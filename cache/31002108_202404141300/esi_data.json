@@ -1,0 +1,86 @@
+{
+    "result": "success",
+    "_id": "661c7ae3ddb48200112d80b3",
+    "newFormat": true,
+    "key": "31002108/202404141300",
+    "systemID": "31002108",
+    "datetime": "202404141300",
+    "createdAt": "2024-04-15T00:54:59.362Z",
+    "updatedAt": "2024-04-15T00:54:59.362Z",
+    "kmsCount": 1,
+    "refreshed": "2024-04-15T00:54:59.362Z",
+    "totalLost": 16157577,
+    "totalPilots": 5,
+    "viewed": 11,
+    "system": {
+        "name": "J233630",
+        "region": "E-R00026",
+        "ss": "-1.0",
+        "whClassID": 5
+    },
+    "kms": [
+        {
+            "_id": 117008491,
+            "id": 117008491,
+            "system": 31002108,
+            "time": 1713101361000,
+            "totalValue": 16157577,
+            "victim": {
+                "char": 0,
+                "corp": 98690093,
+                "ally": 99010161,
+                "fctn": 0,
+                "ship": 47140,
+                "dmg": 33163,
+                "lossValue": 16157577
+            },
+            "attackers": [
+                {
+                    "char": 2118555869,
+                    "corp": 98755784,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 47271,
+                    "weap": 31866,
+                    "dmg": 19991
+                },
+                {
+                    "char": 2118236033,
+                    "corp": 98730128,
+                    "ally": 0,
+                    "fctn": 0,
+                    "ship": 47271,
+                    "weap": 31866,
+                    "dmg": 13172
+                },
+                {
+                    "char": 2120770535,
+                    "corp": 98730128,
+                    "ally": 0,
+                    "fctn": 0,
+                    "ship": 47271,
+                    "weap": 47923,
+                    "dmg": 0
+                },
+                {
+                    "char": 2120770534,
+                    "corp": 98730128,
+                    "ally": 0,
+                    "fctn": 0,
+                    "ship": 47271,
+                    "weap": 448,
+                    "dmg": 0
+                },
+                {
+                    "char": 2120770532,
+                    "corp": 98730128,
+                    "ally": 0,
+                    "fctn": 0,
+                    "ship": 47271,
+                    "weap": 47923,
+                    "dmg": 0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "Astrahaus",
+        "Azbel",
+        "Fortizar",
+        "Keepstar",
+        "Raitaru",
+        "Sotiyo",
+        "Tatara"
+    ],
+    "python.linting.pydocstyleEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": true
+}

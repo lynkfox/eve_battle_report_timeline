@@ -1,0 +1,59 @@
+{
+    "result": "success",
+    "_id": "6619ddce953bc4001246cdaf",
+    "newFormat": true,
+    "key": "31002423/202404122100",
+    "systemID": "31002423",
+    "datetime": "202404122100",
+    "createdAt": "2024-04-13T01:20:14.261Z",
+    "updatedAt": "2024-04-13T01:20:14.261Z",
+    "kmsCount": 1,
+    "refreshed": "2024-04-13T01:20:14.261Z",
+    "totalLost": 163892976,
+    "totalPilots": 2,
+    "viewed": 6,
+    "system": {
+        "name": "J154021",
+        "region": "F-R00030",
+        "ss": "-1.0",
+        "whClassID": 6
+    },
+    "kms": [
+        {
+            "_id": 116963589,
+            "id": 116963589,
+            "system": 31002423,
+            "time": 1712958180000,
+            "totalValue": 163892976,
+            "victim": {
+                "char": 2122057606,
+                "corp": 98723888,
+                "ally": 99009384,
+                "fctn": 0,
+                "ship": 4302,
+                "dmg": 15370,
+                "lossValue": 163892976
+            },
+            "attackers": [
+                {
+                    "char": 96355220,
+                    "corp": 98499719,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35833,
+                    "weap": 47141,
+                    "dmg": 10010
+                },
+                {
+                    "char": 0,
+                    "corp": 98499719,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 47141,
+                    "weap": 0,
+                    "dmg": 5360
+                }
+            ]
+        }
+    ]
+}

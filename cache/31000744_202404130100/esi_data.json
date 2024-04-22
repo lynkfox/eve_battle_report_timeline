@@ -1,0 +1,104 @@
+{
+    "result": "success",
+    "_id": "661b270dddb48200112d7f1a",
+    "newFormat": true,
+    "key": "31000744/202404130100",
+    "systemID": "31000744",
+    "datetime": "202404130100",
+    "createdAt": "2024-04-14T00:45:01.186Z",
+    "updatedAt": "2024-04-14T00:45:01.186Z",
+    "kmsCount": 2,
+    "refreshed": "2024-04-14T00:45:01.186Z",
+    "totalLost": 1053269873,
+    "totalPilots": 4,
+    "viewed": 5,
+    "system": {
+        "name": "J161138",
+        "region": "B-R00007",
+        "ss": "-1.0",
+        "whClassID": 2
+    },
+    "kms": [
+        {
+            "_id": 116967476,
+            "id": 116967476,
+            "system": 31000744,
+            "time": 1712972143000,
+            "totalValue": 963242774,
+            "victim": {
+                "char": 95338503,
+                "corp": 98747618,
+                "ally": 99012082,
+                "fctn": 0,
+                "ship": 52252,
+                "dmg": 16905,
+                "lossValue": 963242774
+            },
+            "attackers": [
+                {
+                    "char": 2114887514,
+                    "corp": 98511274,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35832,
+                    "weap": 47035,
+                    "dmg": 9345
+                },
+                {
+                    "char": 0,
+                    "corp": 98611078,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35832,
+                    "weap": 0,
+                    "dmg": 7560
+                }
+            ]
+        },
+        {
+            "_id": 116968853,
+            "id": 116968853,
+            "system": 31000744,
+            "time": 1712976914000,
+            "totalValue": 90027099,
+            "victim": {
+                "char": 2121681388,
+                "corp": 98751949,
+                "ally": 0,
+                "fctn": 0,
+                "ship": 49710,
+                "dmg": 4412,
+                "lossValue": 90027099
+            },
+            "attackers": [
+                {
+                    "char": 0,
+                    "corp": 98611078,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35832,
+                    "weap": 0,
+                    "dmg": 3338
+                },
+                {
+                    "char": 2114887514,
+                    "corp": 98511274,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35832,
+                    "weap": 47035,
+                    "dmg": 1074
+                },
+                {
+                    "char": 2116993400,
+                    "corp": 98751949,
+                    "ally": 0,
+                    "fctn": 0,
+                    "ship": 49710,
+                    "weap": 5439,
+                    "dmg": 0
+                }
+            ]
+        }
+    ]
+}

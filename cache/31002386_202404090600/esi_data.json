@@ -1,0 +1,77 @@
+{
+    "result": "success",
+    "_id": "6615d540953bc4001246c9b5",
+    "newFormat": true,
+    "key": "31002386/202404090600",
+    "systemID": "31002386",
+    "datetime": "202404090600",
+    "createdAt": "2024-04-09T23:54:40.101Z",
+    "updatedAt": "2024-04-09T23:54:40.101Z",
+    "kmsCount": 2,
+    "refreshed": "2024-04-09T23:54:40.101Z",
+    "totalLost": 215285435,
+    "totalPilots": 2,
+    "viewed": 8,
+    "system": {
+        "name": "J114003",
+        "region": "F-R00030",
+        "ss": "-1.0",
+        "whClassID": 6
+    },
+    "kms": [
+        {
+            "_id": 116883168,
+            "id": 116883168,
+            "system": 31002386,
+            "time": 1712643461000,
+            "totalValue": 99117870,
+            "victim": {
+                "char": 860886661,
+                "corp": 840323545,
+                "ally": 99011699,
+                "fctn": 0,
+                "ship": 34317,
+                "dmg": 6935,
+                "lossValue": 99117870
+            },
+            "attackers": [
+                {
+                    "char": 0,
+                    "corp": 98652584,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35833,
+                    "weap": 0,
+                    "dmg": 6935
+                }
+            ]
+        },
+        {
+            "_id": 116883173,
+            "id": 116883173,
+            "system": 31002386,
+            "time": 1712643504000,
+            "totalValue": 116167565,
+            "victim": {
+                "char": 385809350,
+                "corp": 840323545,
+                "ally": 99011699,
+                "fctn": 0,
+                "ship": 34317,
+                "dmg": 6719,
+                "lossValue": 116167565
+            },
+            "attackers": [
+                {
+                    "char": 0,
+                    "corp": 98652584,
+                    "ally": 99005601,
+                    "fctn": 0,
+                    "ship": 35833,
+                    "weap": 0,
+                    "dmg": 6719
+                }
+            ]
+        }
+    ]
+}
