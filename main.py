@@ -290,6 +290,20 @@ br_links = [
     "https://br.evetools.org/related/31001918/202404211700",
     "https://br.evetools.org/related/31002374/202404212100",
     "https://br.evetools.org/related/31002065/202404212300",
+    "https://br.evetools.org/related/31002379/202404220000",
+    "https://br.evetools.org/related/31001685/202404220100",
+    "https://br.evetools.org/related/31002379/202404220200",
+    "https://br.evetools.org/related/31001291/202404220100",
+    "https://br.evetools.org/related/31000941/202404220100",
+    "https://br.evetools.org/related/31002378/202404220200",
+    "https://br.evetools.org/related/31002426/202404220300",
+    "https://br.evetools.org/related/31002374/202404220500",
+    "https://br.evetools.org/related/31002384/202404221400",
+    "https://br.evetools.org/br/662702ed5e161e001248d35b",
+    "https://br.evetools.org/related/31002374/202404222100",
+    "https://br.evetools.org/br/6627003c0262b5001221cd65",
+    "https://br.evetools.org/related/31001850/202404222200",
+    "https://br.evetools.org/related/31002375/202404222300",
 ]
 
 new = []

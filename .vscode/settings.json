@@ -9,6 +9,6 @@
         "Tatara"
     ],
     "python.linting.pydocstyleEnabled": false,
-    "python.linting.enabled": true,
+    "python.linting.enabled": false,
     "python.linting.pycodestyleEnabled": true
 }

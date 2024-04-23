@@ -25,7 +25,7 @@ def build_timelines(battles: List[Battle]) -> List[TimelineNode]:
 
     nodes = build_timeline_nodes(battles, mapping_of_battles)
 
-    return nodes
+    return nodes, mapping_of_battles
 
 
 def map_battles(battles: List[Battle]):
@@ -38,7 +38,7 @@ def map_battles(battles: List[Battle]):
     for battle in battles:
         battle_identifiers[battle.battle_identifier] = battle
         battles_per_day.setdefault(battle.time_data.start_time_as_key, []).append(battle)
-        systems.setdefault(battle.system.name, []).append(battle.battle_identifier)
+        systems.setdefault(battle.system.name, []).append(battle)
         if len(battle.structures) > 0:
             for station in battle.structures.values():
                 stations.setdefault(battle.system.name, []).append(station)
@@ -92,6 +92,8 @@ def build_battle_node(battle: Battle, per_day_mapping: dict) -> TimelineNode:
     if coalition_team == hawks_team:
         raise Exception(f"SAME TEAMS!!!! {battle.battle_identifier}")
 
+    y_value_order = 1
+
     return TimelineNode(
         date=battle.time_data.started,
         duration=battle.time_data.duration,
@@ -109,8 +111,7 @@ def build_battle_node(battle: Battle, per_day_mapping: dict) -> TimelineNode:
         not_guaranteed_to_be_coalition=coalition_suspect or coalition_is_third_party,
         coalition_is_third_party=coalition_suspect,
         battle_report_link=battle.br_link,
-        battle_order_value=per_day_mapping.get(battle.time_data.start_time_as_key, []).index(battle.battle_identifier)
-        + 1,
+        battle_order_value=y_value_order,
     )
 
 

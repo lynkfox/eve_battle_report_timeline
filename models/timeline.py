@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from typing import List
+from typing import List, Union
 
 from pydantic import BaseModel
 
@@ -24,7 +24,7 @@ class TimelineNode(BaseModel):
     not_guaranteed_to_be_coalition: bool = False
     coalition_is_third_party: bool = False
     battle_report_link: str
-    battle_order_value: int = 0
+    battle_order_value: Union[int, str] = 0
 
     @classmethod
     def extra_properties(cls):
@@ -42,9 +42,9 @@ class TimelineNode(BaseModel):
     @property
     def hawks_won(self) -> int:
         if self.hawks_destroyed_excluding_trash > self.coalition_destroyed_excluding_trash:
-            return 1
+            return "no"
         else:
-            return 0
+            return "yes"
 
     @property
     def system_name(self) -> str:
@@ -64,7 +64,10 @@ class TimelineNode(BaseModel):
 
     @property
     def total_isk_destroyed(self) -> float:
-        return self.hawks_destroyed_excluding_trash + self.coalition_destroyed_excluding_trash
+        total = self.hawks_destroyed_excluding_trash + self.coalition_destroyed_excluding_trash
+        if total < 5:
+            return 5
+        return total
 
     @property
     def total_pilots_involved(self) -> int:
