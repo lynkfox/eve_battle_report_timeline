@@ -80,12 +80,15 @@ def build_scatter(battles: List[Battle]):
             yref = "y2"
         else:
             yref = "y3"
+
+        offset = details.get("offset", 0)
         fig.add_annotation(
             x=datetime.strptime(details["date"], "%Y-%m-%dT%H:%M"),
             y=details["system"],
             yref=yref,
             text=note,
-            textangle=90,
+            textangle=10,
+            yshift=offset,
             showarrow=True,
             xanchor="right",
         )
@@ -101,6 +104,7 @@ def build_scatter(battles: List[Battle]):
     )
     fig.update_layout()
     fig.show()
+    fig.write_html("docs/war.html")
 
 
 def get_system_order_by_class(battles: List[Battle]):
