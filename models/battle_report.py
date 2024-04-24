@@ -52,6 +52,7 @@ class Battle(BaseModel):
             team_trash = output.setdefault(team, {})
             team_trash["value"] = sum([p.value for p in trash])
             team_trash["ships"] = len(trash)
+            team_trash["pilots"] = len(set((p.name for p in trash)))
         return output
 
 

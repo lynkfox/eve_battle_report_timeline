@@ -6,6 +6,9 @@ from typing import List, Tuple
 from data.teams import Team, WhoseWho
 from models.battle_report import *
 from models.timeline import StationTimerBars, TimelineNode
+import plotly.express as px
+from data import load_json
+import json
 
 WHOSE_WHO = WhoseWho()
 
@@ -17,6 +20,7 @@ class BattleMapping:
     stations: dict  # system_name:stations timers
     days: dict  # datetime iso format: battles_identifier
     battles: dict  # battle_identifier: battle
+    j_class: dict
 
 
 def build_timelines(battles: List[Battle]) -> List[TimelineNode]:
@@ -35,6 +39,7 @@ def map_battles(battles: List[Battle]):
     stations = {}
     battles_per_day = {}
     battle_identifiers = {}
+    j_class = {}
     for battle in battles:
         battle_identifiers[battle.battle_identifier] = battle
         battles_per_day.setdefault(battle.time_data.start_time_as_key, []).append(battle)
@@ -47,29 +52,57 @@ def map_battles(battles: List[Battle]):
             for name in team.keys():
                 alliances.setdefault(name, []).append(battle.battle_identifier)
 
+        j_class.setdefault(battle.system.j_class, []).append(battle)
+
     for key, value in battles_per_day.items():
         battles_per_day[key] = [
             b.battle_identifier for b in sorted(value, key=lambda x: datetime.timestamp(x.time_data.started))
         ]
 
     return BattleMapping(
-        systems=systems, alliances=alliances, stations=stations, days=battles_per_day, battles=battle_identifiers
+        systems=systems,
+        alliances=alliances,
+        stations=stations,
+        days=battles_per_day,
+        battles=battle_identifiers,
+        j_class=j_class,
     )
 
 
 def build_timeline_nodes(battles: List[Battle], battle_mapping: BattleMapping):
 
     battle_data = []
+
+    colors = build_colors(battle_mapping)
+
     for battle in battles:
 
-        battle_data.append(build_battle_node(battle, battle_mapping.days))
+        battle_data.append(build_battle_node(battle, colors[battle.system.name]))
+
         if len(battle.structures) > 0:
             pass
 
     return battle_data
 
 
-def build_battle_node(battle: Battle, per_day_mapping: dict) -> TimelineNode:
+def build_colors(battle_mapping: BattleMapping):
+    output = {}
+
+    for j_class, battles in battle_mapping.j_class.items():
+        unique_systems = list(set([b.system.name for b in battles]))
+        n_colors = len(unique_systems)
+        if n_colors <= 1:
+            n_colors += 2
+
+        colors = px.colors.sample_colorscale("Turbo", [n / (n_colors - 1) for n in range(n_colors)])
+
+        for idx, name in enumerate(unique_systems):
+            output[name] = colors[idx]
+
+    return output
+
+
+def build_battle_node(battle: Battle, color) -> TimelineNode:
     output = determine_team(battle.teams, battle.time_data.started)
 
     for team, team_name in output.items():
@@ -79,6 +112,8 @@ def build_battle_node(battle: Battle, per_day_mapping: dict) -> TimelineNode:
             hawks_top_three_ships = get_top_three_ships(battle.team_participants[team_name])
             hawks_suspect = output.get(team_name, {}).get("sus", False)
             hawks_trash_isk = battle.trash_lost_totals.get(team_name, {}).get("value", 0)
+            hawks_pilots_in_trash = battle.trash_lost_totals.get(team_name, {}).get("pilots", 0)
+            hawks_ships_in_trash = battle.trash_lost_totals.get(team_name, {}).get("ships", 0)
             hawks_team = team_name
             hawks_is_third_party = output.get(team_name, {}).get("unk", False)
         elif team == Team.COALITION:
@@ -86,13 +121,13 @@ def build_battle_node(battle: Battle, per_day_mapping: dict) -> TimelineNode:
             coalition_top_three_ships = get_top_three_ships(battle.team_participants[team_name])
             coalition_suspect = output.get(team_name, {}).get("sus", False)
             coalition_trash_isk = battle.trash_lost_totals.get(team_name, {}).get("value", 0)
+            coalition__pilots_in_trash = battle.trash_lost_totals.get(team_name, {}).get("pilots", 0)
+            coalition_ships_in_trash = battle.trash_lost_totals.get(team_name, {}).get("ships", 0)
             coalition_team = team_name
             coalition_is_third_party = output.get(team_name, {}).get("unk", False)
 
     if coalition_team == hawks_team:
         raise Exception(f"SAME TEAMS!!!! {battle.battle_identifier}")
-
-    y_value_order = 1
 
     return TimelineNode(
         date=battle.time_data.started,
@@ -100,18 +135,24 @@ def build_battle_node(battle: Battle, per_day_mapping: dict) -> TimelineNode:
         system=battle.system,
         hawks_pilots=hawks_results.total_pilots,
         hawks_losses=hawks_results.isk_lost,
+        hawks_ships=hawks_results.ships_lost,
         hawks_primary_ships=list(hawks_top_three_ships.keys()),
         not_guaranteed_to_be_hawks=hawks_suspect or hawks_is_third_party,
         hawks_is_third_party=hawks_is_third_party,
         hawks_destroyed_excluding_trash=hawks_results.isk_lost - hawks_trash_isk,
+        hawks_pilots_excluding_trash=hawks_results.total_pilots - hawks_pilots_in_trash,
+        hawks_ships_excluding_trash=hawks_results.ships_lost - hawks_ships_in_trash,
         coalition_pilots=coalition_result.total_pilots,
         coalition_losses=coalition_result.isk_lost,
+        coalition_ships=coalition_result.ships_lost,
         coalition_primary_ships=list(coalition_top_three_ships.keys()),
         coalition_destroyed_excluding_trash=coalition_result.isk_lost - coalition_trash_isk,
+        coalition_pilots_excluding_trash=coalition_result.total_pilots - coalition__pilots_in_trash,
+        coalition_ships_excluding_trash=coalition_result.ships_lost - coalition_ships_in_trash,
         not_guaranteed_to_be_coalition=coalition_suspect or coalition_is_third_party,
         coalition_is_third_party=coalition_suspect,
         battle_report_link=battle.br_link,
-        battle_order_value=y_value_order,
+        color=color,
     )
 
 

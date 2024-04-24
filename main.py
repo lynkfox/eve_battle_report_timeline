@@ -304,6 +304,12 @@ br_links = [
     "https://br.evetools.org/br/6627003c0262b5001221cd65",
     "https://br.evetools.org/related/31001850/202404222200",
     "https://br.evetools.org/related/31002375/202404222300",
+    "https://br.evetools.org/related/31002374/202404230300",
+    "https://br.evetools.org/related/31002382/202404230200",
+    "https://br.evetools.org/related/31002449/202404230300",
+    "https://br.evetools.org/related/31002437/202404231000",
+    "https://br.evetools.org/related/31002037/202404231200",
+    "https://br.evetools.org/related/31001019/202404231800",
 ]
 
 new = []
@@ -328,8 +334,6 @@ if __name__ == "__main__":
 
     battles = parse_battles(br_links)
 
-    fig = build_scatter(battles)
-
     print("Saving data...\n")
     converted = [m.model_dump(exclude={"raw_json"}) for m in battles]
     with open("output/war_to_date.json", "w") as f:
@@ -349,3 +353,7 @@ if __name__ == "__main__":
     }
     with open("output/war_lists.json", "w") as f:
         json.dump(content, f, indent=4)
+
+    print("creating timeline plot")
+
+    fig = build_scatter(battles)

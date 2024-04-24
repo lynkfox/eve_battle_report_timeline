@@ -26,7 +26,7 @@ class System(BaseModel):
     constellation: Optional[str] = None
     weather: Optional[Weather] = None
     j_class: Optional[str] = None
-    statics: Optional[str] = None
+    statics: Optional[list] = None
 
     @field_validator("weather")
     @classmethod

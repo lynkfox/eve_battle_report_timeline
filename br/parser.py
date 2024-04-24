@@ -387,10 +387,10 @@ def get_system(raw_data: dict, use_br: bool) -> System:
     )
 
 
-def get_statics(system_name: str) -> str:
+def get_statics(system_name: str) -> dict:
 
     statics = JSPACE_STATICS.get(system_name)
 
     if statics is not None:
 
-        return ", ".join([f'{s["destination"]} ({s["identification"]})' for s in statics])
+        return statics
