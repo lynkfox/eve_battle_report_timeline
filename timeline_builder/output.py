@@ -94,6 +94,7 @@ def build_scatter(battles: List[Battle]):
         )
 
     fig.update_layout(
+        title="There is no War in C6 Space ( circle size = total pilots involved )",
         legend=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.8),
         legend2=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.9),
         legend3=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=1),
