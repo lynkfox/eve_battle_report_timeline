@@ -11,6 +11,7 @@ class Team(Enum):
     THIRD_PARTY = "Third Party"
     NEUTRAL = "Neutral"
     NOT_INVOLVED = "Not Involved"
+    UNKNOWN = "Unknown"
 
 
 @dataclass
@@ -45,10 +46,12 @@ class WhoseWho:
     HawksKnown: List[str] = field(default_factory=list)
     HawksNull: List[str] = field(default_factory=list)
     HawksSuspected: List[str] = field(default_factory=list)
+    HawksSystems: List[str] = field(default_factory=list)
 
     CoalitionKnown: List[str] = field(default_factory=list)
     CoalitionNull: List[str] = field(default_factory=list)
     CoalitionSuspected: List[str] = field(default_factory=list)
+    CoalitionSystems: List[str] = field(default_factory=list)
 
     ThirdParty: List[str] = field(default_factory=list)
 
@@ -68,11 +71,13 @@ class WhoseWho:
         self.HawksKnown = data["Hawks"]["Known"]
         self.HawksNull = data["Hawks"]["Null"]
         self.HawksSuspected = data["Hawks"]["Suspected"]
+        self.HawksSystems = data["Hawks"]["Systems"]
 
         # corps known to start the war on Coalition side
         self.CoalitionKnown = data["Coalition"]["Known"]
         self.CoalitionNull = data["Coalition"]["Null"]
         self.CoalitionSuspected = data["Coalition"]["Suspected"]
+        self.CoalitionSystems = data["Coalition"]["Systems"]
 
         # corps known to have switched sides - see SideSwitches for details
         self.Switchers = data["Switcher"]

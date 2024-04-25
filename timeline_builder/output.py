@@ -27,7 +27,7 @@ def build_scatter(battles: List[Battle]):
 
     system_name_order = get_system_order_by_class(battles)
 
-    sizeref = 2.0 * max([t.total_pilots_involved for t in timeline_nodes]) / (60.0**2)
+    sizeref = determine_size_reference_variable(timeline_nodes)
 
     fig = make_subplots(
         rows=len(system_name_order.keys()),
@@ -35,42 +35,68 @@ def build_scatter(battles: List[Battle]):
         shared_xaxes=True,
         vertical_spacing=0.01,
         row_heights=[0.425, 0.425, 0.15],
-        subplot_titles=list(system_name_order.keys()),
+        subplot_titles=[*list(system_name_order.keys())],
     )
 
     for idx, j_c in enumerate(list(system_name_order.keys())):
-        nodes = build_timeline_nodes(system_name_order[j_c], mapping)
-        data = DataFrame({field_name: getattr(battle, field_name) for field_name in fields} for battle in nodes)
-        unique_system_names = list(set([b.system.name for b in system_name_order[j_c]]))
-        unique_system_names = sorted(
-            unique_system_names, key=lambda x: mapping.systems[x][0].time_data.started, reverse=True
-        )
-        traces = [
-            go.Scatter(
-                x=data[data["system_name"] == system_name]["date"],
-                y=data[data["system_name"] == system_name]["system_name"],
-                name=system_name,
-                mode="markers",
-                marker=dict(
-                    color=data[data["system_name"] == system_name]["color"],
-                    size=data[data["system_name"] == system_name]["total_pilots_involved"],
-                    sizemode="area",
-                    sizeref=sizeref,
-                    sizemin=4,
-                ),
-                # marker_symbol=data[data["system_name"]== system_name]["symbol"],
-                legendgroup=j_c,
-                legend=f"legend{idx+1}",
-                legendgrouptitle_text=j_c,
-                customdata=data[data["system_name"] == system_name]["hover_text"],
-                hovertemplate="%{customdata[0]}<br>%{customdata[1]}<br><br>%{customdata[2]}<br>%{customdata[3]}<br>%{customdata[4]}<extra></extra>",
-            )
-            for system_name in unique_system_names
-        ]
+        traces = create_subplot_traces(mapping, fields, system_name_order, sizeref, idx, j_c)
 
         for trace in traces:
             fig.append_trace(trace, idx + 1, 1)
 
+    add_annotations_and_format(fig)
+
+    fig.show()
+    fig.write_html("docs/war.html")
+
+
+def determine_size_reference_variable(timeline_nodes, factor: float = 100.0):
+    """
+    determines the max size a circle on the chart can grow too, and how to scale all other circles appropriately
+
+    bigger factor = bigger overall max circle
+    """
+    return 2.0 * max([t.raw_isk_destroyed for t in timeline_nodes]) / (factor**2)
+
+
+def create_subplot_traces(mapping, fields, system_name_order, sizeref, idx, j_c):
+    nodes = build_timeline_nodes(system_name_order[j_c], mapping)
+    data = DataFrame({field_name: getattr(battle, field_name) for field_name in fields} for battle in nodes)
+    unique_system_names = list(set([b.system.name for b in system_name_order[j_c]]))
+    unique_system_names = sorted(
+        unique_system_names, key=lambda x: mapping.systems[x][0].time_data.started, reverse=True
+    )
+    traces = [
+        go.Scatter(
+            x=data[data["system_name"] == system_name]["date"],
+            y=data[data["system_name"] == system_name]["system_name"],
+            name=system_name,
+            mode="markers",
+            marker=dict(
+                color=data[data["system_name"] == system_name]["owner_color"],
+                size=data[data["system_name"] == system_name]["raw_isk_destroyed"],
+                line=dict(
+                    color=data[data["system_name"] == system_name]["border_color"],
+                    width=data[data["system_name"] == system_name]["border_width"],
+                ),
+                sizemode="area",
+                sizeref=sizeref,
+                sizemin=4,
+            ),
+            # marker_symbol=data[data["system_name"]== system_name]["symbol"],
+            legendgroup=j_c,
+            legend=f"legend{idx+1}",
+            legendgrouptitle_text=j_c,
+            customdata=data[data["system_name"] == system_name]["hover_text"],
+            hovertemplate="%{customdata[0]}<br>%{customdata[1]}<br><br>%{customdata[2]}<br>%{customdata[3]}<br>%{customdata[4]}<br>%{customdata[5]}<extra>%{customdata[6]}</extra>",
+        )
+        for system_name in unique_system_names
+    ]
+
+    return traces
+
+
+def add_annotations_and_format(fig):
     annotations = load_json("special_systems.json")
 
     for note, details in annotations.items():
@@ -87,14 +113,14 @@ def build_scatter(battles: List[Battle]):
             y=details["system"],
             yref=yref,
             text=note,
-            textangle=10,
+            textangle=-10,
             yshift=offset,
             showarrow=True,
-            xanchor="right",
+            xanchor="left",
         )
 
     fig.update_layout(
-        title="There is no War in C6 Space ( circle size = total pilots involved )",
+        title="There is no War in C6 Space ( circle size = total isk destroyed (including trash) ) - Some things are still inaccurate - WIP",
         legend=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.8),
         legend2=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.9),
         legend3=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=1),
@@ -103,9 +129,6 @@ def build_scatter(battles: List[Battle]):
         plot_bgcolor="#808080",
         font=dict(color="black"),
     )
-    fig.update_layout()
-    fig.show()
-    fig.write_html("docs/war.html")
 
 
 def get_system_order_by_class(battles: List[Battle]):

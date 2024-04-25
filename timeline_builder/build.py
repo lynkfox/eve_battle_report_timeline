@@ -20,7 +20,8 @@ class BattleMapping:
     stations: dict  # system_name:stations timers
     days: dict  # datetime iso format: battles_identifier
     battles: dict  # battle_identifier: battle
-    j_class: dict
+    j_class: dict  # j_class: battle
+    system_owner: dict  # system_name: owner
 
 
 def build_timelines(battles: List[Battle]) -> List[TimelineNode]:
@@ -36,17 +37,41 @@ def map_battles(battles: List[Battle]):
 
     systems = {}
     alliances = {}
-    stations = {}
+    stations_per_system = {}
     battles_per_day = {}
     battle_identifiers = {}
     j_class = {}
+    system_owner = {}
     for battle in battles:
         battle_identifiers[battle.battle_identifier] = battle
         battles_per_day.setdefault(battle.time_data.start_time_as_key, []).append(battle)
         systems.setdefault(battle.system.name, []).append(battle)
         if len(battle.structures) > 0:
-            for station in battle.structures.values():
-                stations.setdefault(battle.system.name, []).append(station)
+            for stations in battle.structures.values():
+                stations_per_system.setdefault(battle.system.name, []).extend(stations)
+                for station in stations:
+                    team_switch = WHOSE_WHO.which_team_for_switchers(station.owner.name, battle.time_data.started)
+
+                    if battle.system.name in WHOSE_WHO.HawksSystems:
+                        system_owner[battle.system.name] = Team.HAWKS
+                        continue
+                    if battle.system.name in WHOSE_WHO.CoalitionSystems:
+                        system_owner[battle.system.name] = Team.COALITION
+                        continue
+
+                    if station.owner.name in WHOSE_WHO.all_hawks:
+                        owner = Team.HAWKS
+                    elif station.owner.name in WHOSE_WHO.all_coalition:
+                        owner = Team.COALITION
+                    elif team_switch is not None:
+                        owner = team_switch
+                    else:
+                        owner = Team.UNKNOWN
+
+                    known_owner = system_owner.setdefault(battle.system.name, owner)
+
+                    if owner is not owner.UNKNOWN and known_owner is owner.UNKNOWN:
+                        system_owner[battle.system.name] = owner
 
         for team in battle.teams.values():
             for name in team.keys():
@@ -66,6 +91,7 @@ def map_battles(battles: List[Battle]):
         days=battles_per_day,
         battles=battle_identifiers,
         j_class=j_class,
+        system_owner=system_owner,
     )
 
 
@@ -77,7 +103,9 @@ def build_timeline_nodes(battles: List[Battle], battle_mapping: BattleMapping):
 
     for battle in battles:
 
-        battle_data.append(build_battle_node(battle, colors[battle.system.name]))
+        battle_data.append(
+            build_battle_node(battle, colors[battle.system.name], battle_mapping.system_owner.get(battle.system.name))
+        )
 
         if len(battle.structures) > 0:
             pass
@@ -102,7 +130,7 @@ def build_colors(battle_mapping: BattleMapping):
     return output
 
 
-def build_battle_node(battle: Battle, color) -> TimelineNode:
+def build_battle_node(battle: Battle, color, owner: Team) -> TimelineNode:
     output = determine_team(battle.teams, battle.time_data.started)
 
     for team, team_name in output.items():
@@ -129,6 +157,12 @@ def build_battle_node(battle: Battle, color) -> TimelineNode:
     if coalition_team == hawks_team:
         raise Exception(f"SAME TEAMS!!!! {battle.battle_identifier}")
 
+    structure_owners = []
+    if len(battle.structures) > 0:
+        for t in battle.structures.values():
+            for s in t:
+                structure_owners.append(s.owner.name)
+
     return TimelineNode(
         date=battle.time_data.started,
         duration=battle.time_data.duration,
@@ -153,6 +187,9 @@ def build_battle_node(battle: Battle, color) -> TimelineNode:
         coalition_is_third_party=coalition_suspect,
         battle_report_link=battle.br_link,
         color=color,
+        system_owner=owner if owner is not None else Team.UNKNOWN,
+        station_destroyed=battle.station_killed,
+        station_owners=list(set(structure_owners)),
     )
 
 

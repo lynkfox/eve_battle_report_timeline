@@ -26,6 +26,10 @@
         "corporation - University of Caille"
     ],
     "Hawks": {
+        "_Note": "systems key are known to be this side and override whatever automatic processes are involved",
+        "Systems": [
+            "J151909"
+        ],
         "Known": [
             "L A Z E R H A W K S",
             "Rainbow Knights",
@@ -65,6 +69,11 @@
         ]
     },
     "Coalition": {
+        "_Note": "systems key are known to be this side and override whatever automatic processes are involved",
+        "Systems": [
+            "J141434",
+            "J105034"
+        ],
         "Known": [
             "TURBOFEED OR GLORY",
             "Singularity Syndicate",
