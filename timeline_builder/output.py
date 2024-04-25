@@ -118,9 +118,9 @@ def add_annotations_and_format(fig):
             showarrow=True,
             xanchor="left",
         )
-
+    last_updated = datetime.today().isoformat()
     fig.update_layout(
-        title="There is no War in C6 Space ( circle size = total isk destroyed (including trash) ) - Some things are still inaccurate - WIP",
+        title=f"There is no War in C6 Space ( circle size = total isk destroyed (including trash) )<br>Some things are still inaccurate - WIP<br>Last Updated {last_updated}",
         legend=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.8),
         legend2=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.9),
         legend3=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=1),
