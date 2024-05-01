@@ -51,7 +51,7 @@ def get_page(url):
         return get_cache(url)
     session = HTMLSession()
     r = session.get(url)
-    r.html.render(sleep=5)
+    r.html.render(sleep=8)
     save_cache(url, r.html.raw_html)
     return BeautifulSoup(r.html.raw_html, features="html.parser")
 
