@@ -7,7 +7,9 @@ from typing import Dict, List, Optional, Tuple, Union
 from pydantic import BaseModel, field_serializer
 
 from models.eve import EveAlliance, EveCorp, EvePilot, EveShip, EveSystem, LARGE_STRUCTURES, StationType, System
-from data.teams import Team
+from data.teams import Team, WhoseWho
+
+WHOSE_WHO = WhoseWho()
 
 
 class Battle2(BaseModel):

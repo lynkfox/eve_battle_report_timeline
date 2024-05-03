@@ -14,7 +14,7 @@
         {
             "system": "J152117",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "To rule them all",
             "ally": null,
             "dates": [
@@ -646,7 +646,7 @@
         {
             "system": "J104037",
             "type": "Tatara",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Now You Don't",
             "ally": null,
             "dates": [
@@ -656,7 +656,7 @@
         {
             "system": "J104037",
             "type": "Azbel",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Now You Don't",
             "ally": null,
             "dates": [
@@ -724,7 +724,7 @@
         {
             "system": "J121649",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "SAFELOG",
             "ally": null,
             "dates": [
@@ -857,7 +857,7 @@
         {
             "system": "J134096",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Brittas Empire",
             "ally": "Pandemic Horde",
             "dates": [
@@ -891,7 +891,7 @@
         {
             "system": "J104617",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Mateber Mining and Manufacturing Company",
             "ally": "C U L T",
             "dates": [
@@ -1027,7 +1027,7 @@
         {
             "system": "J172840",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "My Little Pony.",
             "ally": "Fraternity.",
             "dates": [
@@ -1157,7 +1157,7 @@
         {
             "system": "J135031",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Holdlings",
             "ally": null,
             "dates": [
@@ -1234,7 +1234,7 @@
         {
             "system": "J212612",
             "type": "Raitaru",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Holdlings",
             "ally": null,
             "dates": [
@@ -1484,7 +1484,7 @@
         {
             "system": "J164846",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Operaatio MatoLuola",
             "ally": null,
             "dates": [
@@ -1504,7 +1504,7 @@
         {
             "system": "J164846",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Operaatio MatoLuola",
             "ally": null,
             "dates": [
@@ -1528,7 +1528,7 @@
         {
             "system": "J155650",
             "type": "Fortizar",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Astrum Architecti",
             "ally": null,
             "dates": [
@@ -1538,7 +1538,7 @@
         {
             "system": "J155650",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Outfit 418",
             "ally": "Blue Loot Not Included",
             "dates": [
@@ -1572,7 +1572,7 @@
         {
             "system": "J144454",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Reduced Connections",
             "ally": null,
             "dates": [
@@ -1582,7 +1582,7 @@
         {
             "system": "J144454",
             "type": "Athanor",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Reduced Connections",
             "ally": null,
             "dates": [
@@ -1974,7 +1974,7 @@
         {
             "system": "J120010",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "League Of Quantum Legends",
             "ally": null,
             "dates": [
@@ -2022,7 +2022,7 @@
         {
             "system": "J132258",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Holding 418",
             "ally": null,
             "dates": [
@@ -2034,7 +2034,7 @@
         {
             "system": "J212302",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "CHURCH OF SERENITY",
             "ally": null,
             "dates": [
@@ -2056,7 +2056,7 @@
         {
             "system": "J145825",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Morytania Trading Co",
             "ally": null,
             "dates": [
@@ -2206,7 +2206,7 @@
         {
             "system": "J152912",
             "type": "Astrahus",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Holdlings",
             "ally": null,
             "dates": [

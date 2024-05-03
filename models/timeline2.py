@@ -11,6 +11,14 @@ from dataclasses import dataclass
 from br.util import convert_isk
 
 
+HAWKS_COLOR = "orange"
+HAWKS_BORDER = "maroon"
+COALITION_COLOR = "cyan"
+COALITION_BORDER = "dodgerblue"
+UNKNOWN_COLOR = "palegreen"
+UNKNOWN_BORDER = "darkgreen"
+
+
 @dataclass
 class TimelineTrace:
     name: str
@@ -33,6 +41,7 @@ class TimelineTrace:
             sizemode="area",
             sizeref=self.sizeref,
             sizemin=4,
+            symbol="circle-dot",
             line=dict(color=[c.border_color for c in self.nodes], width=[w.border_width for w in self.nodes]),
         )
 
@@ -109,22 +118,22 @@ class BattleNode(BaseModel):
     def marker_color(self) -> str:
 
         return (
-            "orange"
+            HAWKS_COLOR
             if self.system_owner == Team.HAWKS
-            else "cyan"
+            else COALITION_COLOR
             if self.system_owner == Team.COALITION
-            else "palegreen"
+            else UNKNOWN_COLOR
         )
 
     @property
     def border_color(self) -> str:
         if self.structure_destroyed:
             return (
-                "maroon"
+                HAWKS_BORDER
                 if self.system_owner == Team.HAWKS
-                else "dodgerblue"
+                else COALITION_BORDER
                 if self.system_owner == Team.COALITION
-                else "darkgreen"
+                else UNKNOWN_BORDER
             )
         return "white"
 

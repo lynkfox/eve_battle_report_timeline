@@ -29,7 +29,8 @@
     "Hawks": {
         "_Note": "systems key are known to be this side and override whatever automatic processes are involved",
         "Systems": [
-            "J151909"
+            "J151909",
+            "J172840"
         ],
         "Known": [
             "L A Z E R H A W K S",
@@ -60,7 +61,15 @@
             "War and Wormhole",
             "Beyond the understanding of human behavior",
             "Wardec Mechanics",
-            "Czarna-Kompania."
+            "Czarna-Kompania.",
+            "Blue Loot Not Included",
+            "Astrum Architecti",
+            "To rule them all",
+            "SAFELOG",
+            "C U L T",
+            "Holdlings",
+            "Holding 418"
+
         ],
         "Null": [
             "Fraternity.",
@@ -69,16 +78,17 @@
         ],
         "Suspected": [
             "VERGED Holdings",
-            "Astrum Architecti",
             "Verged",
-            "Order Strigiformes"
+            "Order Strigiformes",
+            "333 Republic School 323"
         ]
     },
     "Coalition": {
         "_Note": "systems key are known to be this side and override whatever automatic processes are involved",
         "Systems": [
             "J141434",
-            "J105034"
+            "J105034",
+            "J134096"
         ],
         "Known": [
             "TURBOFEED OR GLORY",
@@ -115,7 +125,13 @@
             "Submarine INC",
             "Anoikis Firewatch",
             "Unchained Alliance",
-            "Mutilate Retirement Fund"
+            "Mutilate Retirement Fund",
+            "Now You Don't",
+            "Operaatio MatoLuola",
+            "Reduced Connections",
+            "League Of Quantum Legends",
+            "CHURCH OF SERENITY",
+            "Morytania Trading Co"
         ],
         "Null": [
             "The Initiative.",
