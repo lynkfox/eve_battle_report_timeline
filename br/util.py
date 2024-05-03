@@ -6,6 +6,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 from models.eve import StationType
+from data.sde import JSPACE_STATICS
 
 
 def get_regex_groups(string, regex):
@@ -62,6 +63,8 @@ def get_cache_path(url):
 
 
 def convert_isk(text):
+    if isinstance(text, int):
+        return text / 1000000000
     if "k" in text:
         return float(text.replace("k", "")) / 1000 / 1000
     if "m" in text:
@@ -85,3 +88,31 @@ def convert_to_zkill(url):
 
 def convert_to_br(url):
     return url.replace("zkillboard.com", "br.evetools.org")
+
+
+def get_id_from_link(url) -> str:
+    if "character/structure-" in url:
+        return url.split("-")[-1].replace("/", "")
+    parts = url.split("/")
+    idx = 1
+    while idx < len(parts):
+        if str.isdigit(parts[-idx]):
+            return parts[-idx]
+        idx += 1
+
+    print(f"couldn't find id_num in {url}")
+
+    return "0"
+
+
+def is_saved_br(url):
+    return "related" not in url
+
+
+def get_statics(system_name: str) -> dict:
+
+    statics = JSPACE_STATICS.get(system_name)
+
+    if statics is not None:
+
+        return statics

@@ -1,148 +1,60 @@
-import plotly.express as px
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from timeline_builder.build import build_timeline_nodes, map_battles, build_timelines
-from models.battle_report import Battle
-from models.timeline import TimelineNode
-from typing import List
-from pandas import DataFrame
-from datetime import datetime
-from data import load_json
+from plotly.offline import plot
+from timeline_builder.build2 import build_page
+import re
+from br.parser2 import AllData
+import webbrowser
+import os
 
 
-def build_scatter(battles: List[Battle]):
+def build_scatter(all_data: AllData):  ## attempt to add onclick go to battle report
 
-    # fig = go.Figure(
-    #     layout=dict(
-    #         title="There is no war in C6 Wormhole Space",
-    #         hovermode="closest"
-    #     )
-    # )
+    fig = build_page(all_data)
+    file_path = "docs/war.html"
+    build_onclick_link_html(fig, "customdata[6]", file_path)
+    webbrowser.open("file://" + os.path.realpath(file_path))
 
-    timeline_nodes, mapping = build_timelines(battles)
 
-    fields = list(TimelineNode.model_fields.keys())
-    # add calculated property fields
-    fields.extend(TimelineNode.extra_properties())
+def build_onclick_link_html(fig, link_value: str = "customdata[0]", file_name: str = "with_hyperlinks.html"):
+    # Get HTML representation of plotly.js and this figure
+    plot_div = plot(fig, output_type="div", include_plotlyjs=True)
 
-    system_name_order = get_system_order_by_class(battles)
+    # Get id of html div element that looks like
+    # <div id="301d22ab-bfba-4621-8f5d-dc4fd855bb33" ... >
+    res = re.search('<div id="([^"]*)"', plot_div)
+    div_id = res.groups()[0]
 
-    sizeref = determine_size_reference_variable(timeline_nodes)
-
-    fig = make_subplots(
-        rows=len(system_name_order.keys()),
-        cols=1,
-        shared_xaxes=True,
-        vertical_spacing=0.01,
-        row_heights=[0.425, 0.425, 0.15],
-        subplot_titles=[*list(system_name_order.keys())],
+    # Build JavaScript callback for handling clicks
+    # and opening the URL in the trace's customdata
+    js_callback = """
+    <script>
+    var plot_element = document.getElementById("{div_id}");
+    plot_element.on('plotly_click', function(data){{
+        console.log(data);
+        var point = data.points[0];
+        if (point) {{
+            console.log(point.LINK_VALUE);
+            window.open(point.LINK_VALUE);
+        }}
+    }})
+    </script>
+    """.format(
+        div_id=div_id
+    ).replace(
+        "LINK_VALUE", link_value
     )
 
-    for idx, j_c in enumerate(list(system_name_order.keys())):
-        traces = create_subplot_traces(mapping, fields, system_name_order, sizeref, idx, j_c)
-
-        for trace in traces:
-            fig.append_trace(trace, idx + 1, 1)
-
-    add_annotations_and_format(fig)
-
-    fig.show()
-    fig.write_html("docs/war.html")
-
-
-def determine_size_reference_variable(timeline_nodes, factor: float = 100.0):
-    """
-    determines the max size a circle on the chart can grow too, and how to scale all other circles appropriately
-
-    bigger factor = bigger overall max circle
-    """
-    return 2.0 * max([t.raw_isk_destroyed for t in timeline_nodes]) / (factor**2)
-
-
-def create_subplot_traces(mapping, fields, system_name_order, sizeref, idx, j_c):
-    nodes = build_timeline_nodes(system_name_order[j_c], mapping)
-    data = DataFrame({field_name: getattr(battle, field_name) for field_name in fields} for battle in nodes)
-    unique_system_names = list(set([b.system.name for b in system_name_order[j_c]]))
-    unique_system_names = sorted(
-        unique_system_names, key=lambda x: mapping.systems[x][0].time_data.started, reverse=True
-    )
-    traces = [
-        go.Scatter(
-            x=data[data["system_name"] == system_name]["date"],
-            y=data[data["system_name"] == system_name]["system_name"],
-            name=system_name,
-            mode="markers",
-            marker=dict(
-                color=data[data["system_name"] == system_name]["owner_color"],
-                size=data[data["system_name"] == system_name]["raw_isk_destroyed"],
-                line=dict(
-                    color=data[data["system_name"] == system_name]["border_color"],
-                    width=data[data["system_name"] == system_name]["border_width"],
-                ),
-                sizemode="area",
-                sizeref=sizeref,
-                sizemin=4,
-            ),
-            # marker_symbol=data[data["system_name"]== system_name]["symbol"],
-            legendgroup=j_c,
-            legend=f"legend{idx+1}",
-            legendgrouptitle_text=j_c,
-            customdata=data[data["system_name"] == system_name]["hover_text"],
-            hovertemplate="%{customdata[0]}<br>%{customdata[1]}<br><br>%{customdata[2]}<br>%{customdata[3]}<br>%{customdata[4]}<br>%{customdata[5]}<extra>%{customdata[6]}</extra>",
-        )
-        for system_name in unique_system_names
-    ]
-
-    return traces
-
-
-def add_annotations_and_format(fig):
-    annotations = load_json("special_systems.json")
-
-    for note, details in annotations.items():
-        if details["class"] == "C6":
-            yref = "y"
-        elif details["class"] == "C5":
-            yref = "y2"
-        else:
-            yref = "y3"
-
-        offset = details.get("offset", 0)
-        fig.add_annotation(
-            x=datetime.strptime(details["date"], "%Y-%m-%dT%H:%M"),
-            y=details["system"],
-            yref=yref,
-            text=note,
-            textangle=-10,
-            yshift=offset,
-            showarrow=True,
-            xanchor="left",
-        )
-    last_updated = datetime.today().isoformat()
-    fig.update_layout(
-        title=f"There is no War in C6 Space ( circle size = total isk destroyed (including trash) )<br>Some things are still inaccurate - WIP<br>Last Updated {last_updated}",
-        legend=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.8),
-        legend2=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=0.9),
-        legend3=dict(groupclick="toggleitem", indentation=10, xref="container", yref="paper", x=1),
-        template="plotly_dark",
-        paper_bgcolor="#D3D3D3",
-        plot_bgcolor="#808080",
-        font=dict(color="black"),
+    # Build HTML string
+    html_str = """
+    <html>
+    <body>
+    {plot_div}
+    {js_callback}
+    </body>
+    </html>
+    """.format(
+        plot_div=plot_div, js_callback=js_callback
     )
 
-
-def get_system_order_by_class(battles: List[Battle]):
-
-    output = {}
-    for battle in battles:
-        j_class = battle.system.j_class
-        if j_class in ["C4", "C3", "C2", "C1", "CNone"]:
-            j_class = "C1-C4, K-Space"
-        output.setdefault(j_class, []).append(battle)
-
-    # for key, value in output.items():
-    #     sorted_battles = sorted(value, key=lambda x: x.time_data.started)
-
-    #     output[key] = sorted_battles
-
-    return output
+    with open(file_name, "w", encoding="utf-8") as f:
+        f.write(html_str)

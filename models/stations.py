@@ -1,168 +1,17 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta
-from math import floor
-from typing import Dict, List, Optional, Tuple, Union
+from typing import List, Optional, Tuple
 
 from pydantic import BaseModel, field_serializer
 
 from models.eve import EveAlliance, LARGE_STRUCTURES, StationType, System
+from data.teams import Team
 
 
-class MultiSystemBattle(BaseModel):
-    started: datetime
-    duration: timedelta
-    systems: List[System]
-    battles: List[Battle]
-
-
-class BattleReportResults(BaseModel):
-    isk_lost: float
-    ships_lost: int
-    total_pilots: int
-
-    def increase(self, loss_value=0):
-        self.total_pilots += 1
-        if loss_value > 0:
-            self.isk_lost += loss_value
-            self.ships_lost += 1
-
-
-class Battle(BaseModel):
-    battle_identifier: str
-    br_link: str
-    time_data: BattleTime
-    teams: Dict[str, Dict[str, BattleReportGroup]]
-    team_results: Dict[str, BattleReportResults] = BattleReportResults(isk_lost=0, ships_lost=0, total_pilots=0)
-    team_killmails: Dict[str, List[str]] = {}
-    team_participants: Dict[str, List[BattleReportParticipant]] = {}
-    structures: Dict[str, List[StationKill]] = {}
-    station_killed: bool = False
-    possible_timer: bool = False
-    third_party: bool = False
-    doubt_if_war: bool = False
-    system: System
-    possible_trash: Dict[str, List[BattleReportParticipant]] = {}
-    raw_json: Optional[dict]
-
-    @property
-    def trash_lost_totals(self):
-        output = {}
-        for team, trash in self.possible_trash.items():
-            team_trash = output.setdefault(team, {})
-            team_trash["value"] = sum([p.value for p in trash])
-            team_trash["ships"] = len(trash)
-            team_trash["pilots"] = len(set((p.name for p in trash)))
-        return output
-
-
-class BattleTime(BaseModel):
-    started: datetime
-    duration: timedelta
-    ended: datetime
-
-    @property
-    def start_time_as_key(self) -> str:
-        return self.started.strftime("%Y-%m-%d")
-
-    @field_serializer("started", "ended")
-    def serialize_ended(self, dt: datetime, _info):
-        return self.serialize_dt(dt, _info)
-
-    @field_serializer("duration")
-    def serialize_duration(self, td: timedelta, _info):
-        seconds = td.seconds
-        hours = ""
-        if seconds > 3600:
-            hours = floor(seconds / 3600)
-            seconds = seconds - (hours * 3600)
-            hours = f"{hours}h"
-
-        mins = floor(seconds / 60)
-
-        if seconds == 0 or (mins == 0 and hours == ""):
-            return "0"
-        return f"{hours} {mins}m".strip()
-
-    def serialize_dt(self, dt: datetime, _info):
-        return dt.isoformat()
-
-
-class BattleReportGroup(EveAlliance):
-    group_results: Optional[BattleReportResults]
-    group_killmails: Optional[List[str]]
-    is_holding: bool = False
-    holding_for: Optional[Tuple[str, str]] = None
-    ships: Dict[str, BattleReportCount]
-    pilots: Dict[str, BattleReportCount]
-
-
-class AssociatedCount(BaseModel):
-    t: int = 0
-    l: int = 0
-    p: int = 0
-    brs: List[str] = []
-
-
-class BattleReportCount(BaseModel):
-    name: str
-    image_link: str
-    total: int = 0
-    lost: int = 0
-    total_lost_value: float = 0
-    killmails: List[str] = []
-    pods: int = 0
-    pod_killmails: List[str] = []
-    associated: Dict[str, AssociatedCount] = {}
-
-    def increase(
-        self,
-        value: float = 0,
-        killmail_id: int = None,
-        multiple: int = None,
-        associated_name: str = None,
-        br: str = None,
-    ):
-        self.total += 1
-
-        if self._is_valid_associated_name(associated_name):
-            related = self.associated.setdefault(associated_name, AssociatedCount())
-        else:
-            related = self.associated.setdefault("Unknown Pilot", AssociatedCount())
-
-        related.t += 1
-
-        if value > 0:
-            self.lost = self.lost + 1 if multiple is not None else self.lost + multiple
-            self.total_lost_value += value
-            self.killmails.append(killmail_id)
-            related.l += 1
-
-        if br is not None:
-            related.brs.append(br)
-
-    def podded(self, killmail: str, associated_name: str):
-        self.pods += 1
-        self.pod_killmails.append(killmail)
-        if self._is_valid_associated_name(associated_name):
-            self.associated[associated_name].p += 1
-
-    def _is_valid_associated_name(self, associated_name):
-        return associated_name is not None and "\u00a0" not in associated_name
-
-
-class BattleReportParticipant(BaseModel):
-    name: str
-    ship: str
-    alliance: Optional[str] = None
-    corp: Optional[str] = None
-    zkill_link: Optional[str] = None
-    value: float = 0
-    podded: bool = False
-
-
-class StationKill(BaseModel):
+class StructureEntry(BaseModel):
     type: StationType
+    team: Team
     value: float
     owner: EveAlliance
     destroyed_on: Optional[datetime] = None

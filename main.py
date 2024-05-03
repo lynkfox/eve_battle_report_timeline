@@ -1,10 +1,10 @@
 import json
 from time import sleep
-
-from aggregator.calculate import calculate_lists
-from br.parser import parse_br
+from br.parser2 import parse_br2
 from br.util import skip_if_cached
 from timeline_builder.output import build_scatter
+import pickle
+import os
 
 br_links = [
     "https://br.evetools.org/related/31002464/202403260000",
@@ -364,49 +364,103 @@ br_links = [
     "https://br.evetools.org/related/31002396/202404300500",
     "https://br.evetools.org/related/31002440/202404300100",
     "https://br.evetools.org/related/31002078/202404300000",
+    "https://br.evetools.org/br/6632e2162da6080012646b93",
+    "https://br.evetools.org/related/31002065/202405010300",
+    "https://br.evetools.org/related/31002459/202405010400",
+    "https://br.evetools.org/br/6632e08a2da6080012646b90",
+    "https://br.evetools.org/related/31002402/202405010500",
+    "https://br.evetools.org/related/31002073/202405010500",
+    "https://br.evetools.org/br/6632e54b132a2a0012c77de7",
+    "https://br.evetools.org/related/31002413/202405010600",
+    "https://br.evetools.org/related/31002443/202405011000",
+    "https://br.evetools.org/related/31002123/202405011600",
+    "https://br.evetools.org/related/31001406/202405011900",
+    "https://br.evetools.org/related/31001672/202405012000",
+    "https://br.evetools.org/related/31002247/202405012100",
+    "https://br.evetools.org/br/6632e31a132a2a0012c77de2",
+    "https://br.evetools.org/related/31001712/202405020000",
+    "https://br.evetools.org/related/31002429/202405020100",
+    "https://br.evetools.org/related/31002078/202405020300",
+    "https://br.evetools.org/related/31002396/202405020300",
+    "https://br.evetools.org/br/6634306a132a2a0012c77f09",
+    "https://br.evetools.org/br/663430a4132a2a0012c77f0b",
+    "https://br.evetools.org/related/31002241/202405020600",
+    "https://br.evetools.org/related/31002427/202405020600",
+    "https://br.evetools.org/br/663430802da6080012646cb4",
+    "https://br.evetools.org/related/31002454/202405021300",
+    "https://br.evetools.org/br/663432422da6080012646cc7",
+    "https://br.evetools.org/related/31002123/202405021700",
+    "https://br.evetools.org/related/31002153/202405021900",
+    "https://br.evetools.org/related/31001970/202405021900",
+    "https://br.evetools.org/related/31001778/202405022100",
+    "https://br.evetools.org/related/31002132/202405022200",
+    "https://br.evetools.org/related/31002205/202405022200",
 ]
 
 new = []
 
 
-def parse_battles(br_links):
+def parse_battles2(br_links):
     PROCESS_LIST = br_links  # new
 
-    battles = []
+    first = True
+    battle_data = None
     for idx, br in enumerate(PROCESS_LIST):
-        if not skip_if_cached(br):
-            sleep(3)
-        print(f"Retrieving and parsing {br}...")
-        battles.append(parse_br(br))
-        print(f"...Done (Completed {idx} of {len(PROCESS_LIST)-1}) \n")
+        if first:
+            battle_data = parse_br2(br, battle_data)
+            first = False
+        else:
+            if not skip_if_cached(br):
+                sleep(3)
+            print(f"Retrieving and parsing {br}...")
+            parse_br2(br, battle_data)
+            print(f"...Done (Completed {idx} of {len(PROCESS_LIST)-1}) \n")
 
-    return battles
+    return battle_data
 
 
 if __name__ == "__main__":
     # parse_br("https://br.evetools.org/related/31002275/202404160300")
 
-    battles = parse_battles(br_links)
+    pickled_data_file = "output/war_to_date.pickle"
+    print("Checking cached computed data")
+    existing_battles = None
+    # if os.path.exists(pickled_data_file):
+    #     try:
+    #         with open(pickled_data_file, "rb") as f:
+    #             existing_battles = pickle.load(f)
+    #     except:
+    #         print("can't load existing pickle, ignoring")
 
-    print("Saving data...\n")
-    converted = [m.model_dump(exclude={"raw_json"}) for m in battles]
-    with open("output/war_to_date.json", "w") as f:
-        json.dump(converted, f, indent=4)
+    if existing_battles is None or len(existing_battles.battles) > len(br_links):
+        battles = parse_battles2(br_links)
+        print("Saving data...\n")
 
-    print("Generating calculations...\n")
-    alliances, systems, holding_corps, probable_friends, ships, probably_just_trash = calculate_lists(battles)
+        with open("output/structure_owners.json", "w") as f:
+            json.dump(battles.get_station_owners(), f, indent=4)
 
-    content = {
-        "probably_just_trash": probably_just_trash,
-        "trash_list": [k for k in probably_just_trash.keys()],
-        "probable_friends": probable_friends,
-        "known_alliances": alliances,
-        "known_systems": systems,
-        "known_holding_corps": holding_corps,
-        "known_ships": ships,
-    }
-    with open("output/war_lists.json", "w") as f:
-        json.dump(content, f, indent=4)
+        # with open(pickled_data_file, "wb") as f:
+        #     pickle.dump(battles, f)
+        # with open("output/war_to_date.json", "w") as f:
+        #     json.dump(battles.convert(), f, indent=4)
+    else:
+        print("No new BR links found, loading cache")
+        battles = existing_battles
+
+    # print("Generating calculations...\n")
+    # alliances, systems, holding_corps, probable_friends, ships, probably_just_trash = calculate_lists(battles)
+
+    # content = {
+    #     "probably_just_trash": probably_just_trash,
+    #     "trash_list": [k for k in probably_just_trash.keys()],
+    #     "probable_friends": probable_friends,
+    #     "known_alliances": alliances,
+    #     "known_systems": systems,
+    #     "known_holding_corps": holding_corps,
+    #     "known_ships": ships,
+    # }
+    # with open("output/war_lists.json", "w") as f:
+    #     json.dump(content, f, indent=4)
 
     print("creating timeline plot")
 

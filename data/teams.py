@@ -133,3 +133,28 @@ class WhoseWho:
                     return switch.side
 
         return None
+
+    def known_team(self, name):
+        if name in self.HawksKnown:
+            return Team.HAWKS
+
+        if name in self.CoalitionKnown:
+            return Team.COALITION
+
+        if name in self.NotInvolved:
+            return Team.NOT_INVOLVED
+
+        if name in self.ThirdParty:
+            return Team.THIRD_PARTY
+
+        return Team.UNKNOWN
+
+    def suspected_team(self, name):
+
+        if name in self.HawksSuspected:
+            return Team.HAWKS
+
+        if name in self.CoalitionSuspected:
+            return Team.COALITION
+
+        return self.known_team(name)

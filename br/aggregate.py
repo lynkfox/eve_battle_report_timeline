@@ -2,7 +2,6 @@ from dataclasses import dataclass
 from datetime import datetime
 
 from data.sde import STATION_FIGHTERS
-from models.battle_report import *
 from models.eve import StationType
 
 
