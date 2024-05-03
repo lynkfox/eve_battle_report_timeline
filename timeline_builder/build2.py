@@ -253,7 +253,7 @@ def build_page(all_data: AllData) -> go.Figure:
         title=f"There is no War in C6 Space<br>Hover over to see info, click to go to BR<br>Last Updated {last_updated}",
         template="plotly_dark",
         paper_bgcolor="#D3D3D3",
-        plot_bgcolor="#808080",
+        plot_bgcolor="#ababab",
         font=dict(color="black"),
     )
 
