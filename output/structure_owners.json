@@ -78,7 +78,8 @@
             "corp": "Full faire parvenir",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-03-28"
+                "2024-03-28",
+                "2024-05-02"
             ]
         }
     ],
@@ -1240,6 +1241,26 @@
             "dates": [
                 "2024-04-15"
             ]
+        },
+        {
+            "system": "J212612",
+            "type": "Astrahus",
+            "team": "Unknown",
+            "corp": "Gloryholers Anonymous.",
+            "ally": null,
+            "dates": [
+                "2024-05-03"
+            ]
+        },
+        {
+            "system": "J212612",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Mark's Retirement Fund",
+            "ally": "Koneko's Child Support Payments",
+            "dates": [
+                "2024-05-03"
+            ]
         }
     ],
     "J230047": [
@@ -1251,6 +1272,16 @@
             "ally": "Dracarys.",
             "dates": [
                 "2024-04-10"
+            ]
+        },
+        {
+            "system": "J230047",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "House Atreides Holdings",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-03"
             ]
         }
     ],
@@ -2062,6 +2093,16 @@
             "dates": [
                 "2024-05-02"
             ]
+        },
+        {
+            "system": "J145825",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "Black Powder Ballistics",
+            "ally": "Hole Control",
+            "dates": [
+                "2024-05-03"
+            ]
         }
     ],
     "J135623": [
@@ -2246,6 +2287,16 @@
             "dates": [
                 "2024-05-02"
             ]
+        },
+        {
+            "system": "J140918",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Syndicate of Singularities",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-03"
+            ]
         }
     ],
     "J103600": [
@@ -2303,6 +2354,40 @@
             "ally": "Koneko's Child Support Payments",
             "dates": [
                 "2024-05-02"
+            ]
+        },
+        {
+            "system": "J105858",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Mark's Retirement Fund",
+            "ally": "Koneko's Child Support Payments",
+            "dates": [
+                "2024-05-03"
+            ]
+        }
+    ],
+    "J151838": [
+        {
+            "system": "J151838",
+            "type": "Athanor",
+            "team": "Coalition",
+            "corp": "Kawahara Heavy Industries",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-02"
+            ]
+        }
+    ],
+    "J104351": [
+        {
+            "system": "J104351",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Wranglers",
+            "ally": "Koneko's Child Support Payments",
+            "dates": [
+                "2024-05-03"
             ]
         }
     ]

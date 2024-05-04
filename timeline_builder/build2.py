@@ -90,63 +90,109 @@ def build_jclass_subplots(
     return subplot, system_order
 
 
-def build_jspace_plots(all_data: AllData, fig: go.Figure, subplot_ranges):
+def build_jspace_plots(all_data: AllData, fig: go.Figure, subplot_ranges, split_by_jclass: bool = False):
     size_ref = determine_size_reference_variable(list(all_data.battles.values()))
 
     subplots = []
     subplot_yaxis_ranges = []
+
     for r in subplot_ranges:
         sp, yaxis = build_jclass_subplots(all_data, r[1], r[2], size_ref, r[0])
         subplots.append(sp)
         subplot_yaxis_ranges.append(yaxis)
 
-    for idx, subplot in enumerate(subplots):
+    if split_by_jclass:
+        for idx, subplot in enumerate(subplots):
 
-        for trace in subplot:
+            for trace in subplot:
+                fig.append_trace(build_scatter_trace(trace), row=idx + 1, col=1)
+            for idx, yaxis in enumerate(subplot_yaxis_ranges):
+                update = {
+                    f"yaxis{idx+1}": {
+                        "range": [yaxis[0], yaxis[-1]],
+                        "categoryarray": yaxis,
+                        "categoryorder": "array",
+                    }
+                }
+                fig.update_layout(update)
+    else:
+        combined_ycords = []
+        subplot_yaxis_ranges.reverse()
+        for ycords in subplot_yaxis_ranges:
+            combined_ycords.extend(ycords)
 
-            fig.append_trace(build_scatter_trace(trace), row=idx + 1, col=1)
+        for subplot in subplots:
+            for trace in subplot:
+                fig.add_trace(build_scatter_trace(trace))
+            add_jclass_dividers(
+                fig,
+                subplot_yaxis_ranges,
+                ["↓ C6 ↓", "↓ C5 ↓", "↓ C4-Kspace ↓"],
+                all_data.start_date,
+                all_data.end_date,
+            )
+            fig.update_yaxes(categoryarray=combined_ycords, categoryorder="array")
 
-    build_dummy_plots(fig, subplot_yaxis_ranges[0])
+    build_dummy_plots(fig, subplot_yaxis_ranges[0], split_by_jclass)
     fig.update_yaxes(showgrid=False, showspikes=True, spikedash="longdash", spikethickness=1, tickangle=-45)
     fig.update_xaxes(showspikes=True, spikedash="dot", spikethickness=1)
 
-    for idx, yaxis in enumerate(subplot_yaxis_ranges):
-        update = {
-            f"yaxis{idx+1}": {
-                "range": [yaxis[0], yaxis[-1]],
-                "categoryarray": yaxis,
-                "categoryorder": "array",
-            }
-        }
-        fig.update_layout(update)
 
-
-def add_jclass_subplot_annotations(fig):
+def add_jclass_subplot_annotations(fig: go.Figure, split_by_jclass: bool = False):
     annotations = load_json("special_systems.json")
 
     for note, details in annotations.items():
-        if details["class"] == "C6":
-            yref = "y"
-        elif details["class"] == "C5":
-            yref = "y2"
-        else:
-            yref = "y3"
-
         offset = details.get("offset", 0)
-        fig.add_annotation(
-            x=datetime.strptime(details["date"], "%Y-%m-%dT%H:%M"),
-            y=details["system"],
-            yref=yref,
-            text=note,
-            textangle=-10,
-            yshift=offset,
-            showarrow=True,
-            xanchor="left",
+
+        if split_by_jclass:
+            if details["class"] == "C6":
+                yref = "y"
+            elif details["class"] == "C5":
+                yref = "y2"
+            else:
+                yref = "y3"
+
+            fig.add_annotation(
+                x=datetime.strptime(details["date"], "%Y-%m-%dT%H:%M"),
+                y=details["system"],
+                yref=yref,
+                text=note,
+                textangle=-10,
+                yshift=offset,
+                showarrow=True,
+                xanchor="left",
+            )
+        else:
+            fig.add_annotation(
+                x=datetime.strptime(details["date"], "%Y-%m-%dT%H:%M"),
+                y=details["system"],
+                text=note,
+                textangle=-10,
+                yshift=offset,
+                showarrow=True,
+                xanchor="left",
+            )
+
+
+def add_jclass_dividers(fig: go.Figure, jclass_system_order, names, start_date, end_date):
+    for idx, jclass in enumerate(jclass_system_order):
+        fig.add_shape(
+            type="line",
+            x0=start_date,
+            x1=end_date,
+            y0=jclass[-1],
+            y1=jclass[-1],
+            line=dict(color="darkviolet", width=1),
+            name=names[idx],
+            layer="between",
+            showlegend=False,
+            opacity=0.7,
         )
 
 
-def build_dummy_plots(fig: go.Figure, system_names):
-    fig.append_trace(
+def build_dummy_plots(fig: go.Figure, system_names, split_by_jclass: bool = False):
+
+    fake_legend_traces = [
         go.Scatter(
             x=[datetime(2024, 3, 26)],
             y=[system_names[0]],
@@ -159,11 +205,6 @@ def build_dummy_plots(fig: go.Figure, system_names):
             showlegend=False,
             hoverinfo="skip",
         ),
-        row=1,
-        col=1,
-    )
-
-    fig.append_trace(
         go.Scatter(
             x=[datetime(2024, 3, 26)],
             y=[system_names[7]],
@@ -176,11 +217,6 @@ def build_dummy_plots(fig: go.Figure, system_names):
             showlegend=False,
             hoverinfo="skip",
         ),
-        row=1,
-        col=1,
-    )
-
-    fig.append_trace(
         go.Scatter(
             x=[datetime(2024, 3, 26)],
             y=[system_names[14]],
@@ -193,11 +229,6 @@ def build_dummy_plots(fig: go.Figure, system_names):
             showlegend=False,
             hoverinfo="skip",
         ),
-        row=1,
-        col=1,
-    )
-
-    fig.append_trace(
         go.Scatter(
             x=[datetime(2024, 3, 26)],
             y=[system_names[21]],
@@ -210,11 +241,6 @@ def build_dummy_plots(fig: go.Figure, system_names):
             showlegend=False,
             hoverinfo="skip",
         ),
-        row=1,
-        col=1,
-    )
-
-    fig.append_trace(
         go.Scatter(
             x=[datetime(2024, 3, 26)],
             y=[system_names[28]],
@@ -227,26 +253,37 @@ def build_dummy_plots(fig: go.Figure, system_names):
             showlegend=False,
             hoverinfo="skip",
         ),
-        row=1,
-        col=1,
-    )
+    ]
+
+    for plot in fake_legend_traces:
+        if split_by_jclass:
+            fig.append_trace(
+                plot,
+                row=1,
+                col=1,
+            )
+        else:
+            fig.add_trace(plot)
 
 
-def build_page(all_data: AllData) -> go.Figure:
+def build_page(all_data: AllData, split_by_jclass: bool = False) -> go.Figure:
 
     jclass_subplot_ranges = [("C6", 6, 7), ("C5", 5, 6), ("KSpace-C4", 0, 5)]
-    fig = make_subplots(
-        rows=3,
-        cols=1,
-        shared_xaxes=True,
-        vertical_spacing=0.01,
-        row_heights=[0.425, 0.425, 0.15],
-        subplot_titles=[x[0] for x in jclass_subplot_ranges],
-    )
+    if split_by_jclass:
+        fig = make_subplots(
+            rows=3,
+            cols=1,
+            shared_xaxes=True,
+            vertical_spacing=0.01,
+            row_heights=[0.425, 0.425, 0.15],
+            subplot_titles=[x[0] for x in jclass_subplot_ranges],
+        )
+    else:
+        fig = go.Figure()
 
-    build_jspace_plots(all_data, fig, jclass_subplot_ranges)
+    build_jspace_plots(all_data, fig, jclass_subplot_ranges, split_by_jclass=split_by_jclass)
 
-    add_jclass_subplot_annotations(fig)
+    add_jclass_subplot_annotations(fig, split_by_jclass=split_by_jclass)
     last_updated = datetime.today().isoformat()
     # add title and coloring
     fig.update_layout(

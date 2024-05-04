@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 from math import floor
-from typing import Dict, List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Set
 
 from pydantic import BaseModel, field_serializer
 
@@ -178,6 +178,7 @@ class StructureHistory(BaseModel):
     armor_attacked_on: Optional[datetime] = None  # medium station destroyed on
     hull_attacked_on: Optional[datetime] = None  # large_station destroyed on
     estimated_timers: Optional[List[StructureTimer]] = None
+    br_ids: Set[str] = set()
 
     @property
     def destroyed_on(self) -> datetime:

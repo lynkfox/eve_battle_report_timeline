@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from dateutil import tz
 from collections import Counter
-from typing import List, Dict
+from typing import List, Dict, Union
 
 from br.mapping import *
 from br.util import (
@@ -77,6 +77,8 @@ class AllData:
     battles: Dict[str, Battle2] = field(default_factory=dict)
     structures: Dict[str, StructureHistory] = field(default_factory=dict)
     structure_owners: Dict[str, List[dict]] = field(default_factory=dict)
+    start_date: datetime = datetime(2999, 12, 31)
+    end_date = datetime(1900, 1, 1)
 
     def __post_init__(self):
         self.__mapping = {
@@ -201,6 +203,11 @@ def parse_br2(url, database: AllData):
 
     system, br_id = get_system_and_br_id(raw_data, use_br, database)
     date_and_duration = parse_battle_time_values(rendered_page, raw_data, use_br)
+
+    if date_and_duration.started < database.start_date:
+        database.start_date = date_and_duration.started
+    if date_and_duration.ended > database.end_date:
+        database.end_date = date_and_duration.ended
 
     battle_totals = get_battle_totals(raw_data, use_br)
 
@@ -442,6 +449,8 @@ def note_structure_event(
             zkill_link=None if pilot is None else pilot.name,
         ),
     )
+
+    structure.br_ids.add(br_id)
 
     if int(multiple_lost) > structure.multiple_in_system:
         structure.multiple_in_system = multiple_lost
