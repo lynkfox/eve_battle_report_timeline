@@ -5,7 +5,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from models.eve import StationType
+from models.eve import StructureType
 from data.sde import JSPACE_STATICS
 
 
@@ -79,7 +79,7 @@ def convert_isk(text):
 
 
 def is_structure(name: str):
-    return StationType.has_value(name) or "Control Tower" in name or "Customs Office" in name
+    return StructureType.has_value(name) or "Control Tower" in name or "Customs Office" in name
 
 
 def convert_to_zkill(url):
@@ -116,3 +116,12 @@ def get_statics(system_name: str) -> dict:
     if statics is not None:
 
         return statics
+
+
+def get_structure_type(name: str) -> StructureType:
+    if "Customs Office" in name:
+        return StructureType.POCO
+    elif "Control Tower" in name:
+        return StructureType.POS
+    else:
+        return StructureType(name)

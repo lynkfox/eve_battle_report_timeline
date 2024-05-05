@@ -49,28 +49,61 @@ class TimelineTrace:
     def customdata(self) -> tuple:
         return [self._build_custom_data(t.battle) for t in self.nodes]
 
-    def _build_custom_data(self, battle) -> tuple:
+    def _structures_destroyed(self, battle: Battle2) -> str:
+        names = []
+        output = {}
+        for team in battle.teams:
+            for structure in team._structures:
+                if structure.destroyed_here:
+                    structure_name = structure.type.value
+                    names.append(f"{structure_name}")
+                    total = output.setdefault(structure_name, 0)
+                    output[structure_name] = total + structure.multiple_killed
+
+        if len(names) > 0:
+            formatted = [f"{k} {'x'+str(total) if total > 1 else ''}" for k, total in output.items()]
+            return f"<i>Structures Destroyed:</i><br>   - " + "<br>   - ".join(formatted) + "<br>"
+        return ""
+
+    def _build_custom_data(self, battle: Battle2) -> tuple:
+
         system = battle.system.name
         date = battle.time_data.started.strftime("%a, %b %d, %Y - %H:%M")
         weather = f" [{battle.system.weather.value}]" if battle.system.weather != Weather.VANILLA else ""
         isk_destroyed = f"{convert_isk(battle.br_totals.isk_lost):.2f}B"
         pilots = battle.br_totals.pilots
         ships = battle.br_totals.ships_lost
+        structures = self._structures_destroyed(battle)
         br_link = battle.br_link
-
-        return system, weather, date, isk_destroyed, pilots, ships, br_link
+        br_link_display = battle.br_link.replace("https://", "")
+        statics = f" [{battle.system.static_str}]"
+        return (
+            br_link,
+            system,
+            statics,
+            weather,
+            date,
+            isk_destroyed,
+            pilots,
+            ships,
+            structures,
+            br_link_display,
+        )
 
     @property
     def hovertemplate(self) -> str:
         return (
-            "<b>%{customdata[0]}</b>%{customdata[1]}<br>"
-            + "<i>On %{customdata[2]}<br>"
+            "<b>%{customdata[1]}</b><sup>%{customdata[2]}%{customdata[3]}</sup><br>"
+            + "<i>On %{customdata[4]}<br>"
             + "<br><b>Totals:</b><br>"
-            + "<i>Isk Destroyed:</i> <b>%{customdata[3]}</b><br>"
-            + "<i>Pilots:</i> <b>%{customdata[4]}</b><br>"
-            + "<i>Ships Destroyed:</i> <b>%{customdata[5]}</b><br>"
-            + "<br>Click this node to go to <b>%{customdata[6]}</b>"
+            + "<i>Isk Destroyed:</i> <b>%{customdata[5]}</b><br>"
+            + "<i>Pilots:</i> <b>%{customdata[6]}</b><br>"
+            + "<i>Ships Destroyed:</i> <b>%{customdata[7]}</b><br>"
+            + "%{customdata[8]}"
+            + "<br><b>Click this node to go to br:</b><br>"
+            + "<sup>%{customdata[9]}</sup>"
             + "<extra></extra>"
+            # customdata[0] = br link, used by the on_click event
         )
 
 
@@ -85,12 +118,7 @@ class BattleNode(BaseModel):
 
         self._owner = Team.UNKNOWN if stations is None else stations[0].team
 
-        for team in self.battle.teams:
-            for structure_history_id in team.structures:
-                if all_data.structures.get(structure_history_id).value > 0:
-                    self._destroyed = True
-
-                # check ref?
+        self._destroyed = any(team.structure_destroyed for team in self.battle.teams)
 
         return self
 
@@ -109,6 +137,18 @@ class BattleNode(BaseModel):
     @property
     def structure_destroyed(self) -> bool:
         return self._destroyed
+
+    @property
+    def structures_destroyed(self) -> List[str]:
+        names = []
+        for team in self.battle.teams:
+            for structure in team._structures:
+                if structure.destroyed_here:
+                    names.append(f"{structure.type.value} {structure.multiple}")
+
+        if len(names) > 0:
+            return names
+        return None
 
     @property
     def total_isk_destroyed(self) -> float:

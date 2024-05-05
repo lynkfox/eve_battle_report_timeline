@@ -1,6 +1,7 @@
 import plotly.graph_objects as go
 from plotly.offline import plot
-from timeline_builder.build2 import build_page
+from plot_builder.timeline import build_timeline_page
+from plot_builder.totals import build_totals_page
 import re
 from br.parser2 import AllData
 import webbrowser
@@ -8,11 +9,17 @@ import os
 
 
 def build_scatter(all_data: AllData):  ## attempt to add onclick go to battle report
-
-    fig = build_page(all_data)
+    print("creating timeline plot")
+    fig = build_timeline_page(all_data)
     file_path = "docs/war.html"
-    build_onclick_link_html(fig, "customdata[6]", file_path)
+    build_onclick_link_html(fig, "customdata[0]", file_path)
     webbrowser.open("file://" + os.path.realpath(file_path))
+
+    print("creating totals data")
+    fig2 = build_totals_page(all_data)
+    file_path2 = "docs/daily_totals.html"
+    fig2.show()
+    fig2.write_html(file_path2)
 
 
 def build_onclick_link_html(fig, link_value: str = "customdata[0]", file_name: str = "with_hyperlinks.html"):

@@ -2,7 +2,7 @@ import json
 from time import sleep
 from br.parser2 import parse_br2
 from br.util import skip_if_cached
-from timeline_builder.output import build_scatter
+from plot_builder.output import build_scatter
 import pickle
 import os
 
@@ -41,7 +41,7 @@ br_links = [
     "https://br.evetools.org/related/31001969/202403300400",
     "https://br.evetools.org/related/31001906/202403300400",
     "https://br.evetools.org/related/31002413/202403301800",
-    "https://br.evetools.org/related/31002210/202403302000",
+    # "https://br.evetools.org/related/31002210/202403302000", #-- Sides on this one are weird, feels like random encounter
     "https://br.evetools.org/related/31002012/202403302200",
     "https://br.evetools.org/br/661fd418953bc4001246d317",
     "https://br.evetools.org/br/661fd44e953bc4001246d318",
@@ -75,7 +75,7 @@ br_links = [
     "https://br.evetools.org/related/31002204/202404020500",
     "https://br.evetools.org/related/31002378/202404021000",
     "https://br.evetools.org/related/31002421/202404021700",
-    "https://br.evetools.org/br/660c7d00ddb48200112d6e31",
+    "https://br.evetools.org/br/6636ebb650adf10012f31a57",
     "https://br.evetools.org/related/31000529/202404030200",
     "https://br.evetools.org/br/660df64cddb48200112d6fbf",
     "https://br.evetools.org/related/31000754/202404030800",
@@ -244,6 +244,7 @@ br_links = [
     "https://br.evetools.org/related/31001252/202404180100",
     "https://br.evetools.org/related/31002453/202404180200",
     "https://br.evetools.org/related/31002384/202404180200",
+    "https://br.evetools.org/br/66366ee38ee77d0011c15cfb",
     "https://br.evetools.org/related/31002365/202404181100",
     "https://br.evetools.org/related/31002422/202404180300",
     "https://br.evetools.org/related/31002185/202404180800",
@@ -407,6 +408,13 @@ br_links = [
     "https://br.evetools.org/related/31002162/202405031700",
     "https://br.evetools.org/related/31002412/202405031900",
     "https://br.evetools.org/related/31002163/202405032000",
+    "https://br.evetools.org/related/31002171/202405040100",
+    "https://br.evetools.org/related/31002092/202405040400",
+    "https://br.evetools.org/related/31002425/202405040300",
+    "https://br.evetools.org/related/31002405/202405040300",
+    "https://br.evetools.org/related/31001014/202405040400",
+    "https://br.evetools.org/related/31002272/202405041800",
+    "https://br.evetools.org/related/31002153/202405041900",
 ]
 
 new = []

@@ -8,7 +8,7 @@
             "ally": "Rainbow Knights",
             "dates": [
                 "2024-03-26",
-                "2024-04-03"
+                "2024-04-04"
             ]
         },
         {
@@ -78,8 +78,7 @@
             "corp": "Full faire parvenir",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-03-28",
-                "2024-05-02"
+                "2024-03-28"
             ]
         }
     ],
@@ -157,7 +156,7 @@
             "corp": "Corp of Holding",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-03-28"
+                "2024-03-29"
             ]
         },
         {
@@ -252,12 +251,32 @@
         },
         {
             "system": "J165953",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "Fueled by RedBull and Liquorice",
+            "ally": "The Candy Shop",
+            "dates": [
+                "2024-03-31"
+            ]
+        },
+        {
+            "system": "J165953",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "Fueled by RedBull and Liquorice",
+            "ally": "The Candy Shop",
+            "dates": [
+                "2024-03-31"
+            ]
+        },
+        {
+            "system": "J165953",
             "type": "Fortizar",
             "team": "Coalition",
             "corp": "Fueled by RedBull and Liquorice",
             "ally": "The Candy Shop",
             "dates": [
-                "2024-03-30"
+                "2024-03-31"
             ]
         },
         {
@@ -267,7 +286,7 @@
             "corp": "Fueled by RedBull and Liquorice",
             "ally": "The Candy Shop",
             "dates": [
-                "2024-03-30"
+                "2024-03-31"
             ]
         },
         {
@@ -277,7 +296,7 @@
             "corp": "Fueled by RedBull and Liquorice",
             "ally": "The Candy Shop",
             "dates": [
-                "2024-03-30"
+                "2024-03-31"
             ]
         },
         {
@@ -287,7 +306,7 @@
             "corp": "Fueled by RedBull and Liquorice",
             "ally": "The Candy Shop",
             "dates": [
-                "2024-03-30"
+                "2024-03-31"
             ]
         },
         {
@@ -297,7 +316,7 @@
             "corp": "Fueled by RedBull and Liquorice",
             "ally": "The Candy Shop",
             "dates": [
-                "2024-03-30"
+                "2024-03-31"
             ]
         }
     ],
@@ -391,7 +410,7 @@
             "corp": "Fingers of God",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-03-30"
+                "2024-03-31"
             ]
         },
         {
@@ -487,7 +506,7 @@
             "corp": "Very dark holding corp of brave and shiny knights",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-03-31"
+                "2024-04-01"
             ]
         },
         {
@@ -601,6 +620,18 @@
             ]
         }
     ],
+    "J121450": [
+        {
+            "system": "J121450",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Q U A C K",
+            "ally": "Rainbow Knights",
+            "dates": [
+                "2024-04-02"
+            ]
+        }
+    ],
     "J150020": [
         {
             "system": "J150020",
@@ -620,48 +651,6 @@
             "ally": "Rainbow Knights",
             "dates": [
                 "2024-04-22"
-            ]
-        }
-    ],
-    "J104037": [
-        {
-            "system": "J104037",
-            "type": "Fortizar",
-            "team": "Coalition",
-            "corp": "Hyperglycemia Holdings",
-            "ally": null,
-            "dates": [
-                "2024-04-02"
-            ]
-        },
-        {
-            "system": "J104037",
-            "type": "Raitaru",
-            "team": "Coalition",
-            "corp": "Hyperglycemia Holdings",
-            "ally": null,
-            "dates": [
-                "2024-04-14"
-            ]
-        },
-        {
-            "system": "J104037",
-            "type": "Tatara",
-            "team": "Coalition",
-            "corp": "Now You Don't",
-            "ally": null,
-            "dates": [
-                "2024-04-16"
-            ]
-        },
-        {
-            "system": "J104037",
-            "type": "Azbel",
-            "team": "Coalition",
-            "corp": "Now You Don't",
-            "ally": null,
-            "dates": [
-                "2024-04-16"
             ]
         }
     ],
@@ -695,7 +684,7 @@
             "corp": "Fingers of God",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-04-02"
+                "2024-04-03"
             ]
         },
         {
@@ -705,7 +694,7 @@
             "corp": "Fingers of God",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-04-02"
+                "2024-04-03"
             ]
         }
     ],
@@ -807,7 +796,7 @@
             "corp": "KAGID",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-04-03"
+                "2024-04-04"
             ]
         },
         {
@@ -817,7 +806,19 @@
             "corp": "KAGID",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-04-03"
+                "2024-04-04"
+            ]
+        },
+        {
+            "system": "J132106",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Hole Dancers Holding",
+            "ally": null,
+            "dates": [
+                "2024-04-07",
+                "2024-04-11",
+                "2024-04-27"
             ]
         },
         {
@@ -884,7 +885,7 @@
             "corp": "Blue Loot Factory",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-04-04"
+                "2024-04-05"
             ]
         }
     ],
@@ -1188,6 +1189,28 @@
             ]
         }
     ],
+    "J133241": [
+        {
+            "system": "J133241",
+            "type": "Raitaru",
+            "team": "Coalition",
+            "corp": "Wildly Incompetent",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-04-09"
+            ]
+        },
+        {
+            "system": "J133241",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Wildly Incompetent",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-04-20"
+            ]
+        }
+    ],
     "J160855": [
         {
             "system": "J160855",
@@ -1293,7 +1316,7 @@
             "corp": "Peace During War Among Nations",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-10",
+                "2024-04-11",
                 "2024-04-22"
             ]
         },
@@ -1304,7 +1327,7 @@
             "corp": "Peace During War Among Nations",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-10"
+                "2024-04-11"
             ]
         },
         {
@@ -1314,7 +1337,7 @@
             "corp": "Peace During War Among Nations",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-10"
+                "2024-04-11"
             ]
         },
         {
@@ -1497,7 +1520,7 @@
             "corp": "The Devil's Rage",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-13"
+                "2024-04-14"
             ]
         },
         {
@@ -1507,7 +1530,7 @@
             "corp": "The Devil's Rage",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-13"
+                "2024-04-14"
             ]
         }
     ],
@@ -1540,6 +1563,38 @@
             "ally": null,
             "dates": [
                 "2024-04-20"
+            ]
+        }
+    ],
+    "J104037": [
+        {
+            "system": "J104037",
+            "type": "Raitaru",
+            "team": "Coalition",
+            "corp": "Hyperglycemia Holdings",
+            "ally": null,
+            "dates": [
+                "2024-04-14"
+            ]
+        },
+        {
+            "system": "J104037",
+            "type": "Tatara",
+            "team": "Coalition",
+            "corp": "Now You Don't",
+            "ally": null,
+            "dates": [
+                "2024-04-16"
+            ]
+        },
+        {
+            "system": "J104037",
+            "type": "Azbel",
+            "team": "Coalition",
+            "corp": "Now You Don't",
+            "ally": null,
+            "dates": [
+                "2024-04-16"
             ]
         }
     ],
@@ -1712,19 +1767,18 @@
             ]
         }
     ],
-    "J145706": [
-        {
-            "system": "J145706",
-            "type": "Astrahus",
-            "team": "Coalition",
-            "corp": "Not a SYNDE Alt Corporation",
-            "ally": "SYNDE Associates",
-            "dates": [
-                "2024-04-17"
-            ]
-        }
-    ],
     "J144420": [
+        {
+            "system": "J144420",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Landscaping And Maintenance",
+            "ally": "Rainbow Knights",
+            "dates": [
+                "2024-04-17",
+                "2024-04-19"
+            ]
+        },
         {
             "system": "J144420",
             "type": "Astrahus",
@@ -1743,6 +1797,42 @@
             "ally": "DarkSide.",
             "dates": [
                 "2024-04-22"
+            ]
+        }
+    ],
+    "J145706": [
+        {
+            "system": "J145706",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Not a SYNDE Alt Corporation",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-04-17"
+            ]
+        }
+    ],
+    "J115901": [
+        {
+            "system": "J115901",
+            "type": "Astrahus",
+            "team": "Hawks",
+            "corp": "Q U A C K",
+            "ally": "Rainbow Knights",
+            "dates": [
+                "2024-04-17"
+            ]
+        }
+    ],
+    "J104859": [
+        {
+            "system": "J104859",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Happy Hotel",
+            "ally": "Wardec Mechanics",
+            "dates": [
+                "2024-04-18"
             ]
         }
     ],
@@ -1887,6 +1977,18 @@
             ]
         }
     ],
+    "J103400": [
+        {
+            "system": "J103400",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Happy Hotel",
+            "ally": "Wardec Mechanics",
+            "dates": [
+                "2024-04-20"
+            ]
+        }
+    ],
     "J111950": [
         {
             "system": "J111950",
@@ -1905,6 +2007,18 @@
             "type": "Fortizar",
             "team": "Hawks",
             "corp": "Happy Hotel",
+            "ally": "Wardec Mechanics",
+            "dates": [
+                "2024-04-20"
+            ]
+        }
+    ],
+    "J121416": [
+        {
+            "system": "J121416",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Magellan Corporation",
             "ally": "Wardec Mechanics",
             "dates": [
                 "2024-04-20"
@@ -2021,7 +2135,7 @@
             "corp": "Syndicate of Singularities",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-25"
+                "2024-04-26"
             ]
         }
     ],
@@ -2205,7 +2319,7 @@
             "corp": "Fux It We Ball",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-30"
+                "2024-05-01"
             ]
         },
         {
@@ -2215,7 +2329,7 @@
             "corp": "Fux It We Ball",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-04-30"
+                "2024-05-01"
             ]
         }
     ],
@@ -2302,6 +2416,16 @@
     "J103600": [
         {
             "system": "J103600",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "The Devil's Rage",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-02"
+            ]
+        },
+        {
+            "system": "J103600",
             "type": "Astrahus",
             "team": "Coalition",
             "corp": "The Devil's Rage",
@@ -2375,7 +2499,7 @@
             "corp": "Kawahara Heavy Industries",
             "ally": "SYNDE Associates",
             "dates": [
-                "2024-05-02"
+                "2024-05-03"
             ]
         }
     ],
@@ -2388,6 +2512,42 @@
             "ally": "Koneko's Child Support Payments",
             "dates": [
                 "2024-05-03"
+            ]
+        }
+    ],
+    "J134024": [
+        {
+            "system": "J134024",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Tee Holding Gun Runners",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-04"
+            ]
+        }
+    ],
+    "J142247": [
+        {
+            "system": "J142247",
+            "type": "Astrahus",
+            "team": "Unknown",
+            "corp": "Ascomanni Remnant",
+            "ally": null,
+            "dates": [
+                "2024-05-04"
+            ]
+        }
+    ],
+    "J221117": [
+        {
+            "system": "J221117",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Ether Tesla Corporation",
+            "ally": null,
+            "dates": [
+                "2024-05-04"
             ]
         }
     ]

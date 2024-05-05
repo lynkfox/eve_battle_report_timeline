@@ -1,0 +1,61 @@
+{
+    "status": "success",
+    "new": true,
+    "timings": [
+        {
+            "systemID": 31002367,
+            "start": 1713405600,
+            "end": 1713409200
+        }
+    ],
+    "teams": [],
+    "viewed": 3,
+    "ended": 1713409200,
+    "calculated": true,
+    "kmsCount": 1,
+    "totalAllys": 1,
+    "totalLost": 139972801,
+    "totalPilots": 1,
+    "totalShipTypes": 1,
+    "totalShips": 1,
+    "id": "66366ee38ee77d0011c15cfb",
+    "relateds": [
+        {
+            "systemID": 31002367,
+            "start": 1713405600,
+            "end": 1713409200,
+            "kms": [
+                {
+                    "id": 117091486,
+                    "sys": 31002367,
+                    "time": 1713409173,
+                    "sumV": 139972801,
+                    "vict": {
+                        "char": 1050620328,
+                        "corp": 98363074,
+                        "ally": 99005476,
+                        "ship": 12034,
+                        "dmg": 8419
+                    },
+                    "atts": [
+                        {
+                            "char": 0,
+                            "corp": 98704284,
+                            "ally": 99009324,
+                            "ship": 35833,
+                            "weap": 0,
+                            "dmg": 8419
+                        }
+                    ]
+                }
+            ],
+            "system": {
+                "name": "J104859",
+                "region": "F-R00030",
+                "ss": "-1.0",
+                "whClassID": 6
+            }
+        }
+    ],
+    "short": true
+}

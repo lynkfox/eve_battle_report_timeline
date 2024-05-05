@@ -5,12 +5,12 @@ from typing import List, Optional, Tuple
 
 from pydantic import BaseModel, field_serializer
 
-from models.eve import EveAlliance, LARGE_STRUCTURES, StationType, System
+from models.eve import EveAlliance, LARGE_STRUCTURES, StructureType, System
 from data.teams import Team
 
 
 class StructureEntry(BaseModel):
-    type: StationType
+    type: StructureType
     team: Team
     value: float
     owner: EveAlliance
@@ -28,7 +28,7 @@ class StructureEntry(BaseModel):
             return None
 
     @field_serializer("type")
-    def serialize_started(self, type: StationType, _info):
+    def serialize_started(self, type: StructureType, _info):
         return type.value
 
     def estimate_timer(self):
@@ -45,7 +45,7 @@ class StructureEntry(BaseModel):
                 self.estimated_timers.append(
                     StationTimer().estimate_timer(False, self.unknown_timer_on, hp_type="shield")
                 )
-            elif self.type == StationType.UNKNOWN:
+            elif self.type == StructureType.UNKNOWN:
                 self.estimated_timers.append(
                     StationTimer().estimate_timer(True, self.unknown_timer_on, hp_type="shield")
                 )

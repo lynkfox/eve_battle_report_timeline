@@ -17,21 +17,23 @@ from br.util import (
     get_id_from_link,
     is_saved_br,
     get_statics,
+    get_structure_type,
 )
 from data.sde import SYSTEM_WEATHER
 from data.teams import WhoseWho
 from models.eve import (
     Weather,
-    StationType,
+    StructureType,
     SystemOwner,
     EveAlliance,
     EvePilot,
     EveShip,
+    EveStructure,
     EveSystem,
     EveCorp,
     EveEntity,
     LARGE_STRUCTURES,
-    StationType,
+    StructureType,
 )
 from dataclasses import dataclass, field
 from models.battle_report_2 import *
@@ -77,8 +79,8 @@ class AllData:
     battles: Dict[str, Battle2] = field(default_factory=dict)
     structures: Dict[str, StructureHistory] = field(default_factory=dict)
     structure_owners: Dict[str, List[dict]] = field(default_factory=dict)
-    start_date: datetime = datetime(2999, 12, 31)
-    end_date = datetime(1900, 1, 1)
+    start_date: datetime = datetime(2999, 12, 31, tzinfo=tz.UTC)
+    end_date = datetime(1900, 1, 1, tzinfo=tz.UTC)
 
     def __post_init__(self):
         self.__mapping = {
@@ -161,32 +163,31 @@ class AllData:
     def get_station_owners(self):
         output = {}
         for structure in self.structures.values():
-            if not structure.is_gunner_entry:
-                system_override = structure.team
-                if structure.system in WHOSE_WHO.HawksSystems:
-                    system_override = Team.HAWKS
-                if structure.system in WHOSE_WHO.CoalitionSystems:
-                    system_override = Team.COALITION
-                output.setdefault(structure.system, []).append(
-                    {
-                        "system": structure.system,
-                        "type": structure.type.value,
-                        "team": system_override.value,
-                        "corp": structure.corp,
-                        "ally": structure.alliance,
-                        "dates": [d.strftime("%Y-%m-%d") for d in structure.dates],
-                    }
+            system_override = structure.team
+            if structure.system in WHOSE_WHO.HawksSystems:
+                system_override = Team.HAWKS
+            if structure.system in WHOSE_WHO.CoalitionSystems:
+                system_override = Team.COALITION
+            output.setdefault(structure.system, []).append(
+                {
+                    "system": structure.system,
+                    "type": structure.type.value,
+                    "team": system_override.value,
+                    "corp": structure.corp,
+                    "ally": structure.alliance,
+                    "dates": [d.strftime("%Y-%m-%d") for d in structure.dates],
+                }
+            )
+            self.structure_owners.setdefault(structure.system, []).append(
+                SystemOwner(
+                    system=structure.system,
+                    type=structure.type,
+                    team=system_override,
+                    corp=structure.corp,
+                    ally=structure.alliance,
+                    dates=[d.strftime("%Y-%m-%d") for d in structure.dates],
                 )
-                self.structure_owners.setdefault(structure.system, []).append(
-                    SystemOwner(
-                        system=structure.system,
-                        type=structure.type,
-                        team=system_override,
-                        corp=structure.corp,
-                        ally=structure.alliance,
-                        dates=[d.strftime("%Y-%m-%d") for d in structure.dates],
-                    )
-                )
+            )
 
         return output
 
@@ -251,45 +252,68 @@ def parse_teams(
             pilot, pod_link = get_pilot_and_pod_zkill_link(participant, all_data, br_id)
             alliance, corp, loss_value, multiple_killed = get_ally_corp_value_killed(participant, all_data, br_id)
 
-            faction, suspected = hawks_or_not(alliance, corp)
+            faction, suspected = hawks_or_not(alliance, corp, battle_date)
             if suspected:
                 all_suspected_teams.append(faction)
             else:
                 known_teams.append(faction)
 
-            team.ships.append(ship)
+            team._ships.append(ship)
             team.km_links.append(km_link)
             if pilot is not None:
                 pilot.alliance = alliance.name if alliance is not None else None
                 pilot.corp = corp.name
-                team.pilots.append(pilot)
+                team._pilots.append(pilot)
             if pod_link is not None:
                 team.pilots_podded.append(pilot.name)
                 team.km_links.append(pod_link)
 
             if alliance is not None:
-                team.alliances.append(alliance)
-            team.corps.append(corp)
+                team._alliances.append(alliance)
+            team._corps.append(corp)
 
             if is_structure(ship.name):
                 structure_team = WHOSE_WHO.known_team(alliance.name if alliance is not None else corp.name)
-                structure_history_id = note_structure_event(
-                    ship,
-                    structure_team,
-                    pilot,
-                    alliance,
-                    corp,
-                    system,
-                    battle_date,
-                    loss_value,
-                    multiple_killed,
-                    all_data,
-                    br_id,
+
+                is_gunner = pilot is not None and pilot.name != ship.name
+
+                structure_history_id = None
+                if not is_gunner:
+                    structure_history_id = note_structure_event(
+                        ship,
+                        structure_team,
+                        pilot,
+                        alliance,
+                        corp,
+                        system,
+                        battle_date,
+                        loss_value,
+                        multiple_killed,
+                        all_data,
+                        br_id,
+                    )
+                    team.structure_history_ids.append(structure_history_id)
+
+                structure_entry = EveStructure(
+                    name=pilot.name if is_gunner else ship.name,
+                    id_num=pilot.id_num if is_gunner else ship.id_num,
+                    image_link=pilot.image_link if is_gunner else ship.image_link,
+                    type=get_structure_type(ship.name),
+                    structure_history_id=structure_history_id,
+                    destroyed_here=loss_value > 0,
+                    loss_value=loss_value,
+                    is_gunner_entry=is_gunner,
+                    gunner_name=pilot.name if is_gunner else None,
+                    gunner_corp=pilot.corp if is_gunner else None,
+                    gunner_alliance=pilot.alliance if is_gunner else None,
+                    multiple_killed=multiple_killed,
                 )
 
-                team.structures.append(structure_history_id)
+                team._structures.append(structure_entry)
+                structure_entry.seen_in.add(br_id)
+                team.structure_destroyed = loss_value > 0
 
-        if structure_team is not None:
+        if structure_team is not None and structure_team is not Team.UNKNOWN:
             team.team = structure_team
         elif len(known_teams) > 0:
             if len(set(known_teams)) == 1:
@@ -308,14 +332,14 @@ def parse_teams(
 
 def parse_battle_time_values(page: BeautifulSoup, raw_data: dict, use_br: bool) -> BattleTime:
     if use_br:
-        date = datetime.fromtimestamp(raw_data["timings"][0]["start"])
+        date = datetime.fromtimestamp(raw_data["timings"][0]["start"], tz=tz.UTC)
         duration = page.find("div", attrs={"class": SAVED_BR_DURATION}).findChildren("div")
         if len(duration) == 0:
             full_string = page.find("div", attrs={"class": SAVED_BR_DURATION}).text
         else:
             full_string = " ".join([c.text for c in duration])
     else:
-        date = datetime.strptime(raw_data["datetime"], "%Y%m%d%H%M")
+        date = datetime.strptime(raw_data["datetime"], "%Y%m%d%H%M").replace(tzinfo=tz.UTC)
         ended = page.find("div", attrs={"class": RELATED_BR_DURATION})
         full_string = ended.findNext("div").text
 
@@ -424,22 +448,16 @@ def note_structure_event(
     all_data: AllData,
     br_id: str,
 ) -> str:
+    structure_type = get_structure_type(ship.name)
 
-    if "Customs Office" in ship.name:
-        station_type = StationType.POCO
-    elif "Control Tower" in ship.name:
-        station_type = StationType.POS
-    else:
-        station_type = StationType(ship.name)
     history_id = structure_history_id(system, alliance, corp, ship)
 
     structure = all_data.structures.setdefault(
         history_id,
         StructureHistory(
             id_number=history_id,
-            type=station_type,
-            is_large=station_type in LARGE_STRUCTURES,
-            is_gunner_entry=pilot is not None and pilot.name != ship.name,
+            type=structure_type,
+            is_large=structure_type in LARGE_STRUCTURES,
             system=system.name,
             team=team,
             alliance=alliance.name if alliance is not None else None,
@@ -591,17 +609,19 @@ def get_ally_corp_value_killed(
     return alliance, corp, loss_value, multiple_killed
 
 
-def hawks_or_not(alliance: EveAlliance, corp: EveCorp) -> Tuple[Team, bool]:
+def hawks_or_not(alliance: EveAlliance, corp: EveCorp, date: datetime) -> Tuple[Team, bool]:
 
+    if (alliance is not None and alliance.name in WHOSE_WHO.Switchers) or corp.name in WHOSE_WHO.Switchers:
+        return WHOSE_WHO.which_team_for_switchers(corp.name if alliance is None else alliance.name, date), False
     suspected = False
     if alliance is None:
-        team = WHOSE_WHO.known_team(f"corporation - {corp.name}")
+        team = WHOSE_WHO.known_team(corp.name)
     else:
         team = WHOSE_WHO.known_team(alliance.name)
 
     if team == Team.UNKNOWN:
         if alliance is None:
-            team = WHOSE_WHO.known_team(f"corporation - {corp.name}")
+            team = WHOSE_WHO.known_team(corp.name)
         else:
             team = WHOSE_WHO.known_team(alliance.name)
 

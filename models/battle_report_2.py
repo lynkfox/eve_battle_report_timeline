@@ -2,14 +2,40 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 from math import floor
-from typing import Dict, List, Optional, Tuple, Set
+from typing import Any, Dict, List, Optional, Tuple, Set
 
 from pydantic import BaseModel, field_serializer
 
-from models.eve import EveAlliance, EveCorp, EvePilot, EveShip, EveSystem, LARGE_STRUCTURES, StationType, System
+from models.eve import (
+    EveAlliance,
+    EveCorp,
+    EvePilot,
+    EveShip,
+    EveStructure,
+    EveSystem,
+    LARGE_STRUCTURES,
+    StructureType,
+    System,
+)
 from data.teams import Team, WhoseWho
+from functools import cached_property
 
 WHOSE_WHO = WhoseWho()
+
+
+class BattleBaseModel(BaseModel):
+    def __getattribute__(self, __name: str) -> Any:
+        prop_name = f"_{__name}"
+        if hasattr(self, prop_name):
+            attr = getattr(self, prop_name)
+            if hasattr(attr, "name"):
+                return [a.name for a in attr]
+
+        elif hasattr(self, __name):
+            return getattr(self, __name)
+
+        else:
+            raise ValueError(f"{type(self)} has no property {__name}")
 
 
 class Battle2(BaseModel):
@@ -69,18 +95,36 @@ class BattleTime(BaseModel):
 class TeamReport(BaseModel):
     br_team_letter: str
     team: Team = Team.UNKNOWN
-    alliances: List[EveAlliance] = []
-    corps: List[EveCorp] = []
-    pilots: List[EvePilot] = []
-    ships: List[EveShip] = []
+    _alliances: List[EveAlliance] = []
+    _corps: List[EveCorp] = []
+    _pilots: List[EvePilot] = []
+    _ships: List[EveShip] = []
     km_links: List[str] = []
     pilots_podded: List[str] = []
-    structures: List[str] = []  # list of id's for Structure History entries
+    _structures: List[EveStructure] = []
+    structure_history_ids: List[str] = []  # list of id's for Structure History entries
     totals: BattleReportResults = BattleReportResults(isk_lost=0, ships_lost=0, total_pilots=0)
+    structure_destroyed: bool = False
 
     @property
-    def structure_destroyed(self) -> bool:
-        return any([s.destroyed_on is not None or s.value > 0 for s in self.structures])
+    def alliances(self):
+        return [a.name for a in self._alliances]
+
+    @property
+    def corps(self):
+        return [a.name for a in self._corps]
+
+    @property
+    def pilots(self):
+        return [a.name for a in self._pilots]
+
+    @property
+    def ships(self):
+        return [a.name for a in self._ships]
+
+    @property
+    def structures(self):
+        return [a.name for a in self._structures]
 
 
 class BattleReportTotals(BaseModel):
@@ -163,9 +207,8 @@ class BattleReportCount(BaseModel):
 class StructureHistory(BaseModel):
     id_number: str
     name: Optional[str] = None
-    type: StationType
+    type: StructureType
     is_large: bool
-    is_gunner_entry: bool
     system: str
     team: Team
     alliance: Optional[str] = None

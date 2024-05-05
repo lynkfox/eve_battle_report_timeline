@@ -1,7 +1,7 @@
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from timeline_builder.build import build_timeline_nodes, map_battles, build_timelines
+from plot_builder.build import build_timeline_nodes, map_battles, build_timelines
 from models.battle_report import Battle
 from models.timeline import TimelineNode
 from typing import List
@@ -9,7 +9,7 @@ from pandas import DataFrame
 from datetime import datetime, timedelta
 from data import load_json
 from dataclasses import dataclass
-from timeline_builder.output import determine_size_reference_variable, create_subplot_traces
+from plot_builder.output import determine_size_reference_variable, create_subplot_traces
 
 
 @dataclass

@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
 from typing import Dict, List
+from dateutil import tz
 
 
 class Team(Enum):
@@ -17,9 +18,9 @@ class Team(Enum):
 @dataclass
 class SideSwitch:
     name: str
-    start: datetime = datetime(1900, 1, 1)
+    start: datetime = datetime(1900, 1, 1, tzinfo=tz.UTC)
     side: Team = Team.NOT_INVOLVED
-    end: datetime = datetime(2999, 12, 31)
+    end: datetime = datetime(2999, 12, 31, tzinfo=tz.UTC)
 
     def allegiance(self, at: datetime):
         """
@@ -86,21 +87,21 @@ class WhoseWho:
         self.ThirdParty = data["Third Party"]
 
         self.SideSwitches = {
-            "corporation - Noob Corp Inc": [
-                SideSwitch(name="corporation - Noob Corp Inc", side=Team.HAWKS, end=datetime(2024, 4, 1)),
+            "Noob Corp Inc": [
+                SideSwitch(name="Noob Corp Inc", side=Team.HAWKS, end=datetime(2024, 4, 1, tzinfo=tz.UTC)),
                 SideSwitch(
-                    name="corporation - Noob Corp Inc",
-                    start=datetime(2024, 4, 1),
+                    name="Noob Corp Inc",
+                    start=datetime(2024, 4, 1, tzinfo=tz.UTC),
                     side=Team.COALITION,
                 ),
             ],
             "Seriously Suspicious": [
-                SideSwitch(name="Seriously Suspicious", side=Team.COALITION, end=datetime(2024, 4, 17)),
-                SideSwitch(name="Seriously Suspicious", side=Team.HAWKS, start=datetime(2024, 4, 17)),
+                SideSwitch(name="Seriously Suspicious", side=Team.COALITION, end=datetime(2024, 4, 17, tzinfo=tz.UTC)),
+                SideSwitch(name="Seriously Suspicious", side=Team.HAWKS, start=datetime(2024, 4, 17, tzinfo=tz.UTC)),
             ],
-            "corporation - Vapor Lock.": [
-                SideSwitch(name="corporation - Vapor Lock.", side=Team.COALITION, end=datetime(2024, 3, 27)),
-                SideSwitch(name="corporation - Vapor Lock.", side=Team.NEUTRAL, start=datetime(2024, 3, 27)),
+            "Vapor Lock.": [
+                SideSwitch(name="Vapor Lock.", side=Team.COALITION, end=datetime(2024, 3, 27, tzinfo=tz.UTC)),
+                SideSwitch(name="Vapor Lock.", side=Team.NEUTRAL, start=datetime(2024, 3, 27, tzinfo=tz.UTC)),
             ],
         }
 

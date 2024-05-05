@@ -266,7 +266,7 @@ def build_dummy_plots(fig: go.Figure, system_names, split_by_jclass: bool = Fals
             fig.add_trace(plot)
 
 
-def build_page(all_data: AllData, split_by_jclass: bool = False) -> go.Figure:
+def build_timeline_page(all_data: AllData, split_by_jclass: bool = False) -> go.Figure:
 
     jclass_subplot_ranges = [("C6", 6, 7), ("C5", 5, 6), ("KSpace-C4", 0, 5)]
     if split_by_jclass:

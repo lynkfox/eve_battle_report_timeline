@@ -2,13 +2,13 @@ from dataclasses import dataclass
 from datetime import datetime
 
 from data.sde import STATION_FIGHTERS
-from models.eve import StationType
+from models.eve import StructureType
 
 
 @dataclass
 class StructureKillTime:
     qualifier: int
-    type: StationType
+    type: StructureType
     timer: datetime
 
 
@@ -92,7 +92,7 @@ def add_station_timer_for_fighter(battle: Battle):
             owner = EveAlliance(name=owner.name, image_link=owner.zkill_link, corps={owner.corp: "0"})
 
         unknown_timer = StationKill(
-            type=StationType.UNKNOWN,
+            type=StructureType.UNKNOWN,
             value=0.0,
             owner=owner,
             unknown_timer_on=battle.time_data.started,

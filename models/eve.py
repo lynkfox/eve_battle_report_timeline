@@ -144,6 +144,34 @@ class EveShip(EveEntity):
     """
 
 
+class EveStructure(EveEntity):
+    """
+    An Eve Structure
+
+    inherited:
+        name [str]: name of this Alliance
+        image_link [str]: url to the image for this alliance
+        id_num [str]: id for this entity
+        seen_in [List[str]]: a list of BR_identifiers this entity has been seen in
+    """
+
+    type: StructureType
+    structure_history_id: Optional[str]
+    destroyed_here: bool = False
+    value: float = 0.0
+    is_gunner_entry: bool = False
+    gunner_name: Optional[str] = None
+    gunner_corp: Optional[str] = None
+    gunner_alliance: Optional[str] = None
+    multiple_killed: Optional[int] = None
+
+    @property
+    def multiple(self) -> str:
+        if self.multiple_killed > 1:
+            return f"x{self.multiple_killed}"
+        return ""
+
+
 class EveSystem(EveEntity):
     """
     An Eve System
@@ -165,6 +193,12 @@ class EveSystem(EveEntity):
     weather: Optional[Weather] = None
     j_class_number: Union[str, int, None] = None
     statics: Optional[list] = None
+
+    @property
+    def static_str(self) -> str:
+        if self.statics is None or len(self.statics) == 0:
+            return ""
+        return self.j_class + "/" + "-".join([s["destination"].replace("C", "") for s in self.statics])
 
     @property
     def j_class(self) -> str:
@@ -200,7 +234,7 @@ class TeamDesignation(BaseModel):
 
 class SystemOwner(TeamDesignation):
     system: str
-    type: StationType
+    type: StructureType
     dates: List[datetime]
 
 
@@ -218,7 +252,7 @@ class Weather(Enum):
         return test.upper() in cls.__members__.keys()
 
 
-class StationType(Enum):
+class StructureType(Enum):
     ASTRAHUS = "Astrahus"
     FORTIZAR = "Fortizar"
     KEEPSTAR = "Keepstar"
@@ -236,4 +270,4 @@ class StationType(Enum):
         return test.upper() in cls.__members__.keys()
 
 
-LARGE_STRUCTURES = [StationType.FORTIZAR, StationType.KEEPSTAR, StationType.SOTIYO, StationType.TATARA]
+LARGE_STRUCTURES = [StructureType.FORTIZAR, StructureType.KEEPSTAR, StructureType.SOTIYO, StructureType.TATARA]
