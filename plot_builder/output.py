@@ -11,13 +11,13 @@ import os
 def build_scatter(all_data: AllData):  ## attempt to add onclick go to battle report
     print("creating timeline plot")
     fig = build_timeline_page(all_data)
-    file_path = "docs/war.html"
+    file_path = "docs/timeline.html"
     build_onclick_link_html(fig, "customdata[0]", file_path)
     webbrowser.open("file://" + os.path.realpath(file_path))
 
     print("creating totals data")
     fig2 = build_totals_page(all_data)
-    file_path2 = "docs/daily_totals.html"
+    file_path2 = "docs/totals.html"
     fig2.show()
     fig2.write_html(file_path2)
 
