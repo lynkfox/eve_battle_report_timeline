@@ -80,6 +80,16 @@
             "dates": [
                 "2024-03-28"
             ]
+        },
+        {
+            "system": "J120823",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Full faire parvenir",
+            "ally": "Rainbow Knights",
+            "dates": [
+                "2024-05-05"
+            ]
         }
     ],
     "J161215": [
@@ -1810,6 +1820,16 @@
             "dates": [
                 "2024-04-17"
             ]
+        },
+        {
+            "system": "J145706",
+            "type": "Astrahus",
+            "team": "Unknown",
+            "corp": "NONAME SOCIETY",
+            "ally": null,
+            "dates": [
+                "2024-05-05"
+            ]
         }
     ],
     "J115901": [
@@ -2548,6 +2568,64 @@
             "ally": null,
             "dates": [
                 "2024-05-04"
+            ]
+        }
+    ],
+    "J133913": [
+        {
+            "system": "J133913",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "The Most Hardcore Snake",
+            "ally": null,
+            "dates": [
+                "2024-05-05"
+            ]
+        },
+        {
+            "system": "J133913",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "The Most Hardcore Snake",
+            "ally": null,
+            "dates": [
+                "2024-05-05"
+            ]
+        }
+    ],
+    "J123940": [
+        {
+            "system": "J123940",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Next Door Neighbours",
+            "ally": "Outback Krabhouse",
+            "dates": [
+                "2024-05-05"
+            ]
+        }
+    ],
+    "J125122": [
+        {
+            "system": "J125122",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Brigand Nation",
+            "ally": null,
+            "dates": [
+                "2024-05-05"
+            ]
+        }
+    ],
+    "J111918": [
+        {
+            "system": "J111918",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Happy Hotel",
+            "ally": "Wardec Mechanics",
+            "dates": [
+                "2024-05-05"
             ]
         }
     ]

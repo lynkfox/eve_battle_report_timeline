@@ -6,6 +6,8 @@ from plot_builder.output import build_scatter
 import pickle
 import os
 
+os.environ["PYPPETEER_CHROMIUM_REVISION"] = "1263111"
+
 br_links = [
     "https://br.evetools.org/related/31002464/202403260000",
     "https://br.evetools.org/related/31002426/202403270000",
@@ -415,6 +417,16 @@ br_links = [
     "https://br.evetools.org/related/31001014/202405040400",
     "https://br.evetools.org/related/31002272/202405041800",
     "https://br.evetools.org/related/31002153/202405041900",
+    "https://br.evetools.org/related/31002123/202405050100",
+    "https://br.evetools.org/related/31001946/202405050100",
+    "https://br.evetools.org/related/31002092/202405050200",
+    "https://br.evetools.org/related/31001055/202405050500",
+    "https://br.evetools.org/related/31002123/202405050500",
+    "https://br.evetools.org/related/31002272/202405050600",
+    "https://br.evetools.org/br/663826d4a2c9030012b91fd7",
+    "https://br.evetools.org/related/31002502/202405051800",
+    "https://br.evetools.org/related/31002433/202405051800",
+    "https://br.evetools.org/related/31002392/202405052300",
 ]
 
 new = []
