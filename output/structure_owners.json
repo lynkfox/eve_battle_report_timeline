@@ -861,7 +861,8 @@
             "ally": "Rainbow Knights",
             "dates": [
                 "2024-04-27",
-                "2024-04-30"
+                "2024-04-30",
+                "2024-05-06"
             ]
         }
     ],
@@ -2077,6 +2078,16 @@
             "dates": [
                 "2024-04-23"
             ]
+        },
+        {
+            "system": "J105023",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Syndicate of Singularities",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-06"
+            ]
         }
     ],
     "J122818": [
@@ -2626,6 +2637,18 @@
             "ally": "Wardec Mechanics",
             "dates": [
                 "2024-05-05"
+            ]
+        }
+    ],
+    "J220924": [
+        {
+            "system": "J220924",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Lethal Devotion",
+            "ally": "Hole Control",
+            "dates": [
+                "2024-05-06"
             ]
         }
     ]
