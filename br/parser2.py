@@ -322,8 +322,12 @@ def parse_teams(
                 team_counts = dict(Counter(known_teams))
                 team.team = max(team_counts, key=team_counts.get)
         else:
+
             team_counts = dict(Counter(all_suspected_teams))
-            team.team = max(team_counts, key=team_counts.get)
+            if len(team_counts) == 0:
+                print("No team")
+            else:
+                team.team = max(team_counts, key=team_counts.get)
 
         output.append(team)
 

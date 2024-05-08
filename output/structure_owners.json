@@ -2614,6 +2614,16 @@
             "dates": [
                 "2024-05-05"
             ]
+        },
+        {
+            "system": "J123940",
+            "type": "Astrahus",
+            "team": "Unknown",
+            "corp": "New Talocan Empire",
+            "ally": null,
+            "dates": [
+                "2024-05-07"
+            ]
         }
     ],
     "J125122": [
@@ -2649,6 +2659,76 @@
             "ally": "Hole Control",
             "dates": [
                 "2024-05-06"
+            ]
+        }
+    ],
+    "J145523": [
+        {
+            "system": "J145523",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "MeatCheesus BBQ Party",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-07"
+            ]
+        },
+        {
+            "system": "J145523",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "MeatCheesus BBQ Party",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-07"
+            ]
+        }
+    ],
+    "J215304": [
+        {
+            "system": "J215304",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Slurp em up",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-07"
+            ]
+        }
+    ],
+    "J101553": [
+        {
+            "system": "J101553",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Tee Holding Gun Runners",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-07"
+            ]
+        }
+    ],
+    "J114430": [
+        {
+            "system": "J114430",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Cannabis Cowboys",
+            "ally": "Rainbow Knights",
+            "dates": [
+                "2024-05-07"
+            ]
+        }
+    ],
+    "J125716": [
+        {
+            "system": "J125716",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Driffting.",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-07"
             ]
         }
     ]

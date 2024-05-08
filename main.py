@@ -432,6 +432,16 @@ br_links = [
     "https://br.evetools.org/related/31002437/202405061500",
     "https://br.evetools.org/br/66397698a2c9030012b920e3",
     "https://br.evetools.org/related/31002036/202405061900",
+    "https://br.evetools.org/br/663acf8cf68f7000119e6663",
+    "https://br.evetools.org/br/663ad577f68f7000119e666b",
+    "https://br.evetools.org/related/31002498/202405070200",
+    "https://br.evetools.org/related/31002355/202405070200",
+    "https://br.evetools.org/br/663ad819f68f7000119e6674",
+    "https://br.evetools.org/related/31002441/202405070300",
+    "https://br.evetools.org/br/663acf0303aec300126937b9",
+    "https://br.evetools.org/related/31002443/202405071500",
+    "https://br.evetools.org/br/663ad5e7f68f7000119e666d",
+    "https://br.evetools.org/related/31002296/202405072000",
 ]
 
 new = []

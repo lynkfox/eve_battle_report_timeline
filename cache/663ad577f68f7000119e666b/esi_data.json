@@ -1,0 +1,76 @@
+{
+    "status": "success",
+    "new": true,
+    "timings": [
+        {
+            "systemID": 31002438,
+            "start": 1715043600,
+            "end": 1715054400
+        }
+    ],
+    "teams": [
+        [
+            "99009384"
+        ],
+        [
+            "99005601"
+        ]
+    ],
+    "viewed": 3,
+    "ended": 1715054400,
+    "calculated": true,
+    "kmsCount": 1,
+    "totalAllys": 2,
+    "totalLost": 95537292,
+    "totalPilots": 2,
+    "totalShipTypes": 1,
+    "totalShips": 1,
+    "id": "663ad577f68f7000119e666b",
+    "relateds": [
+        {
+            "systemID": 31002438,
+            "start": 1715043600,
+            "end": 1715054400,
+            "kms": [
+                {
+                    "id": 117620445,
+                    "sys": 31002438,
+                    "time": 1715047212,
+                    "sumV": 95537292,
+                    "vict": {
+                        "char": 2118378837,
+                        "corp": 98770277,
+                        "ally": 99009384,
+                        "ship": 49710,
+                        "dmg": 4910
+                    },
+                    "atts": [
+                        {
+                            "char": 168381841,
+                            "corp": 98074026,
+                            "ally": 99005601,
+                            "ship": 35832,
+                            "weap": 47035,
+                            "dmg": 3764
+                        },
+                        {
+                            "char": 0,
+                            "corp": 98074026,
+                            "ally": 99005601,
+                            "ship": 47035,
+                            "weap": 0,
+                            "dmg": 1146
+                        }
+                    ]
+                }
+            ],
+            "system": {
+                "name": "J101652",
+                "region": "F-R00030",
+                "ss": "-1.0",
+                "whClassID": 6
+            }
+        }
+    ],
+    "short": true
+}
