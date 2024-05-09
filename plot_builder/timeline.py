@@ -118,6 +118,9 @@ def build_jspace_plots(all_data: AllData, fig: go.Figure, subplot_ranges, split_
     else:
         combined_ycords = []
         subplot_yaxis_ranges.reverse()
+
+        build_important_systems_lines(fig, split_by_jclass, all_data.start_date, all_data.end_date)
+
         for ycords in subplot_yaxis_ranges:
             combined_ycords.extend(ycords)
 
@@ -127,7 +130,7 @@ def build_jspace_plots(all_data: AllData, fig: go.Figure, subplot_ranges, split_
             add_jclass_dividers(
                 fig,
                 subplot_yaxis_ranges,
-                ["↓ C6 ↓", "↓ C5 ↓", "↓ C4-Kspace ↓"],
+                ["↓ C4-Kspace ↓", "↓ C5 ↓", "↓ C6 ↓"],
                 all_data.start_date,
                 all_data.end_date,
             )
@@ -161,6 +164,7 @@ def add_jclass_subplot_annotations(fig: go.Figure, split_by_jclass: bool = False
                 yshift=offset,
                 showarrow=True,
                 xanchor="left",
+                arrowcolor="black",
             )
         else:
             fig.add_annotation(
@@ -171,6 +175,7 @@ def add_jclass_subplot_annotations(fig: go.Figure, split_by_jclass: bool = False
                 yshift=offset,
                 showarrow=True,
                 xanchor="left",
+                arrowcolor="black",
             )
 
 
@@ -186,7 +191,25 @@ def add_jclass_dividers(fig: go.Figure, jclass_system_order, names, start_date, 
             name=names[idx],
             layer="between",
             showlegend=False,
+            label=dict(text=names[idx], padding=15),
             opacity=0.7,
+        )
+
+
+def build_important_systems_lines(fig: go.Figure, split_by_jclass: bool, start_date, end_date):
+    for key, value in WHOSE_WHO.SystemsOfNote.items():
+        fig.add_shape(
+            type="line",
+            x0=start_date,
+            x1=end_date,
+            y0=key,
+            y1=key,
+            line=dict(color="#828282", width=1, dash="dash"),
+            name=value,
+            layer="between",
+            showlegend=False,
+            opacity=0.6,
+            label=dict(text=f"{key}: {value}", textposition="start", font=(dict(size=12, color="#828282"))),
         )
 
 

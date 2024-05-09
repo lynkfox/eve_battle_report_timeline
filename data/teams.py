@@ -59,6 +59,8 @@ class WhoseWho:
     SideSwitches: Dict[str, List[SideSwitch]] = field(default_factory=dict)
     Switchers: List[str] = field(default_factory=list)
 
+    SystemsOfNote: Dict[str, str] = field(default_factory=dict)
+
     def __post_init__(self):
         with open("data\whosewho.json", "r") as f:
             data = json.load(f)
@@ -79,6 +81,9 @@ class WhoseWho:
         self.CoalitionNull = data["Coalition"]["Null"]
         self.CoalitionSuspected = data["Coalition"]["Suspected"]
         self.CoalitionSystems = data["Coalition"]["Systems"]
+
+        # systems of note for annotations
+        self.SystemsOfNote = data["important_systems"]
 
         # corps known to have switched sides - see SideSwitches for details
         self.Switchers = data["Switcher"]
