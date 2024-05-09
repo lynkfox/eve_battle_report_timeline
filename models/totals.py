@@ -1,11 +1,11 @@
 from __future__ import annotations
 from models.battle_report_2 import Battle2, TeamReport
+from models.eve import EntityType, EveEntity
 from data.teams import Team
 from plot_builder.timeline import HAWKS_COLOR, COALITION_COLOR, UNKNOWN_COLOR
 import plotly.graph_objects as go
-from dataclasses import dataclass
-from typing import List
-from collections import namedtuple
+from dataclasses import dataclass, field
+from typing import List, Optional, Dict
 
 dummy_team = TeamReport(
     br_team_letter="",

@@ -272,6 +272,8 @@ def parse_teams(
                 team._alliances.append(alliance)
             team._corps.append(corp)
 
+            increment_entity_values(pilot, ship, corp, alliance, br_id)
+
             if is_structure(ship.name):
                 structure_team = WHOSE_WHO.known_team(alliance.name if alliance is not None else corp.name)
 
@@ -293,12 +295,12 @@ def parse_teams(
                         br_id,
                     )
                     team.structure_history_ids.append(structure_history_id)
-
+                structure_type = get_structure_type(ship.name)
                 structure_entry = EveStructure(
                     name=pilot.name if is_gunner else ship.name,
                     id_num=pilot.id_num if is_gunner else ship.id_num,
                     image_link=pilot.image_link if is_gunner else ship.image_link,
-                    type=get_structure_type(ship.name),
+                    type=structure_type,
                     structure_history_id=structure_history_id,
                     destroyed_here=loss_value > 0,
                     loss_value=loss_value,
@@ -312,6 +314,25 @@ def parse_teams(
                 team._structures.append(structure_entry)
                 structure_entry.seen_in.add(br_id)
                 team.structure_destroyed = loss_value > 0
+
+                corp.structures.setdefault(system.name, {}).setdefault(structure_type.value, {"s": 0, "d": 0, "g": 0})
+                if is_gunner:
+                    corp.structures[system.name][structure_type.value]["g"] += 1
+                else:
+                    corp.structures[system.name][structure_type.value]["s"] += 1
+                if loss_value > 0:
+                    corp.structures[system.name][structure_type.value]["d"] += 1
+
+                if alliance is not None:
+                    alliance.structures.setdefault(system.name, {}).setdefault(
+                        structure_type.value, {"s": 0, "d": 0, "g": 0}
+                    )
+                    if is_gunner:
+                        alliance.structures[system.name][structure_type.value]["g"] += 1
+                    else:
+                        alliance.structures[system.name][structure_type.value]["s"] += 1
+                    if loss_value > 0:
+                        alliance.structures[system.name][structure_type.value]["d"] += 1
 
         if structure_team is not None and structure_team is not Team.UNKNOWN:
             team.team = structure_team
@@ -632,3 +653,24 @@ def hawks_or_not(alliance: EveAlliance, corp: EveCorp, date: datetime) -> Tuple[
         suspected = True
 
     return team, suspected
+
+
+def increment_entity_values(pilot: EvePilot, ship: EveShip, corp: EveCorp, alliance: Optional[EveAlliance], br_link):
+    if pilot is not None and ship is not None:
+        pilot.ships.setdefault(ship.name, 0)
+        pilot.ships[ship.name] += 1
+
+    if corp is not None and pilot is not None:
+        corp.members.setdefault(pilot.name, 0)
+        corp.members[pilot.name] += 1
+
+        corp.pilots_per_battle.setdefault(br_link, 0)
+        corp.pilots_per_battle[br_link] += 1
+
+    if corp is not None and ship is not None:
+        corp.ships.setdefault(ship.name, 0)
+        corp.ships[ship.name] += 1
+
+    if alliance is not None and corp is not None:
+        alliance.members.setdefault(corp.name, 0)
+        alliance.members[corp.name] += 1

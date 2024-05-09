@@ -1,0 +1,1551 @@
+{
+    "Description": "Number of appearances for each corp in each alliance",
+    "Last Compiled": "2024-05-09",
+    "Hawks and Friends": {
+        "Rainbow Knights": {
+            "Oro Escondido": 1,
+            "Boy Parts": 1,
+            "Full faire parvenir": 1,
+            "Mammoth Logistics": 1,
+            "The Principality of Zeon.": 1,
+            "Cannabis Cowboys": 1,
+            "Landscaping And Maintenance": 1,
+            "Like dis if you kry everytiem": 1,
+            "Very dark holding corp of brave and shiny knights": 1,
+            "Vaholdings": 1,
+            "Vahalla La": 1,
+            "Port Maw Cartel": 1,
+            "Adventurous Psychedelic Enjoyers Society": 1,
+            "Le Potato Farm": 1,
+            "Leeole's Legion": 1,
+            "Fingers of God": 1,
+            "Corp of Holding": 1,
+            "Blue Loot Factory": 1,
+            "Kanuna's Salvaging Yard": 1,
+            "KAGID": 1,
+            "Vicinity of Obscenity": 1,
+            "Rayet Holdings": 1,
+            "Touching Tips": 1,
+            "Q U A C K": 1,
+            "Zefalasparagus": 1,
+            "Ektanis Baking Club": 1,
+            "S P A C E - X": 1,
+            "Cherry Blossoms Anonymous": 1,
+            "Hole Insane": 1,
+            "Rent Collection Convoy": 1,
+            "SILLY STUFF": 1,
+            "Erratum Holding": 1,
+            "Union for Underpaid School Teachers": 1,
+            "Centerlink": 1,
+            "Pegasus Properties LLC": 1,
+            "Pivovarna Union": 1,
+            "Gravimetric Pressure": 1,
+            "Coal Fusion Industries": 1,
+            "Leafy Greens Incorporated": 1,
+            "Caterpillar Nest": 1,
+            "Hellhound Logistic Incorporated": 1,
+            "Astro Electrical Engineering": 1,
+            "Air Terrific Control": 1,
+            "Wetchik Estate": 1,
+            "Dirty Drinkers": 1,
+            "Black Swans and Wormhole Wizards": 1,
+            "xX Pasta Legion Citizens. Xx": 1,
+            "Anxiety Holdings": 1,
+            "Knights of the dangerous unknown table": 1,
+            "ST Borg": 1,
+            "The corp for old men": 1
+        },
+        "Hard Knocks Associates": {
+            "Hard Knocks Holdings": 1,
+            "Hard Knocks Defense Federation": 1
+        },
+        "Hard Knocks Citizens": {
+            "Erratum.": 1,
+            "Hard Knocks Inc.": 1,
+            "Knights of Artemis": 1,
+            "Mesta War Machine": 1,
+            "Space.Force.": 1,
+            "2456": 1,
+            "Cult of Black Phillip": 1,
+            "And Hell Followed With Him": 1,
+            "Hong Kong Refugees": 1,
+            "Solo Dancing": 1
+        },
+        "L A Z E R H A W K S": {
+            "Lazerhawks": 1
+        },
+        "Rote Kapelle": {
+            "The Gavinomium": 1,
+            "Overclocker.": 1,
+            "Signal Reflection": 1,
+            "Stimulus": 1,
+            "Pure Avarice.": 1
+        },
+        "Breuvages Kiri": {
+            "Farmer Bean's Agricultural Society": 1,
+            "The Pillow Knights": 1,
+            "Ugandan Home Owners Association": 1,
+            "Ugandan Sentry Squad": 1,
+            "Scary in Space": 1
+        },
+        "null": {
+            "Ugandan Death Squad": 1,
+            "Pseudo-Intellectual White Knight Dog": 1,
+            "Kingsparrow Wormhole Division": 1,
+            "Turbo miners inc": 1,
+            "jeberbek": 1,
+            "SHENSHIDEENMO": 1,
+            "1-800 Space Maids": 1,
+            "The Shire of Guinea Pigs": 1,
+            "EVE Online Troll Specialization V": 1,
+            "333 Republic School 323": 1,
+            "To rule them all": 1,
+            "Brygada Zaczepna": 1,
+            "SL0W. Holding": 1,
+            "SAFELOG": 1,
+            "NONAME SOCIETY": 1,
+            "Catalyst Corporation": 1,
+            "NeighbourRoach": 1,
+            "Astrum Architecti": 1,
+            "Holdlings": 1,
+            "Roundtable Congress": 1,
+            "Holding 418": 1,
+            "Order Strigiformes": 1,
+            "Equinoxe.": 1,
+            "Brigand Nation": 1
+        },
+        "C U L T": {
+            "Mateber Mining and Manufacturing Company": 1
+        },
+        "SL0W CHILDREN AT PLAY": {
+            "Nonpersistent Threat": 1,
+            "Slow Chidlren at Play": 1,
+            "DAWGS Corp.": 1,
+            "legion of fortune": 1,
+            "Short Bus Buccaneers": 1,
+            "Urban Mining Group": 1,
+            "The Bjorg Collective": 1
+        },
+        "New. Sig.": {
+            "Voidlings": 1,
+            "The Bilderberg Group": 1,
+            "Church of Blue Loot": 1
+        },
+        "Fraternity.": {
+            "Phoenix City": 1,
+            "Nuwa Foundation": 1,
+            "Fraternity Building Management": 1,
+            "Arknights.": 1,
+            "ChuangShi": 1,
+            "STARCHASER Inc": 1,
+            "Dragonborn of New Eden": 1,
+            "Chaos arbiter": 1,
+            "Starry Armada": 1,
+            "Lone Army Fighting Club": 1,
+            "BTCSI": 1,
+            "KheshigFleet": 1,
+            "Descendants of Shen Nong": 1,
+            "My Little Pony.": 1,
+            "Light Spot Poacher": 1,
+            "Fuxi Legion": 1,
+            "YeLuo-XingHai": 1,
+            "Formosa Research Center": 1,
+            "Galactic Empire Co LTD": 1,
+            "Snow Moon City": 1,
+            "Jade Cloud Corporation": 1,
+            "Humankind Empire of Abh": 1,
+            "Stardust-Guardian": 1,
+            "Thunders Claw Fleet": 1,
+            "Gangue hill": 1,
+            "Iron.Guard": 1,
+            "Raccoon Covenant": 1,
+            "ZER0POINT": 1,
+            "No Mercy For Percy": 1,
+            "Area-52": 1
+        },
+        "No Vacancies.": {
+            "No Vacancies": 1
+        },
+        "Fraternity University": {
+            "Chuangshi College": 1,
+            "Siren Awake": 1,
+            "Trisolaris Military Academy": 1,
+            "Jade Cloud University": 1,
+            "STARCHASER University": 1,
+            "Baye industry": 1,
+            "I Don't Give a Darn": 1
+        },
+        "SLOW Logistics Alliance": {
+            "SL0W. Logistics": 1,
+            "Hel Hammern": 1,
+            "Apocalypse Nomads": 1
+        },
+        "Sirius-Business": {
+            "Sirius Proxima": 1
+        },
+        "Czarna-Kompania.": {
+            "Czarna-Kompania": 1
+        },
+        "Blue Loot Not Included": {
+            "Outfit 418": 1,
+            "Lifeform Designed to Kill": 1
+        },
+        "Beyond the understanding of human behavior": {
+            "Injected minds": 1
+        },
+        "Nerds of a Feather": {
+            "The Back Hand": 1,
+            "We Worship StrawBerrys": 1,
+            "The Immortal Demons": 1,
+            "Curb Stompers": 1,
+            "Flock'n Animals": 1
+        },
+        "Neon Nightmares": {
+            "Violent Trans Matching": 1
+        },
+        "Guinea Pigs Appreciation Society": {
+            "G-Force.": 1,
+            "Complejo de Investigacion y Desarrollo Naval": 1,
+            "Contacto J-space": 1
+        },
+        "Wardec Mechanics": {
+            "Rackers": 1,
+            "Dark Fusion Industrial": 1,
+            "Bearholes Gone Wild": 1,
+            "SmartBomb Mechanics": 1,
+            "Happy Hotel": 1,
+            "Ghost House Holdings": 1,
+            "Love and Wormholes": 1,
+            "Krab Team 6": 1,
+            "Wasted Beers": 1,
+            "Magellan Corporation": 1,
+            "Deez Nuts Association": 1,
+            "NV Holdings": 1
+        },
+        "Sirius Krabs": {
+            "Cephalopods of Destiny": 1
+        },
+        "War and Wormhole": {
+            "Salted Fish Inc": 1,
+            "FeedingMachine": 1,
+            "Sleeping and Wake Up": 1
+        },
+        "Caduceus.": {
+            "Bush Meanies": 1,
+            "Secret Surprise": 1
+        },
+        "VERGED Holdings": {
+            "Order of the Wanderers": 1
+        },
+        "Verged": {
+            "B.L.A.C.K F.O.X": 1
+        },
+        "Pill urself": {
+            "KrabberHood": 1
+        }
+    },
+    "The Coalition": {
+        "Stay Feral": {
+            "Speaker for the Dead": 1,
+            "Duty.": 1,
+            "African Atomic.": 1
+        },
+        "Disturbing Silence.": {
+            "Blood Alcohol Content": 1,
+            "Disturbing Silence": 1,
+            "H I P P I T Y . H O P P I T Y": 1
+        },
+        "We Forsakened Few": {
+            "The Forsakened Few": 1
+        },
+        "FFEW Associates": {
+            "Steamwheel Industries": 1,
+            "Strongblood Holdings Inc": 1,
+            "Last Chance for Redemption": 1,
+            "Hekiru Space Exploration": 1,
+            "FFEW Holdings": 1,
+            "Virus Protection": 1,
+            "Grab Her by The Pith Si": 1,
+            "BatteryCorp": 1,
+            "Inter Arma": 1
+        },
+        "Singularity Syndicate": {
+            "Singularity Expedition Services": 1,
+            "Bastards at the Hole": 1,
+            "Hyperspatial Bomb Delivery": 1
+        },
+        "Wild Fat Cocks": {
+            "Not A Holder": 1,
+            "Fake Menace": 1,
+            "Dizz Corp": 1,
+            "The 0th foundation": 1,
+            "221st Support group": 1,
+            "Never Not Sandbag": 1
+        },
+        "SYNDE Associates": {
+            "Zero Imagination": 1,
+            "Syndicate of Singularities": 1,
+            "Rook celeste Corporation inc squared": 1,
+            "Ricdic Is Not Suitably Edible": 1,
+            "Ascomanni Remnant": 1,
+            "Gainnewlife Corporation": 1,
+            "Tee Holding Gun Runners": 1,
+            "Fux It We Ball": 1,
+            "Aventure Chasse Peche": 1,
+            "Dane-train": 1,
+            "Yakuza Dudes": 1,
+            "The Devil's Rage": 1,
+            "Peace During War Among Nations": 1,
+            "Kor Intergalactic Empire Inc.": 1,
+            "Monte Carlo Inc": 1,
+            "Weapons of the Alliance": 1,
+            "Wildly Incompetent": 1,
+            "Odd Looking Delectables": 1,
+            "Piratical Activities": 1,
+            "Pukuu": 1,
+            "Blue Guardians": 1,
+            "Nocx Holdings": 1,
+            "Exiles Holding": 1,
+            "Stolen Goods Industries": 1,
+            "Holding of MEINS": 1,
+            "Shad0w Wizard M0ney Gang": 1,
+            "Not a SYNDE Alt Corporation": 1,
+            "Clam Sand Distribution Systems": 1,
+            "FairBairn Holdin": 1,
+            "Banana Hammock Thunder Squad": 1,
+            "Prison Sex": 1,
+            "Nomadic Living": 1,
+            "Tourelach Industries": 1,
+            "Pantless Horses": 1,
+            "The Taco Truck": 1,
+            "Practical Applications of Antimatter Physics": 1,
+            "2 Men and a Goat": 1,
+            "House Atreides Holdings": 1,
+            "Abyssal Freighting": 1,
+            "Cobalt Mining Militia": 1,
+            "Kawahara Heavy Industries": 1,
+            "Blahajideen Freedom Fighters": 1,
+            "Bling Fleet": 1,
+            "MeatCheesus BBQ Party": 1,
+            "Slurp em up": 1,
+            "Driffting.": 1
+        },
+        "Sugar.": {
+            "Insulin LLC": 1,
+            "White Pearl Initiative": 1,
+            "Orbital Tactics": 1,
+            "4VICTORY": 1,
+            "Flying Jumping bears": 1,
+            "3Guys1Orca": 1,
+            "Yashin ex Machina": 1,
+            "Silent Majority.": 1,
+            "External Factors LLC": 1,
+            "Wormhole Effects": 1
+        },
+        "Koneko's Child Support Payments": {
+            "Hold Deez.": 1,
+            "Neon Genocide": 1,
+            "Wandering Whales": 1,
+            "Morganus Holdings": 1,
+            "Challengers Alpha": 1,
+            "UwU Industry": 1,
+            "Time Force Special Squad": 1,
+            "Mark's Retirement Fund": 1,
+            "Morytania Trading Co": 1,
+            "Yassavi Holding Group": 1,
+            "Orgron Holdings": 1,
+            "Psychic Genocide": 1,
+            "Wranglers": 1,
+            "Xadi Holding": 1,
+            "Ne Plus Ultra": 1,
+            "Ansat's Taxi": 1
+        },
+        "Unchained Alliance": {
+            "Exit-Strategy": 1
+        },
+        "Outback Krabhouse": {
+            "Deep Hole Investments": 1,
+            "Les serpents de Pandora": 1,
+            "Next Door Neighbours": 1,
+            "Dausu Collective": 1,
+            "CityState": 1,
+            "Cael Viatoribus": 1,
+            "Kraken a goat": 1,
+            "Toilet Emergency": 1,
+            "Monster Hunter International": 1,
+            "No Irony": 1
+        },
+        "TURBOFEED OR GLORY": {
+            "Holey Roamin' Empire": 1,
+            "Interbellum": 1,
+            "Yassavi Corp.": 1,
+            "Overload This": 1
+        },
+        "null": {
+            "Vapor Lock.": 1,
+            "Anoikis Firewatch": 1,
+            "SIT LUX": 1,
+            "Hyperglycemia Holdings": 1,
+            "Operaatio MatoLuola": 1,
+            "Hole Dancers Holding": 1,
+            "ATLAS CORPORATION S.A": 1,
+            "H0LE IN 0NE": 1,
+            "ATLAS CORPORATION HOLDING": 1,
+            "Top Shelf Holding": 1,
+            "Now You Don't": 1,
+            "Reduced Connections": 1,
+            "Somewhat Law-Abiding Citizens": 1,
+            "Submarine INC": 1,
+            "Mutilate Retirement Fund": 1,
+            "League Of Quantum Legends": 1,
+            "CHURCH OF SERENITY": 1,
+            "The Most Hardcore Snake": 1,
+            "Late Night WormHolers Inc.": 1
+        },
+        "The Candy Shop": {
+            "Towing Ur Mom": 1,
+            "The Space Exiles Co.": 1,
+            "Fueled by RedBull and Liquorice": 1,
+            "JFK WAS GANKED": 1,
+            "Way of White": 1,
+            "INTERNATIONAL INDUSTRIES": 1,
+            "new eden hauling inc.": 1,
+            "I'm On A Boat Industries": 1
+        },
+        "Atrax Hollow": {
+            "ATRAX.": 1,
+            "Holey Amarrian Inquisition": 1
+        },
+        "Hole Control": {
+            "Avanto": 1,
+            "Unreasonable Neighbours": 1,
+            "Bohemian Worms": 1,
+            "Lethal Devotion": 1,
+            "Black Powder Ballistics": 1,
+            "Vision Inc": 1,
+            "NexaVast VoidWorks": 1
+        },
+        "Deepwater Hooligans": {
+            "Outback Steakhouse of Pancakes": 1,
+            "ElitistOps": 1,
+            "Windowlickers Inc": 1,
+            "Jump 2 Beacon": 1,
+            "Rogue Herring.": 1,
+            "Old Bittervets": 1
+        },
+        "E.C.H.O Holding": {
+            "Liquid Isk.": 1
+        },
+        "No Mercy For Percy.": {
+            "A Leap Of Faith": 1
+        },
+        "E.C.H.O": {
+            "Inevitable Outcome": 1,
+            "BLACK FOX COLLECTIVE": 1
+        },
+        "The Initiative.": {
+            "DEFCON.": 1,
+            "United Mining and Hauling Inc": 1,
+            "Freyja Syndicate": 1,
+            "Kinship": 1,
+            "Ethereal Morality": 1,
+            "The Graduates": 1,
+            "Vanishing Point.": 1,
+            "Baba Yagas": 1,
+            "Cherry Defense Systems": 1,
+            "League of Gentlemen": 1,
+            "Sisters of EVE - Origins": 1,
+            "Project Stealth Squad": 1,
+            "Worthless Carebears": 1,
+            "Cloak and Daggers": 1,
+            "Game of Drones": 1,
+            "The KittenSwarm Federation": 1,
+            "Unsung Heroes": 1,
+            "Public Enemies CO": 1,
+            "Simple Businessmen": 1,
+            "TEMPLAR.": 1,
+            "Thundercats": 1,
+            "Veni Vidi Vici Inc": 1,
+            "Resilience.": 1,
+            "Siromanci": 1,
+            "Warriors of Caldari": 1,
+            "Air": 1,
+            "Unleashed' Fury": 1,
+            "Helgast Militarum": 1,
+            "Dead's Prostitutes": 1,
+            "Kraken Exploration and Janitorial Services": 1,
+            "Eternal Darkness.": 1,
+            "Applied Anarchy": 1,
+            "Solar Meta": 1,
+            "Gildinous Vangaurd": 1,
+            "STK Scientific": 1,
+            "WALLTREIPERS": 1,
+            "Cruisers Crew": 1,
+            "Machinum": 1,
+            "GeoCorp.": 1,
+            "The Bannermen": 1,
+            "Xynodyne": 1,
+            "Tactically Challenged": 1,
+            "E.X.A.L.T.E.D": 1,
+            "Lost Legends": 1,
+            "Children Of The Isotope": 1,
+            "Falcoes Peregrinos": 1,
+            "Teutate raiders": 1,
+            "ANGELGARD.": 1,
+            "Grey Templars": 1
+        },
+        "Dracarys.": {
+            "Why So Sage": 1,
+            "Moriya Military Industry Complex": 1,
+            "HongLou": 1,
+            "Kuan.Dai.Shan": 1,
+            "AWAKE LIONS": 1,
+            "Faceless.": 1,
+            "WAAAGH THE HELLLL": 1,
+            "Eternity Pavilion": 1,
+            "De Vliegende Hollander.": 1,
+            "Tu Zi Fei Corporation": 1,
+            "Emperor Scythes": 1,
+            "B.O.P Supplication For Glorious": 1,
+            "North Shore Ghost Army": 1,
+            "Stars Corporate Group": 1,
+            "Why is this Pigeon so Big": 1,
+            "Schale.": 1,
+            "Sing Hua": 1,
+            "Cyber Violence Authority": 1,
+            "TuoLaJi Team": 1,
+            "The Covenant combined fleet": 1,
+            "Titan Federation": 1,
+            "SummerHall": 1,
+            "F.13 Base": 1,
+            "Eviction Co.": 1,
+            "Starfire Industry": 1,
+            "Rage Confederacy": 1,
+            "Chromaggus Corp": 1,
+            "Flying Cats": 1,
+            "Obsidian Engineering": 1
+        },
+        "D E L E T E L O C A L": {
+            "Alpha Frank Kilo": 1
+        },
+        "Can i bring my Drake...": {
+            "Q-Zar": 1,
+            "Deadly Dozen Mans": 1,
+            "Formica Corp.": 1
+        },
+        "Prismatic Legion": {
+            "Be Nice Inc.": 1
+        },
+        "SUS Holding": {
+            "Could Be Anyone": 1
+        },
+        "Seriously Suspicious": {
+            "Shadow Legion X": 1
+        },
+        "DarkSide.": {
+            "NanoNerf Inc.": 1,
+            "Far East Inc": 1
+        },
+        "Moss Piglet Preservation Society": {
+            "Protean Concept": 1,
+            "Aurae Scientia": 1
+        },
+        "Stryker Group": {
+            "Stryker Industries": 1,
+            "K162'S": 1
+        }
+    },
+    "Unknown": {
+        "Top Shelf": {
+            "Metagamez": 1
+        },
+        "null": {
+            "Noob Corp Inc": 1,
+            "Garloid Preservation and Conservation Society": 1,
+            "Consultancy": 1,
+            "Agitator Holdings": 1,
+            "The Mighty Beans": 1,
+            "Donec Purum Scoriam": 1,
+            "The Sceptre": 1,
+            "School of Applied Knowledge": 1,
+            "Garoun Investment Bank": 1,
+            "Malakim Zealots": 1,
+            "Imperial Academy": 1,
+            "Technobev": 1,
+            "Hedion University": 1,
+            "Pator Tech School": 1,
+            "Federal Navy Academy": 1,
+            "Center for Advanced Studies": 1,
+            "Science and Trade Institute": 1,
+            "State War Academy": 1,
+            "Ventures Bar": 1,
+            "Ichinumib's Space Force Milition": 1,
+            "W-Space Squad": 1,
+            "1613": 1,
+            "Sibila Explorer WH": 1,
+            "State Protectorate": 1,
+            "Deaf Squadron": 1,
+            "Pints and Prospectors": 1,
+            "Zorg Industries.": 1,
+            "V0ID REAVERS": 1,
+            "Not Just A Game": 1,
+            "Dynamic Revolution Enterprises": 1,
+            "The Anoikis Project": 1,
+            "Whole Squid": 1,
+            "The Royal Wormhole Agency": 1,
+            "Staging Point For Sale": 1,
+            "Republic Military School": 1,
+            "Sebiestor Tribe": 1,
+            "Republic University": 1,
+            "Muppets from Space": 1,
+            "Far Point International": 1,
+            "Tywins Mechanical Dong": 1,
+            "Hole Awareness": 1,
+            "Korupt FM": 1,
+            "The Bean Holder": 1,
+            "The Scope": 1,
+            "Royal Amarr Institute": 1,
+            "0RANJ": 1,
+            "Coalition for Displaced Capsuleers": 1,
+            "Dark Nova Industries": 1,
+            "The Protoss Protectorate": 1,
+            "Icecreamtrain Industries": 1,
+            "Give us isk": 1,
+            "Flying Fox Logistics": 1,
+            "SpaceX Noir": 1,
+            "Viziam": 1,
+            "Olympus Misfits": 1,
+            "Darkwraiths": 1,
+            "Bob's Burgers": 1,
+            "Dildough Delivery Services LLC": 1,
+            "Warp Nomads": 1,
+            "ScotFire": 1,
+            "WH0RE SQUAD": 1,
+            "MoonEmpire": 1,
+            "Im Sorry EVE": 1,
+            "University of Caille": 1,
+            "Cool Crimes Inc": 1,
+            "Sins Saintz": 1,
+            "Planetary Deep Development": 1,
+            "E C L I P S E": 1,
+            "Proudly Snoring": 1,
+            "G And R Aeronautics Industries": 1,
+            "Perkone": 1,
+            "PIN Associates.": 1,
+            "CATALYST TOWER": 1,
+            "Space Oddities Join Us": 1,
+            "Bromeliaceae": 1,
+            "Deep Core Mining Inc.": 1,
+            "United Mining and Hauling Janitor Plc": 1,
+            "Ca Plane Pour Moi": 1,
+            "LET ME SUCK YOUR TOES": 1,
+            "Green Vegetables": 1,
+            "While My Guitar Gently Weeps": 1,
+            "Spooky Space Salesmen": 1,
+            "Alpaca Breeding Company": 1,
+            "SYNDE ROMANTIC COMMAND": 1,
+            "AlduinCorp": 1,
+            "Dunkin-Donuts": 1,
+            "Umenod Holdings": 1,
+            "Vargurs Go BRRRRRRR": 1,
+            "Baka Corps": 1,
+            "Tax Heaven": 1,
+            "Salt Cartel": 1,
+            "M1A12 Corp": 1,
+            "Blue Sun Holdings LLC": 1,
+            "Damage Plan": 1,
+            "Seekers of the holy bagel": 1,
+            "The ExtraOne Space": 1,
+            "Kulhavy sup": 1,
+            "Soltech Armada": 1,
+            "Highly Regarded Signature Finders": 1,
+            "United Standings Improvement Agency": 1,
+            "Saqueadores": 1,
+            "Points Mean Prizes": 1,
+            "African Coconut Beach Resort": 1,
+            "Tiltyard Collective": 1,
+            "Advanced Threat Suppression Unit": 1,
+            "Aether.": 1,
+            "Redpimp's WhoreEmporium": 1,
+            "Ordo Minoris": 1,
+            "Corp of MEINS": 1,
+            "Tengus are here.": 1,
+            "Peaceful Ragnarok Cafe and Bath House": 1,
+            "Loki is here.": 1,
+            "Valhalla Norse": 1,
+            "Kanuna's Salvaging Associates": 1,
+            "Evasive Maneuvers Inc": 1,
+            "Crokite Embezzlement Firm": 1,
+            "Death to All Sandbaggers": 1,
+            "CyberTecK Production Technologies": 1,
+            "Operation E Staging": 1,
+            "If you Die Its Rapid Light": 1,
+            "Swipe Left": 1,
+            "Yandex.Taxi": 1,
+            "BAKA HENTAI": 1,
+            "Knees2Face Corp.": 1,
+            "WormHole Bros": 1,
+            "brevery Purvanen Corporation": 1,
+            "LP Crabs": 1,
+            "Peace Enmity Gum": 1,
+            "Almost Zero": 1,
+            "Arth 2456": 1,
+            "Russian Krab Corp 4678954123": 1,
+            "Caldari Provisions": 1,
+            "EXTELLAR H": 1,
+            "Carebear Mission Runners Inc": 1,
+            "Handler One": 1,
+            "Metatron's Cube": 1,
+            "Neko Racing": 1,
+            "ATJIAHTuDA": 1,
+            "Watcher Out": 1,
+            "Humpback Whale Logistic": 1,
+            "House of Sasan": 1,
+            "36 Chambers": 1,
+            "HEAVY KAWAIS ASSOCIATES": 1,
+            "Homefront Mercenaries": 1,
+            "Sentinel Task Force Associates": 1,
+            "Dinastia Rios": 1,
+            "Tesza Stark Corporation": 1,
+            "Industry association": 1,
+            "SS Exodus Holdings": 1,
+            "Stellaroom.Inc": 1,
+            "SPPlan INC": 1,
+            "small skill": 1,
+            "Daxon Industries": 1,
+            "Wiskey Brothers": 1,
+            "Apostles of Joomba": 1,
+            "Fat Soil": 1,
+            "New Eden Federal Intelligence Agency": 1,
+            "Wormhole Development Cooperation Organization": 1,
+            "ThE Night Gamblers": 1,
+            "R-Shifted": 1,
+            "Project Entropy.": 1,
+            "Thundercloaks": 1,
+            "Fullerite Syndicate": 1,
+            "D4RK M00N": 1,
+            "Deep Industries And Mining": 1,
+            "Zhang Holding": 1,
+            "This is a Bird Meme": 1,
+            "Suddenly Carebears": 1,
+            "Some Corporation.": 1,
+            "Bugcat Capoo": 1,
+            "Hongda International Electronics Co.": 1,
+            "Click Clack Club": 1,
+            "Awaken Warriors Society": 1,
+            "StarTrek.": 1,
+            "Ready for Remote Detonation": 1,
+            "Rebirth of Av3ng3rs": 1,
+            "To Lead To Excel To Overcome": 1,
+            "Manly Muscle Tribe Of Danger And Excellence": 1,
+            "Light Style Academy": 1,
+            "Catalysts R Us": 1,
+            "killer sauce": 1,
+            "I Want To Hear You Scream": 1,
+            "Get Jinxed": 1,
+            "Da zdravstvuet pervoe maya": 1,
+            "Nova Dynamics.": 1,
+            "Holey Holdings": 1,
+            "Gurnney's Hunters": 1,
+            "Simp Agency": 1,
+            "shattered luna": 1,
+            "4534537455": 1,
+            "Shield Supers in Eso": 1,
+            "Reincarnated Otakus": 1,
+            "Hidden Variables": 1,
+            "Gathering Of The Damned": 1,
+            "Bootleggers MC": 1,
+            "Bloodthirsty Slaves": 1,
+            "Riders of Darkness": 1,
+            "Anti Gate Freight": 1,
+            "Guys With Guns": 1,
+            "Vigilant Tyrannos": 1,
+            "Nebula Cooperative": 1,
+            "Robots in disguise": 1,
+            "The Replicators": 1,
+            "Lafiq": 1,
+            "Panzerknacker AG": 1,
+            "The Atticus Project": 1,
+            "Magical Ponies and Butterflies": 1,
+            "Deimos Enterprises": 1,
+            "Shadow Flight": 1,
+            "Distant Worlds Reclamation and Venture Services": 1,
+            "model bank and investments": 1,
+            "Stolen Goods Transport": 1,
+            "Templarios Oscuros": 1,
+            "Some Men Just Want To Watch The World Burn.": 1,
+            "The Alt Corp for Alts of": 1,
+            "Shadow Goverment": 1,
+            "Anglo-Space Mining": 1,
+            "Super Saiyen God's": 1,
+            "Tooky Tooky Space Bird Federation": 1,
+            "KEY-OWNER HOLDINGS": 1,
+            "Refugees of Bria for Bubbles": 1,
+            "Gunboat Commando": 1,
+            "Hazardous Investment Group": 1,
+            "Spazzoid Enterprises": 1,
+            "happy game in wormhole": 1,
+            "Sweet Water Alley": 1,
+            "Lost Wolfpack": 1,
+            "Serenity Prime": 1,
+            "Lip Shords": 1,
+            "Corporation 939": 1,
+            "Titans Of Eve": 1,
+            "Serenity of the Void": 1,
+            "Imperial Shipment": 1,
+            "FishDicks": 1,
+            "Betel Quantum Horizons": 1,
+            "ANTIKRAB AKTION": 1,
+            "Raiders of Crimson Steppes": 1,
+            "Sniff My Wormhole": 1,
+            "Jesus died for your sins": 1,
+            "Big Stonks Only": 1,
+            "Exploration Sheeps Pancake Syrups Inc": 1,
+            "owo corpo": 1,
+            "Bravery .and. Stupidity": 1,
+            "Republic Defense Force": 1,
+            "Por la razon o la fuerza": 1,
+            "Elite Fleet Group": 1,
+            "Russian PvE and Mining Academy": 1,
+            "Bottletoads": 1,
+            "Shadow of xX-Hiki-Xx": 1,
+            "MinMax.": 1,
+            "Shaljoro Tribe Scouting": 1,
+            "Elite By Nature": 1,
+            "Andromeda Strain": 1,
+            "ATLAS CORPORATION INC": 1,
+            "NIN ELISH HOLDING": 1,
+            "Owen Wilson's WOW Factory": 1,
+            "Menace of Morons": 1,
+            "Clan Gron": 1,
+            "Sugar-free Coca-Cola has no soul": 1,
+            "Space Is Dark And Full of Terrors": 1,
+            "Rapid Exploration Corporation": 1,
+            "Advanced Logistics": 1,
+            "Brutor Tribe": 1,
+            "Interstellar Sober Living Home": 1,
+            "SHINE Spaceship Tech Co Ltd": 1,
+            "Vocation House": 1,
+            "White Square.": 1,
+            "neoliberal deep state cabal": 1,
+            "Crab plex for flex": 1,
+            "Never Play With Fire": 1,
+            "Free space nomads": 1,
+            "White Scars Industries": 1,
+            "Federal Defense Union": 1,
+            "Waffle House Employees": 1,
+            "The Se7en Sins": 1,
+            "Dead Space Horizon": 1,
+            "Natureza Holdings": 1,
+            "Dr. Butthole's Angels": 1,
+            "Krabbing Inc.": 1,
+            "Great Nature": 1,
+            "let's dance the crab": 1,
+            "New eden Trash strike service": 1,
+            "IRS Criminal Investigation": 1,
+            "Mesta Machining Company": 1,
+            "Winner. Winner. Chicken Dinner": 1,
+            "Mesta War Effort": 1,
+            "Tribal Liberation Force": 1,
+            "Local supercluster": 1,
+            "RedCrab Inc.": 1,
+            "Leks Corp": 1,
+            "Crack Inspection Squad": 1,
+            "Clan of Sturlungar": 1,
+            "Power In Numbers": 1,
+            "One Foot In The Hole": 1,
+            "Dzizzle's": 1,
+            "KarmaFleet University": 1,
+            "Notorious Commodities.": 1,
+            "Solarmark": 1,
+            "My Little Pony Farm": 1,
+            "Jita Productions": 1,
+            "Cosmic Trident Corporation": 1,
+            "The Minions of Midas": 1,
+            "VOID-OUT": 1,
+            "Besra Overwatch": 1,
+            "T1 Battleship Fan Club": 1,
+            "Tricky Situations": 1,
+            "RuCorpStain": 1,
+            "Insight Enterprise": 1,
+            "House Annister": 1,
+            "The Independent Legion of Wookies": 1,
+            "Holier Than Thou.": 1,
+            "No man's home": 1,
+            "Cult of Steel Terror": 1,
+            "Stellar Pathfinders": 1,
+            "MINELAbaz": 1,
+            "Stahlwerke Stodertal": 1,
+            "The ISK Siphon": 1,
+            "The Golden Dawn": 1,
+            "Spongeworks Ltd.": 1,
+            "Carnival of Eve": 1,
+            "Hobo Hand Grenade": 1,
+            "Globeatron Dynamics Inc": 1,
+            "Tunelari": 1,
+            "Lubricity of Love": 1,
+            "Czech squadron of loners": 1,
+            "BAND of MAGNUS": 1,
+            "Hashimoto Distributed Bank": 1,
+            "Galactic Information Broker": 1,
+            "HiberNation": 1,
+            "First Amendment Corp": 1,
+            "ZYRV": 1,
+            "GOD LOVE 499": 1,
+            "Orcinus Orca.": 1,
+            "Spaghetti Cannon": 1,
+            "Little Feelings of Big Regret": 1,
+            "Cuba Cola Bottling Company": 1,
+            "Shadow Archers": 1,
+            "Out of Local Inc.": 1,
+            "Neighbors to locals": 1,
+            "Dickhead Corner": 1,
+            "Dangerously Incompetent": 1,
+            "Tulandia": 1,
+            "Spes SA": 1,
+            "Sails never Fails": 1,
+            "Hardcocks": 1,
+            "Paradoxical Quandry": 1,
+            "Gloryholers Anonymous.": 1,
+            "Renkinjutsu Corporation": 1,
+            "Solitariometalisteria": 1,
+            "HighestGround": 1,
+            "The Not So Jolly Rogers Academy": 1,
+            "Ether Tesla Corporation": 1,
+            "W-space guardians": 1,
+            "HADIX TAX FREE CORP": 1,
+            "Corporation For Mineral Acquisition And Banking": 1,
+            "Ewok Industries": 1,
+            "A Wormhole Corp": 1,
+            "DuruToli": 1,
+            "Namir Industries": 1,
+            "Degenerate Depot.": 1,
+            "UngaBunga Nani": 1,
+            "Angry Anomalies": 1,
+            "A few more rounds": 1,
+            "Aliastra": 1,
+            "RED GIANT HOLDING CORP": 1,
+            "Suddenly Structures": 1,
+            "The Pulsar Boys": 1,
+            "Spreadsheeters": 1,
+            "JFK Had a Suspect Timer": 1,
+            "New Talocan Empire": 1,
+            "The Silence of the Lambs": 1,
+            "Mystery Mass Inc.": 1,
+            "Legendary Crew": 1,
+            "State of krab": 1,
+            "Tanzerain Holdings": 1,
+            "Sol Drake Consortium": 1,
+            "Public Neutral Holding": 1,
+            "Chinese Breeze Peace": 1,
+            "Eden Gift Box Production company": 1,
+            "Agriculture": 1,
+            "Red Branch": 1,
+            "Auraus' Modified Tatara": 1,
+            "The Voices Keep Getting Louder": 1,
+            "hackone": 1,
+            "Ministry of War": 1,
+            "Furnace": 1,
+            "Pochven Board of Ethics": 1
+        },
+        "Aspartame.": {
+            "Sorbitol Holdings": 1,
+            "Crux Industries": 1
+        },
+        "Snuffed Out": {
+            "French Drop-O-Panache": 1,
+            "Nothing Comes To Mind": 1,
+            "Wife Is Sleeping": 1,
+            "Lowlife.": 1,
+            "Boomer Humor": 1,
+            "The Stone Garden": 1,
+            "Infinity Avenger": 1
+        },
+        "Tocards Professionnels": {
+            "Rokym's managment organisation": 1
+        },
+        "Yeet. Pray. Love.": {
+            "Nano Currency": 1
+        },
+        "Arkhos Peace Training Support Division": {
+            "Whale Girth": 1
+        },
+        "S K Y W I Z A R D S": {
+            "Luv Gun": 1
+        },
+        "OnlyFleets.": {
+            "Godless Horizon.": 1,
+            "Regiment Of Naga Association": 1
+        },
+        "Pirate Lords of War": {
+            "Nano Gang": 1,
+            "Sons of Seyllin": 1
+        },
+        "Wild Ones": {
+            "H.U.N.T.E.R": 1
+        },
+        "Emotionally. Unstable": {
+            "Retirment Home.": 1
+        },
+        "Order Collective Alliance": {
+            "Blood Money Capitalist Ventures": 1
+        },
+        "Gentlemen's.Club": {
+            "Garbage Incorporated": 1,
+            "Gold Moon Industries": 1,
+            "Enigmous Prime": 1,
+            "Dreadnoughtz Conclave": 1,
+            "Di-Tron Heavy Industries": 1,
+            "Notorious Anomalies.": 1,
+            "Valhalla Guards": 1
+        },
+        "Zoo Landers": {
+            "Center For Kids Who Can't Fly Good": 1
+        },
+        "Wolves Amongst Strangers": {
+            "Almost Dangerous": 1,
+            "Little Red Riding Hole": 1
+        },
+        "United Federation of Conifers": {
+            "The Pinecone Squad": 1
+        },
+        "Dreads Amongst Drifters": {
+            "Lemar Holdings": 1,
+            "Karmic Injustice": 1,
+            "farmers r us": 1,
+            "Ixtab.": 1,
+            "Akragori's Rejects": 1
+        },
+        "LootGoblins": {
+            "Retirement.Home.": 1,
+            "Chicken Manufacturing": 1
+        },
+        "X - Z E S T": {
+            "X-Zest Voyage": 1,
+            "Zero Ambition Corp": 1,
+            "SECURITY SQUAD": 1
+        },
+        "Ghost Rabbits": {
+            "HotDrop Anonymous": 1
+        },
+        "Aurora Alliance": {
+            "Phantom Regiment": 1
+        },
+        "ur fricked": {
+            "Wanderlust.": 1
+        },
+        "Arkhos Core": {
+            "Bellax Borealis": 1
+        },
+        "Cynosural Field Theory.": {
+            "Neurotoxin Control": 1
+        },
+        "M A R A K U G A": {
+            "The Untraceable": 1,
+            "Joe's Saloon": 1
+        },
+        "URSA PRIMUS.": {
+            "URSA PRIMUS": 1,
+            "URSA Legion": 1
+        },
+        "Legion of Vulcan": {
+            "Brewmaster Armada": 1
+        },
+        "Wrong Hole.": {
+            "Whiteout Initiative": 1,
+            "OpSec.": 1,
+            "Dark Skies Dojo": 1
+        },
+        "Astrodwarfs.": {
+            "Astrodwarfs": 1
+        },
+        "Dreadbomb.": {
+            "Invisible Special Projects": 1,
+            "Hot Potato Holding": 1
+        },
+        "Solyaris Chtonium": {
+            "Gregarious Games Mechanized Federation": 1,
+            "Alpha Republic - Transcenders of Space and Time": 1
+        },
+        "Shadow Cartel": {
+            "Immortalis Inc.": 1,
+            "Late night poets": 1,
+            "LowKey Ops": 1
+        },
+        "Siege Green.": {
+            "Need more dudes": 1,
+            "Sons of Black Rise": 1
+        },
+        "United Cats": {
+            "CATALYST FOR YOU": 1
+        },
+        "Goonswarm Federation": {
+            "KarmaFleet": 1,
+            "Magellanic Itg": 1,
+            "GoonWaffe": 1,
+            "Lost Brain Cells": 1,
+            "Unstoppable legion": 1,
+            "Semper Iratus Omni Tempore": 1,
+            "Miners Inn": 1,
+            "Memento. Mori.": 1,
+            "Iron Whales": 1,
+            "Volition Cult": 1,
+            "Unexpected Company": 1,
+            "The Night Watchmen": 1,
+            "Asteroid Farm Unlimited": 1,
+            "Honest Pyramid Schemes": 1,
+            "4S Corporation": 1,
+            "DJ's Retirement Fund": 1,
+            "Peoples Liberation Army": 1,
+            "Brothers of Tyr": 1,
+            "Cuervos Imperiales": 1,
+            "Players vs. EVE": 1,
+            "Ascendance": 1,
+            "Strategically Bad": 1,
+            "UK Corp": 1,
+            "Cabaret": 1,
+            "Carebears -With- Guns": 1,
+            "Thunderwaffe": 1,
+            "ANZAC ALLIANCE": 1,
+            "Cloaked Goof": 1,
+            "Hogyoku": 1,
+            "Tritanium Industries and Technology": 1,
+            "Suspicious Intentions": 1,
+            "AOJI Colliery": 1,
+            "Monkey Attack Squad": 1,
+            "Country House": 1,
+            "NED-Clan": 1,
+            "Cosmos Collective": 1,
+            "Amok.": 1,
+            "Universalis Imperium": 1,
+            "ImperiaI Federation": 1,
+            "Darkmoon Military Industrial Complex": 1,
+            "Mindstar Technology": 1,
+            "Echelon Research": 1,
+            "Close Encounters of the EVE Kind": 1,
+            "Enlightened Industries": 1,
+            "SUNDERING": 1,
+            "Black Aces": 1,
+            "Windrammers": 1
+        },
+        "Tactical Narcotics Team": {
+            "HolyTrident": 1,
+            "Space Wizards.": 1,
+            "Tactically Armed Vanguard": 1,
+            "I N E X T R E M I S": 1,
+            "Imperial Guardians": 1
+        },
+        "Plug N Play": {
+            "Seal Club Six": 1
+        },
+        "Not Purple Shoot It.": {
+            "Hold The Pod": 1,
+            "why did i join this corp": 1
+        },
+        "Brotherhood of Spacers": {
+            "WORLDSTAR HIPHOP": 1,
+            "Star Frontiers": 1,
+            "Vulture Enterprises": 1,
+            "Aurora Empire": 1
+        },
+        "NullSechnaya Sholupen": {
+            "You're dunked": 1
+        },
+        "Azure Citizen": {
+            "FS Holding": 1
+        },
+        "Ocean's Empire": {
+            "Pentacruise Enterprises": 1,
+            "Ocean Eleven": 1
+        },
+        "The Initiates.": {
+            "Aegis Victorium": 1,
+            "Goat to Go": 1,
+            "Threat Contained": 1,
+            "Reconquista Omnis": 1,
+            "Next Frontier": 1,
+            "xQcGOLDx": 1,
+            "Helgast Militarum Army": 1,
+            "Sunny Weather Mercenaries": 1,
+            "Do not disturb": 1
+        },
+        "Alea jacta est.": {
+            "Cepn u MoJIoT": 1
+        },
+        "PEPE SQUAD": {
+            "Russian Space Academy": 1
+        },
+        "Pirate Coalition": {
+            "PYRO MANIACS": 1
+        },
+        "Kybernauts Clade": {
+            "Rapid Unscheduled Disassembly.": 1,
+            "Kybernauts": 1
+        },
+        "Absolute Will": {
+            "Absolute Order VI": 1,
+            "Absolute Order XIV": 1
+        },
+        "Pandemic Horde": {
+            "Fusion Enterprises Ltd": 1,
+            "Profane Proverb": 1,
+            "Brittas Empire": 1,
+            "Deaths Consortium": 1,
+            "Horde Vanguard.": 1,
+            "Pandemic Horde Inc.": 1,
+            "Comms Black": 1,
+            "0.0 Massive Dynamic": 1,
+            "Tech Builds": 1,
+            "Death'sEnd": 1,
+            "Pandemic Horde Hld.": 1
+        },
+        "Absolute Glory": {
+            "Absolute Order XIX": 1
+        },
+        "Absolute Honor": {
+            "Absolute Order": 1
+        },
+        "PURPLE HELMETED WARRIORS": {
+            "The Cynosural Sisters": 1,
+            "Ghetto Warlords": 1
+        },
+        "Kitchen Sinkhole": {
+            "Dark Venture Corporation": 1
+        },
+        "WE FORM YUG0SLAVIA": {
+            "The Femdominations Angels": 1,
+            "Privi Partizan": 1,
+            "Shes a 10 But Disappears Everytime I Take My Pills": 1,
+            "skeleton wheel": 1
+        },
+        "D3LYRIUM": {
+            "Blitzkrieg Battalion": 1
+        },
+        "Greener Pastures United": {
+            "Constellation Development Initiative": 1
+        },
+        "Strange Alliance": {
+            "Nexgen Industry": 1
+        },
+        "Shadow Ultimatum": {
+            "Surreptitious Technologies": 1,
+            "The BadAzz Elite Corporation": 1,
+            "Deadspace Excavations": 1
+        },
+        "Brave Collective": {
+            "Galactic Deep Space Industries": 1,
+            "Therapy.": 1
+        },
+        "The Tuskers Co.": {
+            "The Tuskers": 1
+        },
+        "Colorful Sky Holding Management": {
+            "BSI Holdings": 1
+        },
+        "Feral Associates": {
+            "Uberalles.": 1
+        },
+        "WE FORM V0LTA": {
+            "With our Fears": 1,
+            "V0LTA": 1
+        },
+        "Wormhole Society": {
+            "Violence is the Answer": 1
+        },
+        "Galactic Primates": {
+            "MineBro Corp.": 1
+        },
+        "Blue Sky Syndicate": {
+            "Black Sky Inc": 1
+        },
+        "Kenshin Shogunate.": {
+            "Kenshin Industries.": 1
+        },
+        "Stealth Alliance": {
+            "Bloodhusk Industries": 1
+        },
+        "Chiffas.": {
+            "2x100in1Glass": 1,
+            "Rapid Disassembly": 1,
+            "Last Starkmanirs": 1,
+            "Chiffas": 1,
+            "Roses On Your Grave": 1,
+            "You're All Obviously Incredible": 1
+        },
+        "Ivy League": {
+            "EVE University": 1
+        },
+        "U N K N O W N": {
+            "Anarchist Dawn": 1,
+            "Structural losses": 1,
+            "Bebrakek": 1
+        },
+        "East Wind.": {
+            "Polaris North": 1
+        },
+        "Ronin Reloaded": {
+            "Ronin ONE": 1
+        },
+        "United Starlight Federation": {
+            "Rise of PhoeniX": 1
+        },
+        "Stellae Renascitur": {
+            "Okata Syndicate": 1
+        },
+        "Good Mental": {
+            "Friendly Riot": 1
+        },
+        "Wormbrain Lowbotomy": {
+            "Hiatus Order": 1,
+            "3SINKMAF1A": 1
+        },
+        "i just wanna upload my logo": {
+            "Arakhis Raiders": 1,
+            "trying to be friendly": 1
+        },
+        "FuriaHispana.": {
+            "OutLaws Corporation": 1,
+            "La Flota Carmesi": 1,
+            "FW Scuad": 1
+        },
+        "Drifter Holding": {
+            "Drifter Miners": 1
+        },
+        "HOLD MY PROBS": {
+            "Scan Stakan": 1,
+            "S.A. NERV": 1
+        },
+        "Worst Alliance Ever": {
+            "Brat Pack": 1
+        },
+        "Diplomatic Incidents.": {
+            "The Presence of Something Sinister": 1
+        },
+        "Unspoken Alliance.": {
+            "TOP DAMAGE Ltd.": 1
+        },
+        "4Crabs Tavern": {
+            "Sargos Corporation": 1,
+            "TRX 26cm mens corporation": 1,
+            "The Asgard": 1
+        },
+        "Bright Side of Death": {
+            "NOOBIAN UNION": 1
+        },
+        "Space Ape Vanguard": {
+            "514 Legion": 1
+        },
+        "Honorable Third Party": {
+            "Anoikis Equilibrium": 1,
+            "Trillium Invariant": 1,
+            "Sodium Chloride.": 1,
+            "Canadian Bacon.": 1
+        },
+        "I Showed You My Probes... Please Respond...": {
+            "Bare Minimum Bandits": 1,
+            "Bob's Bait and Tackle": 1,
+            "RoKaSa Industries Ltd.": 1
+        },
+        "Test Alliance Please Ignore": {
+            "Star Ring Praetorian": 1
+        },
+        "Negating a Nasty Outcome. Alliance.": {
+            "Negating a Nasty Outcome.": 1
+        },
+        "Suddenly Spaceships.": {
+            "Mind Games.": 1
+        },
+        "STOKI Asucciates": {
+            "InAndOut": 1
+        },
+        "The Rogue Auxiliaries": {
+            "S4LT Road Truckers": 1
+        },
+        "Hostile Probes.": {
+            "K162 Holdings": 1
+        },
+        "Rote Works": {
+            "Navajazos expres Inc.": 1
+        },
+        "Nourv Gate Security Commission": {
+            "Victory or Whatever": 1,
+            "404. Corporation": 1
+        },
+        "The New Eden Yacht Club.": {
+            "The New Eden Yacht Club": 1
+        },
+        "Forever Blue Horizons": {
+            "Cosmic Cohorts": 1
+        },
+        "Stray Dogs.": {
+            "8 Sins of Man": 1
+        },
+        "Big Green Fly": {
+            "Wormhole Expedition and Exploration Corporation": 1
+        },
+        "The Divine Warriors": {
+            "Bombaclat.": 1
+        },
+        "Wormageddon": {
+            "Pagids Legion": 1
+        },
+        "RED.OverLord": {
+            "My Little Pony Industries Inc.": 1
+        },
+        "Gooseflock Featheration": {
+            "Goosefleet": 1
+        },
+        "No Value": {
+            "NeoCorteX Industry": 1
+        },
+        "Travelers of Both Time and Space": {
+            "Drug Enjoyers Agency": 1
+        },
+        "Anti Krab Coalition": {
+            "Battalion Of The Lost": 1
+        },
+        "Leviathan.": {
+            "The League of Extraordinary Assholes": 1,
+            "Dire Assembly": 1
+        },
+        "The Ninth Eye.": {
+            "Die Burg": 1,
+            "Veldspar Ultras": 1
+        },
+        "Marauders Swarm Alliance": {
+            "Freedom Communications Corporation": 1
+        },
+        "Paper Numbers": {
+            "Death Squad Sektor B": 1
+        },
+        "ROLLED IN.": {
+            "THE AESIR.": 1
+        },
+        "Divine Damnation": {
+            "Heretic Army": 1
+        },
+        "New Jovian Collective": {
+            "New Jovian Exploration Department": 1
+        },
+        "Siege Green Friends": {
+            "Arirang Request": 1
+        },
+        "DPEBHUE PYCbI": {
+            "6u3HeC JlaH4": 1
+        },
+        "OnlyHoles": {
+            "Zoldyck Solutions": 1,
+            "Minds of Murderers": 1
+        },
+        "Ligma Grindset": {
+            "Edge of Deactivation": 1
+        },
+        "Out of the Blue.": {
+            "Into the Ether": 1,
+            "Anti-Bloc Holdings": 1
+        },
+        "ZERG REBORN": {
+            "Trlil corporation": 1,
+            "WILD FLAME": 1
+        },
+        "The Hidden Boom": {
+            "Black Badge Agents": 1
+        },
+        "The Big Blue": {
+            "West Indian Dope Smoking Team": 1
+        },
+        "Sigma Grindset": {
+            "Misfits of the Unknown": 1,
+            "Syndicate Enterprise": 1,
+            "Noobs for Ethical Treatment of Scrubs": 1,
+            "Anarchist Order": 1
+        },
+        "Fluffy.Snakes": {
+            "The EVE-rydayers": 1,
+            "Hellios Cartel": 1,
+            "THE EYE OF HAVOC": 1
+        },
+        "Homicidal Tendencies.": {
+            "Satans Bastard": 1
+        },
+        "Memento Moriendo": {
+            "CloroFormo": 1
+        },
+        "Come in and freak out": {
+            "Nagamoto Inc.": 1
+        },
+        "Templis CALSF": {
+            "Noir.": 1
+        },
+        "Observatory Great Bear": {
+            "SYNDE MEMES": 1
+        },
+        "Good Sax": {
+            "BOATFULL": 1
+        },
+        "CeskoSlovenska Aliance": {
+            "Newbie Friendly Industries": 1,
+            "Assecla in Tellure": 1
+        },
+        "Domain Research and Mining Inst.": {
+            "Feather Rufflers": 1
+        },
+        "Esports Petopia": {
+            "F1 Monkey.": 1
+        },
+        "Polaris Mercenary Alliance": {
+            "We Love Cody": 1
+        },
+        "Griffin And Kruger": {
+            "Mountain Water Always Meet": 1
+        },
+        "Invidia Gloriae Comes": {
+            "Zhuque squad": 1
+        },
+        "UA Fleets": {
+            "Nezlamni": 1
+        },
+        "SOLAR FLEET": {
+            "Solar Dragons": 1
+        },
+        "SLYCE Pirates": {
+            "MAFIA MINERA": 1
+        },
+        "W A R B I R D S": {
+            "Warbirds Nation": 1
+        },
+        "Pretenders": {
+            "StratsCo": 1
+        },
+        "Black Knife Division": {
+            "Dead Squad": 1
+        },
+        "Brothers of Tangra": {
+            "Astral Nexus": 1
+        },
+        "Pandemic Legion": {
+            "Sniggerdly": 1
+        },
+        "Empyrean Edict": {
+            "Tredecim.": 1
+        },
+        "Convocation of Empyreans": {
+            "Malevelon Roe Industries": 1
+        },
+        "Concept. Protean": {
+            "AD4PT Holdings": 1
+        },
+        "No Therapy": {
+            "Loot 'n' Scoot Salvage Co.": 1
+        },
+        "IIIIIIIIIIIIIIIIIIIIIIIII": {
+            "Wilderness": 1
+        },
+        "Star Murderer": {
+            "Destiny Bunys": 1
+        },
+        "Abyssal Brick Rollers": {
+            "Outcasts Only": 1
+        }
+    }
+}

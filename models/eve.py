@@ -50,6 +50,10 @@ class EveEntity(BaseModel):
     id_num: str
     seen_in: Set[str] = set()
 
+    @property
+    def appearances(self) -> int:
+        return len(self.seen_in)
+
     @field_validator("id_num")
     @classmethod
     def is_str(cls, v):
@@ -77,6 +81,8 @@ class EveAlliance(EveEntity):
 
     corps: Set[str] = set()
     holding_for: Optional[str] = None
+    members: Dict[str, int] = {}
+    structures: Dict[str, Dict[str, dict]] = {}  # system name, station type, {(s)een, (d)estroyed, (g)unner}
     is_only_corp: bool = False
 
     @field_serializer("corps")
@@ -99,6 +105,10 @@ class EveCorp(EveEntity):
     """
 
     alliance: Optional[str] = None
+    members: Dict[str, int] = {}
+    pilots_per_battle: Dict[str, int] = {}  # br_link, total_pilots
+    ships: Dict[str, int] = {}  # ship name, appearances
+    structures: Dict[str, Dict[str, dict]] = {}  # system name, station type, {(s)een, (d)estroyed, (g)unner}
     holding_for: Optional[str] = None
 
     @property
@@ -124,12 +134,17 @@ class EvePilot(EveEntity):
 
     corp: str
     alliance: str
+    ships: Dict[str, int] = {}
     podded_in: Set[str] = set()
     zkill_link: Optional[str] = None
 
     @field_serializer("podded_in")
     def serialize_set(self, v: Set, _info):
         return list(v)
+
+    @property
+    def podded(self) -> int:
+        return len(self.podded_in)
 
 
 class EveShip(EveEntity):
@@ -271,3 +286,13 @@ class StructureType(Enum):
 
 
 LARGE_STRUCTURES = [StructureType.FORTIZAR, StructureType.KEEPSTAR, StructureType.SOTIYO, StructureType.TATARA]
+
+
+class EntityType(Enum):
+    SYSTEM = "System"
+    SHIP = "Ship"
+    PILOT = "Pilot"
+    CORP = "Corporation"
+    ALLY = "Alliance"
+    STRUCTURE = "Structure"
+    OTHER = "Other/Unknown"

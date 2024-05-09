@@ -3,7 +3,7 @@ from time import sleep
 from br.parser2 import parse_br2
 from br.util import skip_if_cached
 from plot_builder.output import build_scatter
-import pickle
+from aggregator.calculate import generate_output_totals
 import os
 
 os.environ["PYPPETEER_CHROMIUM_REVISION"] = "1263111"
@@ -493,6 +493,8 @@ if __name__ == "__main__":
 
         with open("output/structure_owners.json", "w") as f:
             json.dump(battles.get_station_owners(), f, indent=4)
+
+        generate_output_totals(battles)
 
         # with open(pickled_data_file, "wb") as f:
         #     pickle.dump(battles, f)
