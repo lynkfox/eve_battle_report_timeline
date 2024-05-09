@@ -20,6 +20,16 @@
             "dates": [
                 "2024-04-01"
             ]
+        },
+        {
+            "system": "J152117",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Syndicate of Singularities",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-08"
+            ]
         }
     ],
     "J115844": [
@@ -773,6 +783,16 @@
             "ally": "Stay Feral",
             "dates": [
                 "2024-04-04"
+            ]
+        },
+        {
+            "system": "J131916",
+            "type": "Fortizar",
+            "team": "Hawks",
+            "corp": "Q U A C K",
+            "ally": "Rainbow Knights",
+            "dates": [
+                "2024-05-08"
             ]
         }
     ],
@@ -2532,6 +2552,16 @@
             "dates": [
                 "2024-05-03"
             ]
+        },
+        {
+            "system": "J151838",
+            "type": "Fortizar",
+            "team": "Unknown",
+            "corp": "AD4PT Holdings",
+            "ally": "Concept. Protean",
+            "dates": [
+                "2024-05-08"
+            ]
         }
     ],
     "J104351": [
@@ -2729,6 +2759,50 @@
             "ally": "SYNDE Associates",
             "dates": [
                 "2024-05-07"
+            ]
+        }
+    ],
+    "J112417": [
+        {
+            "system": "J112417",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Nomadic Living",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-08"
+            ]
+        },
+        {
+            "system": "J112417",
+            "type": "Azbel",
+            "team": "Coalition",
+            "corp": "Nomadic Living",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-08"
+            ]
+        },
+        {
+            "system": "J112417",
+            "type": "Athanor",
+            "team": "Coalition",
+            "corp": "Nomadic Living",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-08"
+            ]
+        }
+    ],
+    "J161301": [
+        {
+            "system": "J161301",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Late Night WormHolers Inc.",
+            "ally": null,
+            "dates": [
+                "2024-05-08"
             ]
         }
     ]
