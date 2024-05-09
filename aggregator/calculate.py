@@ -27,7 +27,7 @@ def alliance_appearances(all_data: AllData):
     }
 
     desc = "Number of appearances for each alliance"
-    file_name = "docs/alliance_appearances.json"
+    file_name = "docs/jsons/alliance_appearances.json"
     save_data(hawks, coalition, other, desc, file_name)
 
 
@@ -47,7 +47,7 @@ def corp_appearances(all_data: AllData):
             other[corp.alliance][corp.name] += 1
 
     desc = "Number of appearances for each corp in each alliance"
-    file_name = "docs/corporation_appearances.json"
+    file_name = "docs/jsons/corporation_appearances.json"
     save_data(hawks, coalition, other, desc, file_name)
 
 
