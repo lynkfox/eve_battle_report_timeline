@@ -16,7 +16,7 @@
 
         for (let file of data) {
             if( file.name != "index.html") {
-                htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+                htmlString += `<li><a href="${file.path.replace("docs/jsons", "")}">${file.name}</a></li>`;
             }
 
         }
