@@ -16,7 +16,7 @@
 
         for (let file of data) {
             if( file.name != "index.html") {
-                htmlString += `<li><a href="${file.path.replace("docs", "eve_battle_report_timeline")}">${file.name}</a></li>`;
+                htmlString += `<li><a href="https://api.github.com/repos/lynkfox/eve_battle_report_timeline/jsons/${file.name}">${file.name}</a></li>`;
             }
 
         }
