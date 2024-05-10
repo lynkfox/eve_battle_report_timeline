@@ -330,6 +330,10 @@
             "Slurp em up": 1,
             "Driffting.": 1
         },
+        "Aspartame.": {
+            "Sorbitol Holdings": 1,
+            "Crux Industries": 1
+        },
         "Sugar.": {
             "Insulin LLC": 1,
             "White Pearl Initiative": 1,
@@ -526,7 +530,8 @@
             "Obsidian Engineering": 1
         },
         "D E L E T E L O C A L": {
-            "Alpha Frank Kilo": 1
+            "Alpha Frank Kilo": 1,
+            "The Entitled Few": 1
         },
         "Can i bring my Drake...": {
             "Q-Zar": 1,
@@ -550,9 +555,15 @@
             "Protean Concept": 1,
             "Aurae Scientia": 1
         },
+        "No Value": {
+            "NeoCorteX Industry": 1
+        },
         "Stryker Group": {
             "Stryker Industries": 1,
             "K162'S": 1
+        },
+        "ANOTHER WAE": {
+            "The Liu family": 1
         }
     },
     "Unknown": {
@@ -946,11 +957,17 @@
             "hackone": 1,
             "Ministry of War": 1,
             "Furnace": 1,
-            "Pochven Board of Ethics": 1
-        },
-        "Aspartame.": {
-            "Sorbitol Holdings": 1,
-            "Crux Industries": 1
+            "Pochven Board of Ethics": 1,
+            "Dreamy Loft": 1,
+            "Hankanfan Warrior Wombaits": 1,
+            "Happy Mining Co.": 1,
+            "Aplicaciones Modulares Corporation": 1,
+            "Extinct Honor": 1,
+            "Vortex Federation": 1,
+            "Me N The Boyz": 1,
+            "De Farm": 1,
+            "EroticShrimp Audeles Corporation": 1,
+            "Passive Yellow Ducks": 1
         },
         "Snuffed Out": {
             "French Drop-O-Panache": 1,
@@ -1395,9 +1412,6 @@
         "Gooseflock Featheration": {
             "Goosefleet": 1
         },
-        "No Value": {
-            "NeoCorteX Industry": 1
-        },
         "Travelers of Both Time and Space": {
             "Drug Enjoyers Agency": 1
         },
@@ -1546,6 +1560,28 @@
         },
         "Abyssal Brick Rollers": {
             "Outcasts Only": 1
+        },
+        "Suddenly Content": {
+            "Unpublished Chapter": 1
+        },
+        "Silent Company": {
+            "Strategic Exploration and Development Corp": 1
+        },
+        "Imperio Galactico.": {
+            "Flota Imperial": 1,
+            "Imperio Galactico": 1
+        },
+        "El Equipo CHAD": {
+            "CHICAS Y BARCOS": 1
+        },
+        "Odin's Call": {
+            "Out of Focus": 1
+        },
+        "Hisec Miners": {
+            "Iron Inquisition": 1
+        },
+        "It Must Be Jelly Cause Jam Don't Shake": {
+            "Mass Collapse": 1
         }
     }
 }

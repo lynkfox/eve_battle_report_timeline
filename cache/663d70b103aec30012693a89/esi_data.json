@@ -1,0 +1,108 @@
+{
+    "status": "success",
+    "new": true,
+    "timings": [
+        {
+            "systemID": 31002132,
+            "start": 1715263200,
+            "end": 1715274000
+        }
+    ],
+    "teams": [
+        [
+            "corp:98677691"
+        ],
+        [
+            "99010161",
+            "corp:98692590"
+        ]
+    ],
+    "viewed": 6,
+    "ended": 1715274000,
+    "calculated": true,
+    "kmsCount": 2,
+    "totalAllys": 2,
+    "totalLost": 4465993480,
+    "totalPilots": 3,
+    "totalShipTypes": 1,
+    "totalShips": 2,
+    "id": "663d70b103aec30012693a89",
+    "relateds": [
+        {
+            "systemID": 31002132,
+            "start": 1715263200,
+            "end": 1715274000,
+            "kms": [
+                {
+                    "id": 117683305,
+                    "sys": 31002132,
+                    "time": 1715267502,
+                    "sumV": 2232005557,
+                    "vict": {
+                        "char": 2119075174,
+                        "corp": 98677691,
+                        "ally": 0,
+                        "ship": 33472,
+                        "dmg": 63329
+                    },
+                    "atts": [
+                        {
+                            "char": 0,
+                            "corp": 98692590,
+                            "ally": 0,
+                            "ship": 47141,
+                            "weap": 0,
+                            "dmg": 33261
+                        },
+                        {
+                            "char": 2119807850,
+                            "corp": 98690093,
+                            "ally": 99010161,
+                            "ship": 35833,
+                            "weap": 47141,
+                            "dmg": 30068
+                        }
+                    ]
+                },
+                {
+                    "id": 117683335,
+                    "sys": 31002132,
+                    "time": 1715267548,
+                    "sumV": 2233987923,
+                    "vict": {
+                        "char": 2121293392,
+                        "corp": 98677691,
+                        "ally": 0,
+                        "ship": 33472,
+                        "dmg": 63250
+                    },
+                    "atts": [
+                        {
+                            "char": 2119807850,
+                            "corp": 98690093,
+                            "ally": 99010161,
+                            "ship": 35833,
+                            "weap": 47139,
+                            "dmg": 33198
+                        },
+                        {
+                            "char": 0,
+                            "corp": 98692590,
+                            "ally": 0,
+                            "ship": 35833,
+                            "weap": 0,
+                            "dmg": 30052
+                        }
+                    ]
+                }
+            ],
+            "system": {
+                "name": "J100252",
+                "region": "E-R00027",
+                "ss": "-1.0",
+                "whClassID": 5
+            }
+        }
+    ],
+    "short": true
+}

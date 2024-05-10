@@ -2016,6 +2016,16 @@
                 "2024-04-20",
                 "2024-04-21"
             ]
+        },
+        {
+            "system": "J145844",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "FFEW Holdings",
+            "ally": "FFEW Associates",
+            "dates": [
+                "2024-05-09"
+            ]
         }
     ],
     "J103400": [
@@ -2654,6 +2664,16 @@
             "dates": [
                 "2024-05-07"
             ]
+        },
+        {
+            "system": "J123940",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Hankanfan Warrior Wombaits",
+            "ally": null,
+            "dates": [
+                "2024-05-09"
+            ]
         }
     ],
     "J125122": [
@@ -2746,7 +2766,8 @@
             "corp": "Cannabis Cowboys",
             "ally": "Rainbow Knights",
             "dates": [
-                "2024-05-07"
+                "2024-05-07",
+                "2024-05-09"
             ]
         }
     ],
@@ -2803,6 +2824,52 @@
             "ally": null,
             "dates": [
                 "2024-05-08"
+            ]
+        }
+    ],
+    "J100252": [
+        {
+            "system": "J100252",
+            "type": "Fortizar",
+            "team": "Unknown",
+            "corp": "Dreamy Loft",
+            "ally": null,
+            "dates": [
+                "2024-05-09"
+            ]
+        }
+    ],
+    "J150606": [
+        {
+            "system": "J150606",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Unpublished Chapter",
+            "ally": "Suddenly Content",
+            "dates": [
+                "2024-05-09"
+            ]
+        },
+        {
+            "system": "J150606",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Avanto",
+            "ally": "Hole Control",
+            "dates": [
+                "2024-05-09"
+            ]
+        }
+    ],
+    "J142624": [
+        {
+            "system": "J142624",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Psychic Genocide",
+            "ally": "Koneko's Child Support Payments",
+            "dates": [
+                "2024-05-09"
             ]
         }
     ]
