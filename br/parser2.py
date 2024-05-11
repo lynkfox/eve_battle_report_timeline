@@ -40,6 +40,13 @@ from models.battle_report_2 import *
 from requests_html import HTMLSession
 
 
+def load_br_links():
+    with open("docs/jsons/battle_reports.txt", "r") as f:
+        brs = f.readlines()
+
+    return [br.replace("\n", "").strip() for br in brs if not br.startswith("#")]
+
+
 def get_json(url, use_br: bool):
     if skip_if_cached(url):
         return get_cache(url, get_json=True)

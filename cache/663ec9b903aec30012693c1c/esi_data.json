@@ -1,0 +1,94 @@
+{
+    "status": "success",
+    "new": true,
+    "timings": [
+        {
+            "systemID": 31002468,
+            "start": 1715346000,
+            "end": 1715356800
+        }
+    ],
+    "teams": [
+        [
+            "99005601",
+            "corp:1000168"
+        ],
+        [
+            "corp:98735066"
+        ]
+    ],
+    "viewed": 10,
+    "ended": 1715356800,
+    "calculated": true,
+    "kmsCount": 1,
+    "totalAllys": 2,
+    "totalLost": 141443400,
+    "totalPilots": 4,
+    "totalShipTypes": 1,
+    "totalShips": 4,
+    "updatedAt": "2024-05-11T01:55:09.981Z",
+    "id": "663ec9b903aec30012693c1c",
+    "relateds": [
+        {
+            "systemID": 31002468,
+            "start": 1715346000,
+            "end": 1715356800,
+            "kms": [
+                {
+                    "id": 117710364,
+                    "sys": 31002468,
+                    "time": 1715351291,
+                    "sumV": 141443400,
+                    "vict": {
+                        "char": 0,
+                        "corp": 98735066,
+                        "ally": 0,
+                        "ship": 20060,
+                        "dmg": 7444048
+                    },
+                    "atts": [
+                        {
+                            "char": 2112163108,
+                            "corp": 1000168,
+                            "ally": 0,
+                            "ship": 4302,
+                            "weap": 4302,
+                            "dmg": 2189931
+                        },
+                        {
+                            "char": 2112289530,
+                            "corp": 98609211,
+                            "ally": 99005601,
+                            "ship": 4302,
+                            "weap": 7087,
+                            "dmg": 2029612
+                        },
+                        {
+                            "char": 2112620280,
+                            "corp": 1000168,
+                            "ally": 0,
+                            "ship": 4302,
+                            "weap": 7087,
+                            "dmg": 1937771
+                        },
+                        {
+                            "char": 2118405064,
+                            "corp": 98609211,
+                            "ally": 99005601,
+                            "ship": 4302,
+                            "weap": 4302,
+                            "dmg": 1286734
+                        }
+                    ]
+                }
+            ],
+            "system": {
+                "name": "J170845",
+                "region": "F-R00030",
+                "ss": "-1.0",
+                "whClassID": 6
+            }
+        }
+    ],
+    "short": true
+}

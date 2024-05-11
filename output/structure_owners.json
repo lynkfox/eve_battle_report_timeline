@@ -1392,6 +1392,26 @@
             "dates": [
                 "2024-04-11"
             ]
+        },
+        {
+            "system": "J170845",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "GPTChat",
+            "ally": null,
+            "dates": [
+                "2024-05-10"
+            ]
+        },
+        {
+            "system": "J170845",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "GPTChat",
+            "ally": null,
+            "dates": [
+                "2024-05-10"
+            ]
         }
     ],
     "J164701": [
@@ -2026,6 +2046,16 @@
             "dates": [
                 "2024-05-09"
             ]
+        },
+        {
+            "system": "J145844",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "FFEW Holdings",
+            "ally": "FFEW Associates",
+            "dates": [
+                "2024-05-10"
+            ]
         }
     ],
     "J103400": [
@@ -2117,6 +2147,16 @@
             "ally": "SYNDE Associates",
             "dates": [
                 "2024-05-06"
+            ]
+        },
+        {
+            "system": "J105023",
+            "type": "Azbel",
+            "team": "Coalition",
+            "corp": "Syndicate of Singularities",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-10"
             ]
         }
     ],
@@ -2859,6 +2899,16 @@
             "dates": [
                 "2024-05-09"
             ]
+        },
+        {
+            "system": "J150606",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Could Be Anyone",
+            "ally": "SUS Holding",
+            "dates": [
+                "2024-05-10"
+            ]
         }
     ],
     "J142624": [
@@ -2870,6 +2920,108 @@
             "ally": "Koneko's Child Support Payments",
             "dates": [
                 "2024-05-09"
+            ]
+        }
+    ],
+    "J214712": [
+        {
+            "system": "J214712",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Wanderlust.",
+            "ally": "ur fricked",
+            "dates": [
+                "2024-05-10"
+            ]
+        },
+        {
+            "system": "J214712",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Wanderlust.",
+            "ally": "ur fricked",
+            "dates": [
+                "2024-05-10"
+            ]
+        }
+    ],
+    "J170118": [
+        {
+            "system": "J170118",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "No Irony",
+            "ally": "Outback Krabhouse",
+            "dates": [
+                "2024-05-10"
+            ]
+        }
+    ],
+    "J155838": [
+        {
+            "system": "J155838",
+            "type": "Athanor",
+            "team": "Coalition",
+            "corp": "Kraken a goat",
+            "ally": "Outback Krabhouse",
+            "dates": [
+                "2024-05-10"
+            ]
+        },
+        {
+            "system": "J155838",
+            "type": "Raitaru",
+            "team": "Coalition",
+            "corp": "Kraken a goat",
+            "ally": "Outback Krabhouse",
+            "dates": [
+                "2024-05-10"
+            ]
+        }
+    ],
+    "J234208": [
+        {
+            "system": "J234208",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Cloud of Uncaring",
+            "ally": null,
+            "dates": [
+                "2024-05-10"
+            ]
+        },
+        {
+            "system": "J234208",
+            "type": "Control Tower",
+            "team": "Unknown",
+            "corp": "Doobie Den",
+            "ally": null,
+            "dates": [
+                "2024-05-10"
+            ]
+        }
+    ],
+    "J141502": [
+        {
+            "system": "J141502",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Bohemian Worms",
+            "ally": "Hole Control",
+            "dates": [
+                "2024-05-10"
+            ]
+        }
+    ],
+    "J222834": [
+        {
+            "system": "J222834",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Morytania Trading Co",
+            "ally": null,
+            "dates": [
+                "2024-05-10"
             ]
         }
     ]

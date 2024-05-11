@@ -1,6 +1,6 @@
 {
     "Description": "Number of appearances for each corp in each alliance",
-    "Last Compiled": "2024-05-09",
+    "Last Compiled": "2024-05-11",
     "Hawks and Friends": {
         "Rainbow Knights": {
             "Oro Escondido": 1,
@@ -970,7 +970,20 @@
             "Me N The Boyz": 1,
             "De Farm": 1,
             "EroticShrimp Audeles Corporation": 1,
-            "Passive Yellow Ducks": 1
+            "Passive Yellow Ducks": 1,
+            "ventures inc": 1,
+            "The Reps Will Land": 1,
+            "Tusken Raiders Spacing Guild": 1,
+            "Artanis Appreciation Society": 1,
+            "GPTChat": 1,
+            "Don't give a ship": 1,
+            "Unsustainable Farming Solutions": 1,
+            "Cloud of Uncaring": 1,
+            "No Pharma": 1,
+            "WangBang Fuji Inc": 1,
+            "Cultivate Mass": 1,
+            "Abrupt Decay": 1,
+            "Doobie Den": 1
         },
         "Snuffed Out": {
             "French Drop-O-Panache": 1,
@@ -1008,7 +1021,9 @@
             "Retirment Home.": 1
         },
         "Order Collective Alliance": {
-            "Blood Money Capitalist Ventures": 1
+            "Blood Money Capitalist Ventures": 1,
+            "Order Collective": 1,
+            "Anbald Industries": 1
         },
         "Gentlemen's.Club": {
             "Garbage Incorporated": 1,
@@ -1146,7 +1161,14 @@
             "Enlightened Industries": 1,
             "SUNDERING": 1,
             "Black Aces": 1,
-            "Windrammers": 1
+            "Windrammers": 1,
+            "OEG": 1,
+            "Russian ICE Bears": 1,
+            "Ministry of Offense": 1,
+            "SovNarKom.": 1,
+            "rRED ANTS": 1,
+            "WE FORM BL0B Inc.": 1,
+            "Deep Space Conquerors": 1
         },
         "Tactical Narcotics Team": {
             "HolyTrident": 1,
@@ -1517,7 +1539,8 @@
             "Mountain Water Always Meet": 1
         },
         "Invidia Gloriae Comes": {
-            "Zhuque squad": 1
+            "Zhuque squad": 1,
+            "RUCIHIIII": 1
         },
         "UA Fleets": {
             "Nezlamni": 1
@@ -1582,6 +1605,18 @@
         },
         "It Must Be Jelly Cause Jam Don't Shake": {
             "Mass Collapse": 1
+        },
+        "Common-Denominator": {
+            "Liber8": 1
+        },
+        "TIME CRIT": {
+            "Don't Wake a sleeping bear": 1
+        },
+        "Get Off My Lawn": {
+            "Muhomory": 1
+        },
+        "Deteriorated": {
+            "Exchequer Capital": 1
         }
     }
 }
