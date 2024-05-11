@@ -1,7 +1,7 @@
 from br.parser2 import AllData
 from models.battle_report_2 import *
 from data.teams import WhoseWho, Team
-from typing import Dict, List
+from typing import Dict, List, Any
 from dataclasses import dataclass
 from datetime import datetime
 from models.timeline2 import (
@@ -17,6 +17,8 @@ from models.totals import DailyTotal, TotalsTraceData, TotalsTraces
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from data import load_json
+from datetime import datetime
+from dateutil import tz
 
 WHOSE_WHO = WhoseWho()
 
@@ -79,6 +81,8 @@ def build_totals_page(all_data: AllData):
         row=3,
         col=2,
     )
+
+    add_annotation(fig, hawks, coalition)
     last_updated = datetime.today().strftime("%Y-%m-%d")
     fig.update_layout(
         title=f"There is no War in C6 Space<br>Daily Totals. Lines are cumulative to date. - Bigger numbers are BAD<br>Last Updated {last_updated}<br><br>",
@@ -110,3 +114,59 @@ def add_traces(fig: go.Figure, hawks: TotalsTraces, coalition: TotalsTraces, tra
     fig.update_yaxes(title_text=y_title, row=row, col=col)
     fig.update_yaxes(showgrid=True, showspikes=True, spikedash="longdash", spikethickness=1, tickangle=-45)
     fig.update_xaxes(showgrid=False, showspikes=True, spikedash="dot", spikethickness=1, tickangle=30)
+
+
+@dataclass
+class AnnotationOrganizer:
+    xref: str
+    yref: str
+    y_attribute_name: str
+    x: Any = None
+    y: Any = None
+
+    def get_two_thirds_point(self, totals_trace: TotalsTraceData, annotation_date: datetime):
+        if isinstance(annotation_date, str):
+            annotation_date = datetime.strptime(annotation_date, "%Y-%m-%dT%H:M")
+            annotation_date.replace(tzinfo=tz.UTC)
+
+        index = next(
+            (i for i, datum in enumerate(totals_trace.daily_totals) if datum.date.date() == annotation_date.date())
+        )
+        self.x = totals_trace.x[index]
+        self.y = getattr(totals_trace, self.y_attribute_name)[index]
+
+
+def add_annotation(fig, hawks, coalition):
+
+    dispatch = {
+        "isk": AnnotationOrganizer(1, 2, "y_isk"),
+        "ships": AnnotationOrganizer(2, 2, "y_ships"),
+        "structures": AnnotationOrganizer(1, 4, "y_structures"),
+        "systems": AnnotationOrganizer(2, 4, "systems_lost"),
+    }
+
+    annotations = load_json("timeline_annotations.json")
+    for note, details in annotations.items():
+        if details.get("totals"):
+            focus = Team(details.get("team_focus", "Coalition"))
+            offset = details.get("offset", 0)
+            if focus == Team.HAWKS:
+                team = hawks
+            else:
+                team = coalition
+
+                for label in dispatch.values():
+                    label.get_two_thirds_point(team, datetime.strptime(details["date"], "%Y-%m-%dT%H:%M"))
+
+                    fig.add_annotation(
+                        x=label.x,
+                        y=label.y,
+                        text=note,
+                        textangle=-10,
+                        yshift=offset,
+                        showarrow=True,
+                        xanchor="left",
+                        arrowcolor="black",
+                        row=label.yref,
+                        col=label.xref,
+                    )

@@ -6,6 +6,7 @@ from plot_builder.timeline import HAWKS_COLOR, COALITION_COLOR, UNKNOWN_COLOR
 import plotly.graph_objects as go
 from dataclasses import dataclass, field
 from typing import List, Optional, Dict
+from datetime import datetime
 
 dummy_team = TeamReport(
     br_team_letter="",
@@ -78,8 +79,12 @@ class DailyTotal:
         self._nodes = [SingleBattleTotal(b) for b in self.battles]
 
     @property
+    def date(self) -> datetime:
+        return self.battles[0].time_data.started
+
+    @property
     def x(self):
-        return self.battles[0].time_data.started.strftime("%b %d")
+        return self.date.strftime("%b %d")
 
     @property
     def hawks_ships_lost(self) -> int:

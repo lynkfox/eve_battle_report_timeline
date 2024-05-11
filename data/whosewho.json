@@ -418,8 +418,9 @@
     ],
 
     "important_systems": {
-        "J105023": "Synde Home",
-        "J151909": "Hawks Home",
-        "J141434": "Synde Staging (Waffles)"
+        "J105023": ["Synde Home", "bottom"],
+        "J151909": ["Hawks Home", "bottom"],
+        "J141434": ["Synde Staging (Waffles)", "bottom"],
+        "J115844": ["HK Staging", "top"]
     }
 }

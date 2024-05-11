@@ -1,0 +1,51 @@
+{
+
+    "Atrax Evicted": {
+        "system":"J165953",
+        "date": "2024-03-31T00:53",
+        "class": "C5",
+        "team_focus": "Coalition",
+        "totals": true
+    },
+    "Noob Corp Switches Sides": {
+        "system": "J213226",
+        "date": "2024-04-01T05:20",
+        "class": "C5",
+        "team_focus": "Hawks"
+    },
+    "Sugar Evicted": {
+        "system": "J104037",
+        "date": "2024-04-14T20:00",
+        "class": "C6",
+        "offset": 5,
+        "team_focus": "Coalition",
+        "totals": true
+    },
+    "Novac Enters the War": {
+        "system": "J104037",
+        "date": "2024-04-14T20:00",
+        "class": "C6",
+        "offset": 15,
+        "team_focus": "Coalition"
+    },
+    "Seriously Suspicious switches sides": {
+        "system": "J105822",
+        "date": "2024-04-17T16:54",
+        "class": "C5",
+        "team_focus": "Coalition"
+    },
+    "Battle of Waffles": {
+        "system": "J141434",
+        "date": "2024-04-21T20:32",
+        "class": "C6",
+        "team_focus": "Coalition",
+        "totals": true
+    },
+    "Exfill Attempt from Waffles": {
+        "system": "J141434",
+        "date": "2024-05-02T04:42",
+        "class": "C6",
+        "team_focus": "Coalition",
+        "totals": true
+    }
+}

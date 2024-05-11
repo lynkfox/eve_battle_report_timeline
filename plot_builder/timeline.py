@@ -142,7 +142,7 @@ def build_jspace_plots(all_data: AllData, fig: go.Figure, subplot_ranges, split_
 
 
 def add_jclass_subplot_annotations(fig: go.Figure, split_by_jclass: bool = False):
-    annotations = load_json("special_systems.json")
+    annotations = load_json("timeline_annotations.json")
 
     for note, details in annotations.items():
         offset = details.get("offset", 0)
@@ -205,11 +205,16 @@ def build_important_systems_lines(fig: go.Figure, split_by_jclass: bool, start_d
             y0=key,
             y1=key,
             line=dict(color="#828282", width=1, dash="dash"),
-            name=value,
+            name=value[0],
             layer="between",
             showlegend=False,
             opacity=0.6,
-            label=dict(text=f"{key}: {value}", textposition="start", font=(dict(size=12, color="#828282"))),
+            label=dict(
+                text=f"{key}: {value[0]}",
+                textposition="start",
+                font=(dict(size=12, color="#828282")),
+                yanchor=value[1],
+            ),
         )
 
 
