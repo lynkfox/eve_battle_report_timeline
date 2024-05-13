@@ -298,6 +298,7 @@ class ShipTotals(EntityTraceTotal):
             "Bestower",
             "Blackbird",
             "Burst",
+            "Bustard",
             "Caracal",
             "Catalyst",
             "Condor",
@@ -407,7 +408,8 @@ class ShipTotals(EntityTraceTotal):
             "Venture",
             "VViator",
             "Vigil",
-            "Wolf" "Worm",
+            "Wolf",
+            "Worm",
             "Wreath",
         ]:
             return False
