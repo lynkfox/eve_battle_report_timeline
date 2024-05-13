@@ -1,6 +1,6 @@
 {
     "Description": "Number of appearances for each corp in each alliance",
-    "Last Compiled": "2024-05-11",
+    "Last Compiled": "2024-05-12",
     "Hawks and Friends": {
         "Rainbow Knights": {
             "Oro Escondido": 1,
@@ -111,6 +111,7 @@
             "Roundtable Congress": 1,
             "Holding 418": 1,
             "Order Strigiformes": 1,
+            "Ether Tesla Corporation": 1,
             "Equinoxe.": 1,
             "Brigand Nation": 1
         },
@@ -161,7 +162,29 @@
             "Raccoon Covenant": 1,
             "ZER0POINT": 1,
             "No Mercy For Percy": 1,
-            "Area-52": 1
+            "Area-52": 1,
+            "Thunder Shield": 1,
+            "Beng beng Begn": 1,
+            "Foredawn Business Corporation": 1,
+            "Titan Legion": 1,
+            "Ministry of Furious Retribution": 1,
+            "Knights of the Silver Eagle": 1,
+            "Bueno Excellente.": 1,
+            "Institute of Calculus": 1,
+            "Setcreasea Pallida Corporation": 1,
+            "Legendary Gentlemen's Club": 1,
+            "Chi Gua": 1,
+            "Redamancy.": 1,
+            "The Soul Society": 1,
+            "EF air force": 1,
+            "White Fang Militia": 1,
+            "Theoretical Mass": 1,
+            "Seraphim Avalon": 1,
+            "Special law enforcement department": 1,
+            "Jack Daniels Elite Squadron": 1,
+            "Light of the moon": 1,
+            "Deep Space Coalition": 1,
+            "13th Squadron": 1
         },
         "No Vacancies.": {
             "No Vacancies": 1
@@ -173,7 +196,8 @@
             "Jade Cloud University": 1,
             "STARCHASER University": 1,
             "Baye industry": 1,
-            "I Don't Give a Darn": 1
+            "I Don't Give a Darn": 1,
+            "Fragrant grass": 1
         },
         "SLOW Logistics Alliance": {
             "SL0W. Logistics": 1,
@@ -404,7 +428,10 @@
             "League Of Quantum Legends": 1,
             "CHURCH OF SERENITY": 1,
             "The Most Hardcore Snake": 1,
-            "Late Night WormHolers Inc.": 1
+            "Late Night WormHolers Inc.": 1,
+            "Cloud of Uncaring": 1,
+            "Doobie Den": 1,
+            "Propulsion Jamming Industries": 1
         },
         "The Candy Shop": {
             "Towing Ur Mom": 1,
@@ -496,7 +523,8 @@
             "Falcoes Peregrinos": 1,
             "Teutate raiders": 1,
             "ANGELGARD.": 1,
-            "Grey Templars": 1
+            "Grey Templars": 1,
+            "The Restless Few": 1
         },
         "Dracarys.": {
             "Why So Sage": 1,
@@ -557,6 +585,12 @@
         },
         "No Value": {
             "NeoCorteX Industry": 1
+        },
+        "Sigma Grindset": {
+            "Misfits of the Unknown": 1,
+            "Syndicate Enterprise": 1,
+            "Noobs for Ethical Treatment of Scrubs": 1,
+            "Anarchist Order": 1
         },
         "Stryker Group": {
             "Stryker Industries": 1,
@@ -925,7 +959,6 @@
             "Solitariometalisteria": 1,
             "HighestGround": 1,
             "The Not So Jolly Rogers Academy": 1,
-            "Ether Tesla Corporation": 1,
             "W-space guardians": 1,
             "HADIX TAX FREE CORP": 1,
             "Corporation For Mineral Acquisition And Banking": 1,
@@ -978,12 +1011,22 @@
             "GPTChat": 1,
             "Don't give a ship": 1,
             "Unsustainable Farming Solutions": 1,
-            "Cloud of Uncaring": 1,
             "No Pharma": 1,
             "WangBang Fuji Inc": 1,
             "Cultivate Mass": 1,
             "Abrupt Decay": 1,
-            "Doobie Den": 1
+            "Militech International Armament": 1,
+            "Tenal Snakes": 1,
+            "Drifter Tech Collection Agency": 1,
+            "Mgla.": 1,
+            "Rot Front Corp": 1,
+            "God Doesn't Exist": 1,
+            "Marena Clade": 1,
+            "Tea House": 1,
+            "Pizza Boys": 1,
+            "Cold Cuts and Mayo.": 1,
+            "Illogical Hostilities": 1,
+            "Incursion Osprey Replacement Fund LLC": 1
         },
         "Snuffed Out": {
             "French Drop-O-Panache": 1,
@@ -1168,7 +1211,13 @@
             "SovNarKom.": 1,
             "rRED ANTS": 1,
             "WE FORM BL0B Inc.": 1,
-            "Deep Space Conquerors": 1
+            "Deep Space Conquerors": 1,
+            "Alt Beanix Fuel Cartel": 1,
+            "Shadow State": 1,
+            "Les chevaliers de l'ordre": 1,
+            "Blackwater Task Forces": 1,
+            "Nova Republica": 1,
+            "EVE-RO": 1
         },
         "Tactical Narcotics Team": {
             "HolyTrident": 1,
@@ -1239,7 +1288,8 @@
             "0.0 Massive Dynamic": 1,
             "Tech Builds": 1,
             "Death'sEnd": 1,
-            "Pandemic Horde Hld.": 1
+            "Pandemic Horde Hld.": 1,
+            "The Northerners": 1
         },
         "Absolute Glory": {
             "Absolute Order XIX": 1
@@ -1320,7 +1370,8 @@
         "U N K N O W N": {
             "Anarchist Dawn": 1,
             "Structural losses": 1,
-            "Bebrakek": 1
+            "Bebrakek": 1,
+            "The Free Search Group": 1
         },
         "East Wind.": {
             "Polaris North": 1
@@ -1389,7 +1440,8 @@
             "RoKaSa Industries Ltd.": 1
         },
         "Test Alliance Please Ignore": {
-            "Star Ring Praetorian": 1
+            "Star Ring Praetorian": 1,
+            "Dreddit": 1
         },
         "Negating a Nasty Outcome. Alliance.": {
             "Negating a Nasty Outcome.": 1
@@ -1493,12 +1545,6 @@
         "The Big Blue": {
             "West Indian Dope Smoking Team": 1
         },
-        "Sigma Grindset": {
-            "Misfits of the Unknown": 1,
-            "Syndicate Enterprise": 1,
-            "Noobs for Ethical Treatment of Scrubs": 1,
-            "Anarchist Order": 1
-        },
         "Fluffy.Snakes": {
             "The EVE-rydayers": 1,
             "Hellios Cartel": 1,
@@ -1598,7 +1644,8 @@
             "CHICAS Y BARCOS": 1
         },
         "Odin's Call": {
-            "Out of Focus": 1
+            "Out of Focus": 1,
+            "ISKebab": 1
         },
         "Hisec Miners": {
             "Iron Inquisition": 1
@@ -1613,10 +1660,15 @@
             "Don't Wake a sleeping bear": 1
         },
         "Get Off My Lawn": {
-            "Muhomory": 1
+            "Muhomory": 1,
+            "Omni Defense Intelligence Network": 1,
+            "The Awoken": 1
         },
         "Deteriorated": {
             "Exchequer Capital": 1
+        },
+        "HONED": {
+            "PH Phildings": 1
         }
     }
 }

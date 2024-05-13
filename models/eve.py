@@ -156,7 +156,17 @@ class EveShip(EveEntity):
         image_link [str]: url to the image for this alliance
         id_num [str]: id for this entity
         seen_in [List[str]]: a list of BR_identifiers this entity has been seen in
+
+
+
+    used: [int]: total number used (sum of all used in all battles)
+    destroyed [int]: # destroyed (sum of all battles)
+    total_value_destroyed [float]: total isk value of all destroyed
     """
+
+    used: int = 0
+    destroyed: int = 0
+    total_value_destroyed: float = 0.0
 
 
 class EveStructure(EveEntity):
@@ -168,6 +178,12 @@ class EveStructure(EveEntity):
         image_link [str]: url to the image for this alliance
         id_num [str]: id for this entity
         seen_in [List[str]]: a list of BR_identifiers this entity has been seen in
+
+    is_gunner_entry [bool]: this list on the BR was from a Gunner, not the station itself
+    gunner_name [str]: the name of the gunner
+    gunner_corp [str]: the corp of the gunner
+    gunner_alliance [str]: the alliance of the gunner, may be none
+    multiple_killed [str]: if the br said x#
     """
 
     type: StructureType

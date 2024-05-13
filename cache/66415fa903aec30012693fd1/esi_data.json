@@ -1,0 +1,77 @@
+{
+    "status": "success",
+    "new": true,
+    "timings": [
+        {
+            "systemID": 31001982,
+            "start": 1715515200,
+            "end": 1715526000
+        }
+    ],
+    "teams": [
+        [
+            "corp:98646435",
+            "corp:98693056"
+        ],
+        [
+            "99004344"
+        ]
+    ],
+    "viewed": 5,
+    "ended": 1715526000,
+    "calculated": true,
+    "kmsCount": 1,
+    "totalAllys": 2,
+    "totalLost": 140490874,
+    "totalPilots": 2,
+    "totalShipTypes": 1,
+    "totalShips": 2,
+    "id": "66415fa903aec30012693fd1",
+    "relateds": [
+        {
+            "systemID": 31001982,
+            "start": 1715515200,
+            "end": 1715526000,
+            "kms": [
+                {
+                    "id": 117770452,
+                    "sys": 31001982,
+                    "time": 1715522392,
+                    "sumV": 140490874,
+                    "vict": {
+                        "char": 0,
+                        "corp": 98345858,
+                        "ally": 99004344,
+                        "ship": 20066,
+                        "dmg": 8343019
+                    },
+                    "atts": [
+                        {
+                            "char": 2119824646,
+                            "corp": 98646435,
+                            "ally": 0,
+                            "ship": 4302,
+                            "weap": 4302,
+                            "dmg": 4211539
+                        },
+                        {
+                            "char": 2118637503,
+                            "corp": 98693056,
+                            "ally": 0,
+                            "ship": 4302,
+                            "weap": 7087,
+                            "dmg": 4131480
+                        }
+                    ]
+                }
+            ],
+            "system": {
+                "name": "J110628",
+                "region": "E-R00025",
+                "ss": "-1.0",
+                "whClassID": 5
+            }
+        }
+    ],
+    "short": true
+}

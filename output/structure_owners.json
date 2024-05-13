@@ -2552,7 +2552,7 @@
         {
             "system": "J161032",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Noobs for Ethical Treatment of Scrubs",
             "ally": "Sigma Grindset",
             "dates": [
@@ -2562,11 +2562,12 @@
         {
             "system": "J161032",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Noobs for Ethical Treatment of Scrubs",
             "ally": "Sigma Grindset",
             "dates": [
-                "2024-05-02"
+                "2024-05-02",
+                "2024-05-11"
             ]
         }
     ],
@@ -2654,7 +2655,7 @@
         {
             "system": "J221117",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Hawks",
             "corp": "Ether Tesla Corporation",
             "ally": null,
             "dates": [
@@ -2909,6 +2910,16 @@
             "dates": [
                 "2024-05-10"
             ]
+        },
+        {
+            "system": "J150606",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "Could Be Anyone",
+            "ally": "SUS Holding",
+            "dates": [
+                "2024-05-11"
+            ]
         }
     ],
     "J142624": [
@@ -2977,13 +2988,23 @@
             "dates": [
                 "2024-05-10"
             ]
+        },
+        {
+            "system": "J155838",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Kraken a goat",
+            "ally": "Outback Krabhouse",
+            "dates": [
+                "2024-05-11"
+            ]
         }
     ],
     "J234208": [
         {
             "system": "J234208",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Cloud of Uncaring",
             "ally": null,
             "dates": [
@@ -2993,7 +3014,7 @@
         {
             "system": "J234208",
             "type": "Control Tower",
-            "team": "Unknown",
+            "team": "Coalition",
             "corp": "Doobie Den",
             "ally": null,
             "dates": [
@@ -3022,6 +3043,78 @@
             "ally": null,
             "dates": [
                 "2024-05-10"
+            ]
+        }
+    ],
+    "J110810": [
+        {
+            "system": "J110810",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Mark's Retirement Fund",
+            "ally": "Koneko's Child Support Payments",
+            "dates": [
+                "2024-05-11"
+            ]
+        }
+    ],
+    "J162231": [
+        {
+            "system": "J162231",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Could Be Anyone",
+            "ally": "SUS Holding",
+            "dates": [
+                "2024-05-11"
+            ]
+        }
+    ],
+    "J122610": [
+        {
+            "system": "J122610",
+            "type": "Astrahus",
+            "team": "Coalition",
+            "corp": "Tourelach Industries",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-12"
+            ]
+        }
+    ],
+    "J164745": [
+        {
+            "system": "J164745",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Propulsion Jamming Industries",
+            "ally": null,
+            "dates": [
+                "2024-05-12"
+            ]
+        }
+    ],
+    "J110628": [
+        {
+            "system": "J110628",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "Black Powder Ballistics",
+            "ally": "Hole Control",
+            "dates": [
+                "2024-05-12"
+            ]
+        }
+    ],
+    "J154846": [
+        {
+            "system": "J154846",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Syndicate of Singularities",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-12"
             ]
         }
     ]

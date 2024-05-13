@@ -259,25 +259,30 @@ def parse_teams(
             pilot, pod_link = get_pilot_and_pod_zkill_link(participant, all_data, br_id)
             alliance, corp, loss_value, multiple_killed = get_ally_corp_value_killed(participant, all_data, br_id)
 
+            if loss_value > 0:
+                ship.destroyed += 1
+                ship.total_value_destroyed += loss_value
+                team.ships_destroyed.append(ship.name)
+
             faction, suspected = hawks_or_not(alliance, corp, battle_date)
             if suspected:
                 all_suspected_teams.append(faction)
             else:
                 known_teams.append(faction)
 
-            team._ships.append(ship)
+            team.ships.append(ship.name)
             team.km_links.append(km_link)
             if pilot is not None:
                 pilot.alliance = alliance.name if alliance is not None else None
                 pilot.corp = corp.name
-                team._pilots.append(pilot)
+                team.pilots.append(pilot.name)
             if pod_link is not None:
                 team.pilots_podded.append(pilot.name)
                 team.km_links.append(pod_link)
 
             if alliance is not None:
-                team._alliances.append(alliance)
-            team._corps.append(corp)
+                team.alliances.append(alliance.name)
+            team.corps.append(corp.name)
 
             increment_entity_values(pilot, ship, corp, alliance, br_id)
 
@@ -556,6 +561,13 @@ def get_ship_and_km_link(participant: BeautifulSoup, all_data: AllData, br_id: s
         else all_data.add("ship", ship_name, ship_image)
     )
 
+    if ship.image_link != ship_image and ship_image != "/icons/eve-question.png":
+        ship.image_link = ship_image
+
+        if ship.id_num == 0:
+            ship.id_num = get_id_from_link(ship_image)
+
+    ship.used += 1
     ship.seen_in.add(br_id)
     return ship, zkill_link
 
@@ -563,7 +575,7 @@ def get_ship_and_km_link(participant: BeautifulSoup, all_data: AllData, br_id: s
 def get_pilot_and_pod_zkill_link(participant: BeautifulSoup, all_data: AllData, br_id: str) -> Tuple[EvePilot, str]:
     character = participant.findChildren("a", href=True, attrs={"class": PARTICIPANT_NAME})[0]
     character_link = character.attrs["href"]
-    character_link = convert_to_zkill(character_link)
+    zkill_link = convert_to_zkill(character_link)
     character_name = character.next_element
 
     while not isinstance(character_name, str):
@@ -574,7 +586,7 @@ def get_pilot_and_pod_zkill_link(participant: BeautifulSoup, all_data: AllData, 
     if all_data.has(character_name, "pilot"):
         pilot = all_data.find(character_name, "pilot")
     else:
-        pilot = all_data.add("pilot", character_name, character_link, corp="", alliance="", zkill_link=character_link)
+        pilot = all_data.add("pilot", character_name, character_link, corp="", alliance="", zkill_link=zkill_link)
 
     if character_name.next_element is not None and character_name.next_element.text == "[pod]":
         pod = character_name.next_element.attrs["href"]

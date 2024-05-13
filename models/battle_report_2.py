@@ -95,32 +95,17 @@ class BattleTime(BaseModel):
 class TeamReport(BaseModel):
     br_team_letter: str
     team: Team = Team.UNKNOWN
-    _alliances: List[EveAlliance] = []
-    _corps: List[EveCorp] = []
-    _pilots: List[EvePilot] = []
-    _ships: List[EveShip] = []
+    alliances: List[str] = []
+    corps: List[str] = []
+    pilots: List[str] = []
+    ships: List[str] = []
+    ships_destroyed: List[str] = []
     km_links: List[str] = []
     pilots_podded: List[str] = []
     _structures: List[EveStructure] = []
     structure_history_ids: List[str] = []  # list of id's for Structure History entries
     totals: BattleReportResults = BattleReportResults(isk_lost=0, ships_lost=0, total_pilots=0)
     structure_destroyed: bool = False
-
-    @property
-    def alliances(self):
-        return [a.name for a in self._alliances]
-
-    @property
-    def corps(self):
-        return [a.name for a in self._corps]
-
-    @property
-    def pilots(self):
-        return [a.name for a in self._pilots]
-
-    @property
-    def ships(self):
-        return [a.name for a in self._ships]
 
     @property
     def structures(self):

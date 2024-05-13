@@ -1,7 +1,8 @@
 import plotly.graph_objects as go
 from plotly.offline import plot
 from plot_builder.timeline import build_timeline_page
-from plot_builder.totals import build_totals_page
+from plot_builder.daily_totals import build_totals_page
+from plot_builder.type_totals import build_ships_totals
 import re
 from br.parser2 import AllData
 import webbrowser
@@ -20,6 +21,11 @@ def build_scatter(all_data: AllData):  ## attempt to add onclick go to battle re
     file_path2 = "docs/totals.html"
     fig2.show()
     fig2.write_html(file_path2)
+
+    fig3 = build_ships_totals(all_data)
+    file_path3 = "docs/type_totals.html"
+    fig3.show()
+    fig3.write_html(file_path3)
 
 
 def build_onclick_link_html(fig, link_value: str = "customdata[0]", file_name: str = "with_hyperlinks.html"):
