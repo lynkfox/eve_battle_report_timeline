@@ -3080,6 +3080,16 @@
             "dates": [
                 "2024-05-12"
             ]
+        },
+        {
+            "system": "J122610",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Tourelach Industries",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-13"
+            ]
         }
     ],
     "J164745": [
@@ -3115,6 +3125,76 @@
             "ally": "SYNDE Associates",
             "dates": [
                 "2024-05-12"
+            ]
+        }
+    ],
+    "J103215": [
+        {
+            "system": "J103215",
+            "type": "Astrahus",
+            "team": "Unknown",
+            "corp": "Vindictive Vengeance",
+            "ally": "Vindictiveness.",
+            "dates": [
+                "2024-05-13"
+            ]
+        }
+    ],
+    "J130900": [
+        {
+            "system": "J130900",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Shad0w Wizard M0ney Gang",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-13"
+            ]
+        }
+    ],
+    "J115418": [
+        {
+            "system": "J115418",
+            "type": "Fortizar",
+            "team": "Unknown",
+            "corp": "Militech International Armament",
+            "ally": null,
+            "dates": [
+                "2024-05-13"
+            ]
+        },
+        {
+            "system": "J115418",
+            "type": "Astrahus",
+            "team": "Unknown",
+            "corp": "Militech International Armament",
+            "ally": null,
+            "dates": [
+                "2024-05-13"
+            ]
+        }
+    ],
+    "J111520": [
+        {
+            "system": "J111520",
+            "type": "Fortizar",
+            "team": "Coalition",
+            "corp": "Here Be Krabs .",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-13"
+            ]
+        }
+    ],
+    "J100616": [
+        {
+            "system": "J100616",
+            "type": "Control Tower",
+            "team": "Coalition",
+            "corp": "Driffting.",
+            "ally": "SYNDE Associates",
+            "dates": [
+                "2024-05-13"
             ]
         }
     ]

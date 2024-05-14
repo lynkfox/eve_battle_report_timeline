@@ -1,6 +1,6 @@
 {
     "Description": "Number of appearances for each corp in each alliance",
-    "Last Compiled": "2024-05-12",
+    "Last Compiled": "2024-05-13",
     "Hawks and Friends": {
         "Rainbow Knights": {
             "Oro Escondido": 1,
@@ -53,7 +53,9 @@
             "Anxiety Holdings": 1,
             "Knights of the dangerous unknown table": 1,
             "ST Borg": 1,
-            "The corp for old men": 1
+            "The corp for old men": 1,
+            "Body by Aunt Jemima": 1,
+            "The Spectrum": 1
         },
         "Hard Knocks Associates": {
             "Hard Knocks Holdings": 1,
@@ -352,7 +354,9 @@
             "Bling Fleet": 1,
             "MeatCheesus BBQ Party": 1,
             "Slurp em up": 1,
-            "Driffting.": 1
+            "Driffting.": 1,
+            "Be Quiet and Fly": 1,
+            "Here Be Krabs .": 1
         },
         "Aspartame.": {
             "Sorbitol Holdings": 1,
@@ -401,7 +405,8 @@
             "Kraken a goat": 1,
             "Toilet Emergency": 1,
             "Monster Hunter International": 1,
-            "No Irony": 1
+            "No Irony": 1,
+            "Room 641A": 1
         },
         "TURBOFEED OR GLORY": {
             "Holey Roamin' Empire": 1,
@@ -465,7 +470,8 @@
             "Old Bittervets": 1
         },
         "E.C.H.O Holding": {
-            "Liquid Isk.": 1
+            "Liquid Isk.": 1,
+            "WH Nomads": 1
         },
         "No Mercy For Percy.": {
             "A Leap Of Faith": 1
@@ -1026,7 +1032,13 @@
             "Pizza Boys": 1,
             "Cold Cuts and Mayo.": 1,
             "Illogical Hostilities": 1,
-            "Incursion Osprey Replacement Fund LLC": 1
+            "Incursion Osprey Replacement Fund LLC": 1,
+            "Lords of the Lockerroom": 1,
+            "Fr1's": 1,
+            "Everse Defense Initiative": 1,
+            "Blue Bagel": 1,
+            "FanFareFeed": 1,
+            "Dread Corsair Syndicate": 1
         },
         "Snuffed Out": {
             "French Drop-O-Panache": 1,
@@ -1237,7 +1249,8 @@
             "WORLDSTAR HIPHOP": 1,
             "Star Frontiers": 1,
             "Vulture Enterprises": 1,
-            "Aurora Empire": 1
+            "Aurora Empire": 1,
+            "Entropy Engine": 1
         },
         "NullSechnaya Sholupen": {
             "You're dunked": 1
@@ -1399,7 +1412,8 @@
         "FuriaHispana.": {
             "OutLaws Corporation": 1,
             "La Flota Carmesi": 1,
-            "FW Scuad": 1
+            "FW Scuad": 1,
+            "Hispanic Revolution": 1
         },
         "Drifter Holding": {
             "Drifter Miners": 1
@@ -1622,7 +1636,8 @@
             "AD4PT Holdings": 1
         },
         "No Therapy": {
-            "Loot 'n' Scoot Salvage Co.": 1
+            "Loot 'n' Scoot Salvage Co.": 1,
+            "BURN EDEN": 1
         },
         "IIIIIIIIIIIIIIIIIIIIIIIII": {
             "Wilderness": 1
@@ -1669,6 +1684,12 @@
         },
         "HONED": {
             "PH Phildings": 1
+        },
+        "Vindictiveness.": {
+            "Vindictive Vengeance": 1
+        },
+        "It's a Skill Issue.": {
+            "Therapy": 1
         }
     }
 }
