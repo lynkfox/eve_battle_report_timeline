@@ -4,38 +4,17 @@ from datetime import datetime, timedelta
 from math import floor
 from typing import Any, Dict, List, Optional, Tuple, Set
 
-from pydantic import BaseModel, field_serializer
+from pydantic import BaseModel, field_serializer, model_serializer
 
 from models.eve import (
     EveAlliance,
-    EveCorp,
-    EvePilot,
-    EveShip,
     EveStructure,
     EveSystem,
-    LARGE_STRUCTURES,
     StructureType,
-    System,
 )
 from data.teams import Team, WhoseWho
-from functools import cached_property
 
 WHOSE_WHO = WhoseWho()
-
-
-class BattleBaseModel(BaseModel):
-    def __getattribute__(self, __name: str) -> Any:
-        prop_name = f"_{__name}"
-        if hasattr(self, prop_name):
-            attr = getattr(self, prop_name)
-            if hasattr(attr, "name"):
-                return [a.name for a in attr]
-
-        elif hasattr(self, __name):
-            return getattr(self, __name)
-
-        else:
-            raise ValueError(f"{type(self)} has no property {__name}")
 
 
 class Battle2(BaseModel):
@@ -47,11 +26,25 @@ class Battle2(BaseModel):
     br_totals: BattleReportTotals
     raw_json: Optional[dict]
 
+    @model_serializer
+    def ser_model(self):
+        return {
+            "br_link": self.br_link,
+            "time_data": self.time_data,
+            "system": self.system.name,
+            "teams": self.teams,
+            "totals": self.br_totals,
+        }
+
 
 class BattleReportResults(BaseModel):
     isk_lost: float
     ships_lost: int
     total_pilots: int
+
+    @model_serializer
+    def ser_model(self):
+        return {"pilots": self.total_pilots, "ships_destroyed": self.ships_lost, "isk_destroyed": self.isk_lost}
 
     def increase(self, loss_value=0):
         self.total_pilots += 1
@@ -69,13 +62,17 @@ class BattleTime(BaseModel):
     def start_time_as_key(self) -> str:
         return self.started.strftime("%Y-%m-%d")
 
-    @field_serializer("started", "ended")
-    def serialize_ended(self, dt: datetime, _info):
-        return self.serialize_dt(dt, _info)
+    @model_serializer
+    def ser_model(self):
+        return {
+            "date": self.started.date().strftime("%Y-%m-%d"),
+            "start": self.started.time().strftime("%H:%M"),
+            "ended": self.ended.time().strftime("%H:%M"),
+            "duration": self.serialize_duration(),
+        }
 
-    @field_serializer("duration")
-    def serialize_duration(self, td: timedelta, _info):
-        seconds = td.seconds
+    def serialize_duration(self):
+        seconds = self.duration.seconds
         hours = ""
         if seconds > 3600:
             hours = floor(seconds / 3600)
@@ -87,9 +84,6 @@ class BattleTime(BaseModel):
         if seconds == 0 or (mins == 0 and hours == ""):
             return "0"
         return f"{hours} {mins}m".strip()
-
-    def serialize_dt(self, dt: datetime, _info):
-        return dt.isoformat()
 
 
 class TeamReport(BaseModel):
@@ -111,6 +105,21 @@ class TeamReport(BaseModel):
     def structures(self):
         return [a.name for a in self._structures]
 
+    @model_serializer
+    def ser_model(self):
+        return {
+            "team:": self.team.value,
+            "alliances": list(set(self.alliances)),
+            "corps": list(set(self.corps)),
+            "pilots": list(set(self.pilots)),
+            "pilots_podded": list(set(self.pilots_podded)),
+            "ships": self.ships,
+            "ships_destroyed": self.ships_destroyed,
+            "structures": self.structures,
+            "was_structure_destroyed": self.structure_destroyed,
+            "totals": self.totals,
+        }
+
 
 class BattleReportTotals(BaseModel):
     """
@@ -125,68 +134,9 @@ class BattleReportTotals(BaseModel):
     shipTypes: Optional[int] = None
     groups: Optional[int] = None
 
-
-class BattleReportGroup(EveAlliance):
-    group_results: Optional[BattleReportResults]
-    group_killmails: Optional[List[str]]
-    is_holding: bool = False
-    holding_for: Optional[Tuple[str, str]] = None
-    ships: Dict[str, BattleReportCount]
-    pilots: Dict[str, BattleReportCount]
-
-
-class AssociatedCount(BaseModel):
-    t: int = 0
-    l: int = 0
-    p: int = 0
-    brs: List[str] = []
-
-
-class BattleReportCount(BaseModel):
-    name: str
-    image_link: str
-    total: int = 0
-    lost: int = 0
-    total_lost_value: float = 0
-    killmails: List[str] = []
-    pods: int = 0
-    pod_killmails: List[str] = []
-    associated: Dict[str, AssociatedCount] = {}
-
-    def increase(
-        self,
-        value: float = 0,
-        killmail_id: int = None,
-        multiple: int = None,
-        associated_name: str = None,
-        br: str = None,
-    ):
-        self.total += 1
-
-        if self._is_valid_associated_name(associated_name):
-            related = self.associated.setdefault(associated_name, AssociatedCount())
-        else:
-            related = self.associated.setdefault("Unknown Pilot", AssociatedCount())
-
-        related.t += 1
-
-        if value > 0:
-            self.lost = self.lost + 1 if multiple is not None else self.lost + multiple
-            self.total_lost_value += value
-            self.killmails.append(killmail_id)
-            related.l += 1
-
-        if br is not None:
-            related.brs.append(br)
-
-    def podded(self, killmail: str, associated_name: str):
-        self.pods += 1
-        self.pod_killmails.append(killmail)
-        if self._is_valid_associated_name(associated_name):
-            self.associated[associated_name].p += 1
-
-    def _is_valid_associated_name(self, associated_name):
-        return associated_name is not None and "\u00a0" not in associated_name
+    @model_serializer
+    def ser_model(self):
+        return {"pilots": self.pilots, "isk_destroyed": self.isk_lost, "ships_destroyed": self.ships_lost}
 
 
 class StructureHistory(BaseModel):

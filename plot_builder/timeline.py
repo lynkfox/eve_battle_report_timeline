@@ -144,6 +144,13 @@ def build_jspace_plots(all_data: AllData, fig: go.Figure, subplot_ranges, split_
 def add_jclass_subplot_annotations(fig: go.Figure, split_by_jclass: bool = False):
     annotations = load_json("timeline_annotations.json")
 
+    # fig.add_vline(
+    #     x= datetime.strptime("2024-05-15T12:00", "%Y-%m-%dT%H:%M").timestamp(),
+    #     annotation_text="Synde offers Surrender",
+    #     annotation_position="top right",
+    #     line_dash="dash"
+    # )
+
     for note, details in annotations.items():
         offset = details.get("offset", 0)
 

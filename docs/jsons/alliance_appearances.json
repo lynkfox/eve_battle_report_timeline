@@ -1,7 +1,7 @@
 {
-    "Description": "Number of appearances for each alliance",
-    "Last Compiled": "2024-05-13",
-    "Hawks and Friends": {
+    "description": "Number of appearances for each alliance",
+    "last_compiled": "2024-05-16",
+    "hawks_and_friends": {
         "Rainbow Knights": 181,
         "Hard Knocks Associates": 2,
         "Hard Knocks Citizens": 96,
@@ -30,7 +30,7 @@
         "Verged": 1,
         "Pill urself": 1
     },
-    "The Coalition": {
+    "the_coalition": {
         "Stay Feral": 38,
         "Disturbing Silence.": 32,
         "We Forsakened Few": 49,
@@ -66,7 +66,7 @@
         "ANOTHER WAE": 2,
         "Suddenly Content": 1
     },
-    "Unknown": {
+    "unknown_or_other": {
         "Top Shelf": 1,
         "Snuffed Out": 29,
         "Tocards Professionnels": 2,

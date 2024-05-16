@@ -25,6 +25,7 @@ from models.eve import (
     Weather,
     StructureType,
     SystemOwner,
+    System,
     EveAlliance,
     EvePilot,
     EveShip,

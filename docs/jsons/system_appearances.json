@@ -1,0 +1,1460 @@
+[
+    {
+        "system": "J152117",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J155650",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 4
+    },
+    {
+        "system": "J164511",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J141434",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 33
+    },
+    {
+        "system": "J102345",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J115844",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 5
+    },
+    {
+        "system": "J151909",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J101748",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 2
+    },
+    {
+        "system": "J171158",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J141319",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J104617",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J113508",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 1
+    },
+    {
+        "system": "J165953",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 3
+    },
+    {
+        "system": "J145844",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 8
+    },
+    {
+        "system": "J120823",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 5
+    },
+    {
+        "system": "J150020",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 5
+    },
+    {
+        "system": "J161215",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J101652",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 6
+    },
+    {
+        "system": "J154152",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J122049",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J135504",
+        "j_class": "6",
+        "statics": "C6/2",
+        "battles": 2
+    },
+    {
+        "system": "J230559",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 2
+    },
+    {
+        "system": "J153447",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J122452",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J142138",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J111447",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J140200",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J145510",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 2
+    },
+    {
+        "system": "J115517",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J205659",
+        "j_class": "5",
+        "statics": "C5/2",
+        "battles": 1
+    },
+    {
+        "system": "J154829",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 8
+    },
+    {
+        "system": "J163701",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J143718",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J130818",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J105623",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J143057",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 4
+    },
+    {
+        "system": "J170845",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J113701",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J172139",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J112137",
+        "j_class": "2",
+        "statics": "C2/Highsec-3",
+        "battles": 5
+    },
+    {
+        "system": "J105934",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 1
+    },
+    {
+        "system": "J142910",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J105822",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J143123",
+        "j_class": "5",
+        "statics": "C5/1",
+        "battles": 1
+    },
+    {
+        "system": "J115308",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 2
+    },
+    {
+        "system": "J213226",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 2
+    },
+    {
+        "system": "J153144",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J171246",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J153335",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J151325",
+        "j_class": "6",
+        "statics": "C6/2",
+        "battles": 2
+    },
+    {
+        "system": "J165641",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 1
+    },
+    {
+        "system": "J121450",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J104632",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 1
+    },
+    {
+        "system": "J104037",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 5
+    },
+    {
+        "system": "J135910",
+        "j_class": "2",
+        "statics": "C2/Highsec-4",
+        "battles": 1
+    },
+    {
+        "system": "J171309",
+        "j_class": "2",
+        "statics": "C2/Highsec-1",
+        "battles": 1
+    },
+    {
+        "system": "J121649",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J104649",
+        "j_class": "4",
+        "statics": "C4/5-6",
+        "battles": 1
+    },
+    {
+        "system": "J141204",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 4
+    },
+    {
+        "system": "J131916",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 3
+    },
+    {
+        "system": "J114014",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J132106",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 7
+    },
+    {
+        "system": "J164701",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J134096",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J233917",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 3
+    },
+    {
+        "system": "J124504",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 3
+    },
+    {
+        "system": "J232246",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J154906",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J164846",
+        "j_class": "5",
+        "statics": "C5/1",
+        "battles": 4
+    },
+    {
+        "system": "J122249",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 3
+    },
+    {
+        "system": "J155207",
+        "j_class": "6",
+        "statics": "C6/1",
+        "battles": 2
+    },
+    {
+        "system": "J171136",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J114430",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J115923",
+        "j_class": "6",
+        "statics": "C6/2",
+        "battles": 2
+    },
+    {
+        "system": "J121847",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 7
+    },
+    {
+        "system": "J152550",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J103800",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J115008",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J151520",
+        "j_class": "4",
+        "statics": "C4/1-4",
+        "battles": 1
+    },
+    {
+        "system": "J142528",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 7
+    },
+    {
+        "system": "J100501",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J163930",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J125923",
+        "j_class": "2",
+        "statics": "C2/Nullsec-6",
+        "battles": 1
+    },
+    {
+        "system": "J172840",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J171344",
+        "j_class": "4",
+        "statics": "C4/3-6",
+        "battles": 1
+    },
+    {
+        "system": "J140154",
+        "j_class": "4",
+        "statics": "C4/3-4",
+        "battles": 1
+    },
+    {
+        "system": "J101142",
+        "j_class": "4",
+        "statics": "C4/5-2",
+        "battles": 1
+    },
+    {
+        "system": "J100237",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J133241",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J172842",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J143200",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 6
+    },
+    {
+        "system": "J135031",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 2
+    },
+    {
+        "system": "J114003",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J132532",
+        "j_class": "4",
+        "statics": "C4/5-2",
+        "battles": 1
+    },
+    {
+        "system": "J134527",
+        "j_class": "4",
+        "statics": "C4/3-4",
+        "battles": 1
+    },
+    {
+        "system": "F-5WYK",
+        "j_class": "0",
+        "statics": "",
+        "battles": 1
+    },
+    {
+        "system": "J123546",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J171722",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 2
+    },
+    {
+        "system": "J160855",
+        "j_class": "6",
+        "statics": "C6/1",
+        "battles": 4
+    },
+    {
+        "system": "J212612",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 5
+    },
+    {
+        "system": "J230047",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 2
+    },
+    {
+        "system": "J222604",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J141250",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J100409",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J110834",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J135402",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J213642",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J144902",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 5
+    },
+    {
+        "system": "J112028",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J154021",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 1
+    },
+    {
+        "system": "J161138",
+        "j_class": "2",
+        "statics": "C2/Nullsec-6",
+        "battles": 2
+    },
+    {
+        "system": "J130900",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J160722",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J224558",
+        "j_class": "4",
+        "statics": "C4/5-6",
+        "battles": 2
+    },
+    {
+        "system": "J140514",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J111003",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J145203",
+        "j_class": "5",
+        "statics": "C5/2",
+        "battles": 1
+    },
+    {
+        "system": "J233630",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 4
+    },
+    {
+        "system": "J155928",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J215554",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J162853",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J144434",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J144454",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J103116",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J120816",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 4
+    },
+    {
+        "system": "J135533",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J133119",
+        "j_class": "5",
+        "statics": "C5/1",
+        "battles": 1
+    },
+    {
+        "system": "J100120",
+        "j_class": "5",
+        "statics": "C5/2",
+        "battles": 1
+    },
+    {
+        "system": "J110915",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 1
+    },
+    {
+        "system": "J144420",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J145706",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 3
+    },
+    {
+        "system": "J115901",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J164729",
+        "j_class": "3",
+        "statics": "C3/Nullsec",
+        "battles": 1
+    },
+    {
+        "system": "J104859",
+        "j_class": "6",
+        "statics": "C6/2",
+        "battles": 1
+    },
+    {
+        "system": "J152106",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J103400",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 2
+    },
+    {
+        "system": "J214006",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 3
+    },
+    {
+        "system": "J104857",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J145322",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J105441",
+        "j_class": "5",
+        "statics": "C5/2",
+        "battles": 1
+    },
+    {
+        "system": "J161335",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 2
+    },
+    {
+        "system": "J152820",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J150109",
+        "j_class": "2",
+        "statics": "C2/Lowsec-2",
+        "battles": 1
+    },
+    {
+        "system": "J165312",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J215930",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J134702",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J152722",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 2
+    },
+    {
+        "system": "J151530",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J165412",
+        "j_class": "2",
+        "statics": "C2/Highsec-1",
+        "battles": 1
+    },
+    {
+        "system": "J111950",
+        "j_class": "4",
+        "statics": "C4/3-2",
+        "battles": 1
+    },
+    {
+        "system": "J164553",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J124100",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J120010",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 4
+    },
+    {
+        "system": "J121416",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J234928",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J122721",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J204230",
+        "j_class": "4",
+        "statics": "C4/3-4",
+        "battles": 1
+    },
+    {
+        "system": "J155403",
+        "j_class": "3",
+        "statics": "C3/Nullsec",
+        "battles": 1
+    },
+    {
+        "system": "J210952",
+        "j_class": "3",
+        "statics": "C3/Lowsec",
+        "battles": 1
+    },
+    {
+        "system": "J105023",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 10
+    },
+    {
+        "system": "J111450",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 2
+    },
+    {
+        "system": "J122818",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J142624",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 3
+    },
+    {
+        "system": "J144408",
+        "j_class": "3",
+        "statics": "C3/Lowsec",
+        "battles": 1
+    },
+    {
+        "system": "J225128",
+        "j_class": "2",
+        "statics": "C2/Nullsec-5",
+        "battles": 1
+    },
+    {
+        "system": "J103924",
+        "j_class": "2",
+        "statics": "C2/Nullsec-5",
+        "battles": 2
+    },
+    {
+        "system": "J135301",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J133906",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 2
+    },
+    {
+        "system": "J230905",
+        "j_class": "3",
+        "statics": "C3/Highsec",
+        "battles": 1
+    },
+    {
+        "system": "J124058",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J135623",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 4
+    },
+    {
+        "system": "J133513",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J103600",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 4
+    },
+    {
+        "system": "J211517",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J145512",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J105835",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 1
+    },
+    {
+        "system": "J212338",
+        "j_class": "1",
+        "statics": "C1/Highsec",
+        "battles": 1
+    },
+    {
+        "system": "J132258",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J212302",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J145825",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 3
+    },
+    {
+        "system": "J100724",
+        "j_class": "5",
+        "statics": "C5/1",
+        "battles": 1
+    },
+    {
+        "system": "J165020",
+        "j_class": "4",
+        "statics": "C4/3-1",
+        "battles": 1
+    },
+    {
+        "system": "J115554",
+        "j_class": "4",
+        "statics": "C4/3-2",
+        "battles": 2
+    },
+    {
+        "system": "J160547",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J125254",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J115935",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 2
+    },
+    {
+        "system": "J135220",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 3
+    },
+    {
+        "system": "J124201",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J152912",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 1
+    },
+    {
+        "system": "J123940",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 4
+    },
+    {
+        "system": "J133913",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 4
+    },
+    {
+        "system": "J153202",
+        "j_class": "4",
+        "statics": "C4/2",
+        "battles": 1
+    },
+    {
+        "system": "J102053",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J230242",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J121006",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 1
+    },
+    {
+        "system": "J140918",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 2
+    },
+    {
+        "system": "J154846",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 4
+    },
+    {
+        "system": "J161032",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 2
+    },
+    {
+        "system": "J162047",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 2
+    },
+    {
+        "system": "J230936",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J105858",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 2
+    },
+    {
+        "system": "J100252",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 2
+    },
+    {
+        "system": "J145753",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J151838",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 2
+    },
+    {
+        "system": "J171404",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 1
+    },
+    {
+        "system": "J104351",
+        "j_class": "3",
+        "statics": "C3/Lowsec",
+        "battles": 1
+    },
+    {
+        "system": "J134024",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J213753",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 1
+    },
+    {
+        "system": "J142247",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J221117",
+        "j_class": "3",
+        "statics": "C3/Lowsec",
+        "battles": 1
+    },
+    {
+        "system": "J125049",
+        "j_class": "3",
+        "statics": "C3/Lowsec",
+        "battles": 1
+    },
+    {
+        "system": "J125122",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J141502",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 2
+    },
+    {
+        "system": "J111918",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 1
+    },
+    {
+        "system": "J220924",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J145523",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 2
+    },
+    {
+        "system": "J215304",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J101553",
+        "j_class": "6",
+        "statics": "C6/1",
+        "battles": 1
+    },
+    {
+        "system": "J125716",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 2
+    },
+    {
+        "system": "J112417",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J161301",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    },
+    {
+        "system": "J155838",
+        "j_class": "6",
+        "statics": "C6/2",
+        "battles": 3
+    },
+    {
+        "system": "J150606",
+        "j_class": "5",
+        "statics": "C5/2",
+        "battles": 3
+    },
+    {
+        "system": "J102834",
+        "j_class": "6",
+        "statics": "C6/5",
+        "battles": 1
+    },
+    {
+        "system": "J140555",
+        "j_class": "6",
+        "statics": "C6/6",
+        "battles": 1
+    },
+    {
+        "system": "J113158",
+        "j_class": "4",
+        "statics": "C4/3-5",
+        "battles": 1
+    },
+    {
+        "system": "J214712",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J170118",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J234208",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 2
+    },
+    {
+        "system": "J222834",
+        "j_class": "5",
+        "statics": "C5/2",
+        "battles": 1
+    },
+    {
+        "system": "J115418",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 2
+    },
+    {
+        "system": "J110810",
+        "j_class": "6",
+        "statics": "C6/3",
+        "battles": 1
+    },
+    {
+        "system": "J130401",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J162231",
+        "j_class": "4",
+        "statics": "C4/3-4",
+        "battles": 1
+    },
+    {
+        "system": "J122610",
+        "j_class": "5",
+        "statics": "C5/6",
+        "battles": 2
+    },
+    {
+        "system": "J164745",
+        "j_class": "6",
+        "statics": "C6/2",
+        "battles": 1
+    },
+    {
+        "system": "J110628",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J000895",
+        "j_class": "13",
+        "statics": "C13/5-Nullsec",
+        "battles": 1
+    },
+    {
+        "system": "J152433",
+        "j_class": "2",
+        "statics": "C2/Highsec-3",
+        "battles": 1
+    },
+    {
+        "system": "J155845",
+        "j_class": "5",
+        "statics": "C5/5",
+        "battles": 1
+    },
+    {
+        "system": "J103215",
+        "j_class": "5",
+        "statics": "C5/4",
+        "battles": 1
+    },
+    {
+        "system": "J111520",
+        "j_class": "6",
+        "statics": "C6/4",
+        "battles": 1
+    },
+    {
+        "system": "J100616",
+        "j_class": "5",
+        "statics": "C5/3",
+        "battles": 1
+    }
+]

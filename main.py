@@ -3,7 +3,7 @@ from time import sleep
 from br.parser2 import parse_br2, load_br_links
 from br.util import skip_if_cached
 from plot_builder.output import build_scatter
-from aggregator.calculate import generate_output_totals
+from plot_builder.to_json import generate_output_totals
 import os
 
 os.environ["PYPPETEER_CHROMIUM_REVISION"] = "1263111"
