@@ -84,6 +84,8 @@ class EveAlliance(EveEntity):
     members: Dict[str, int] = {}
     structures: Dict[str, Dict[str, dict]] = {}  # system name, station type, {(s)een, (d)estroyed, (g)unner}
     is_only_corp: bool = False
+    total_lost_isk: float = 0.0
+    total_lost_ships: int = 0
 
     @field_serializer("corps")
     def serialize_set(self, v: Set, _info):
@@ -110,6 +112,8 @@ class EveCorp(EveEntity):
     ships: Dict[str, int] = {}  # ship name, appearances
     structures: Dict[str, Dict[str, dict]] = {}  # system name, station type, {(s)een, (d)estroyed, (g)unner}
     holding_for: Optional[str] = None
+    total_lost_isk: float = 0.0
+    total_lost_ships: int = 0
 
     @property
     def has_no_alliance(self) -> bool:

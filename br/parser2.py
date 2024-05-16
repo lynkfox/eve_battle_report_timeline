@@ -263,6 +263,11 @@ def parse_teams(
                 ship.destroyed += 1
                 ship.total_value_destroyed += loss_value
                 team.ships_destroyed.append(ship.name)
+                corp.total_lost_isk += loss_value
+                corp.total_lost_ships += 1
+                if alliance is not None:
+                    alliance.total_lost_isk += loss_value
+                    alliance.total_lost_ships += 1
 
             faction, suspected = hawks_or_not(alliance, corp, battle_date)
             if suspected:
