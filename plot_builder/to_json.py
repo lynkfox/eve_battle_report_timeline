@@ -13,6 +13,8 @@ WHOSE_WHO = WhoseWho()
 
 def generate_output_totals(all_data: AllData):
 
+    t_shirt(all_data.systems)
+
     print("saving all_battle_reports.json")
     battles_to_json(all_data.battles)
 
@@ -27,6 +29,11 @@ def generate_output_totals(all_data: AllData):
 
     print("filtering alliances to just the big names in major_players.json")
     big_names(all_data)
+
+
+def t_shirt(systems):
+    with open("docs/jsons/all_systems_tshirt.txt", "w") as f:
+        f.write(" ".join(systems.keys()))
 
 
 def battles_to_json(all_battles: List[Battle2]):
@@ -71,7 +78,7 @@ def big_names(all_data):
         "Unchained Alliance": ["Outback Krabhouse"],
         "Wild Fat Cocks": [],
         "We Forsakened Few": ["FFEW Associates"],
-        "Sugar.": ["Now You Don't", "Hyperglycemia Holdings"],
+        "Sugar.": ["Now You Don't", "Hyperglycemia Holdings", "Aspartame."],
         "Atrax Hollow": ["The Candy Shop"],
         "Stay Feral": [],
         "Hole Control": ["Operaatio MatoLuola"],
